@@ -98,7 +98,8 @@
                 {% assign link_handle = link.handle | replace: '-', '_' %}
                 <div class="relative" x-data="{ {{ link_handle }}: false }">
                   <li>
-                    <a href="#">Pages</a>
+                    <a href="#">{{ link.title }}
+                      {% render 'icon-dropdown' %}</a>
 
                     <button
                       type="button"
@@ -142,6 +143,7 @@
                 </div>
 
               {% else %}
+
                 <li class="active">
                   <a href="{{ link.url }}">{{ link.title }}</a>
                 </li>
