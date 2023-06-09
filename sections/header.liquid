@@ -96,19 +96,17 @@
             {% for link in main_menu_linklist %}
               {% if link.links != blank %}
                 {% assign link_handle = link.handle | replace: '-', '_' %}
-                <div class="relative" x-data="{ {{ link_handle }}: false }">
-                  <li>
-                    <a href="#">{{ link.title }}</a>
+                <li>
+                  <a href="#" x-data="{ {{ link_handle }}: false }">{{ link.title }}</a>
 
-                    <ul class="dropdown">
-                      {% for childlink in link.links %}
-                        <li>
-                          <a href="{{ childlink.url }}" class="hover:bg-gray-300">{{ childlink.title }}</a>
-                        </li>
-                      {% endfor %}
-                    </ul>
-                  </li>
-                </div>
+                  <ul class="dropdown">
+                    {% for childlink in link.links %}
+                      <li>
+                        <a href="{{ childlink.url }}" class="hover:bg-gray-300">{{ childlink.title }}</a>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                </li>
 
               {% else %}
 
