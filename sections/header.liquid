@@ -53,6 +53,15 @@
         <div class="col-lg-6 col-md-5">
           <div class="header__top__right">
             <div class="header__top__links">
+              {% if shop.customer_accounts_enabled %}
+                {% if customer %}
+                  <a href="{{ routes.account_url }}" class="text-base text-gray-500 hover:text-gray-900">Account</a>
+                  {{ 'Log out' | customer_logout_link | replace: '<a', '<a class="text-base text-gray-500 hover:text-gray-900"' }}
+                {% else %}
+                  {{ 'Log in ' | customer_login_link | replace: '<a', '<a class="text-base text-gray-500 hover:text-gray-900"' }}
+                  {{ 'Register' | customer_register_link | replace: '<a', '<a class="text-base text-gray-500 hover:text-gray-900"' }}
+                {% endif %}
+              {% endif %}
               <a href="{{ routes.account_login_url }}">Sign in</a>
               <a href="{{ routes.account_register_url }}">Sign up</a>
             </div>
