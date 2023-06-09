@@ -76,7 +76,12 @@
       <div class="col-lg-3 col-md-3">
         {% if section.settings.logo != blank %}
           <div class="header__logo">
-            <a href="./index.html"><img src="img/logo.png" alt=""></a>
+            <a href="{{ routes.root_url }}"><img
+                src="{{ section.settings.logo | img_url: 'medium' }}"
+                alt="{{ shop.name }}"
+                width=""
+                height=""
+                loading="lazy"></a>
           </div>
 
         {% else %}
