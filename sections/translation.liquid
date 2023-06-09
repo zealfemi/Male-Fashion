@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <style>
   #shopify-section-translation {
     position: fixed;
@@ -75,82 +74,4 @@
       })
     })
   }
-=======
-<style>
-  #shopify-section-translation {
-    position: fixed;
-  }
-
-  .dropup {
-    position: relative;
-    display: inline-block;
-  }
-
-  .localeBtn {
-    background-color: skyblue;
-    color: white;
-    padding: 6px;
-    font-size: 20px;
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    border-radius: 50%;
-    max-width: 70px;
-    max-height: 70px;
-    box-shadow: -1px 0 20px 0 #00000066;
-  }
-
-  .dropup-content {
-    display: none;
-    position: fixed;
-    bottom: 80px;
-    right: 25px;
-    min-width: 210px;
-    z-index: 1;
-    background-color: white;
-    box-shadow: -1px 0 20px 0 #00000066;
-  }
-
-  .dropup:hover .dropup-content {
-    display: block;
-  }
-
-  .dropup-content a {
-    color: black;
-    font-size: 17px;
-    padding: 8px 4px;
-    display: block;
-    text-align: center;
-  }
-</style>
-
-{% form 'localization', id: "#localization_form_tag", class: "dropup" %}
-  <div class="localeBtn">{{ 'globe.png' | asset_img_url: '50x50' | img_tag }}</div>
-  <div class="dropup-content">
-    {% for locale in shop.published_locales %}
-      <a
-        href="#"
-        id="localeItem"
-        lang="{{ locale.iso_code }}">{{ locale.endonym_name }}</a>
-    {% endfor %}
-  </div>
-  <input
-    type="hidden"
-    name="locale_code"
-    value="{{ form.current_locale.iso_code }}"
-    id="localeCode">
-{% endform %}
-
-<script>
-  var localeItem = document.querySelectorAll("#localeItem");
-
-  if (localeItem.length > 0) {
-    localeItem.forEach(item => {
-      item.addEventListener("click", (event) => {
-        document.getElementById("localeCode").value = item.getAttribute("lang")
-        document.getElementById("localization_form_tag").submit()
-      })
-    })
-  }
->>>>>>> ab45bba2408610fa9551620155b8452781fd489c
 </script>
