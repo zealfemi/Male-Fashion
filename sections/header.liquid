@@ -98,8 +98,7 @@
                 {% assign link_handle = link.handle | replace: '-', '_' %}
                 <div class="relative" x-data="{ {{ link_handle }}: false }">
                   <li>
-                    <a href="#">{{ link.title }}
-                      {% render 'icon-dropdown' %}</a>
+                    <a href="#">{{ link.title }}</a>
 
                     <ul class="dropdown">
                       {% for childlink in link.links %}
