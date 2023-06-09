@@ -1,0 +1,62 @@
+<<<<<<< HEAD
+<div class="w-full">
+  <div class="border bg-white shadow-lg rounded-lg overflow-hidden">
+    <a href="{{ products_card.url }}">
+
+      {% if products_card.featured_image %}
+        <div class="h-80 overflow-hidden">
+          <img
+            class="w-full h-full object-cover transition duration-1000 ease-in-out hover:scale-105 transform"
+            src="{{ products_card.featured_image | img_url: 'medium' }}"
+            alt="{{ products_card.featured_image.alt }}"
+            width="{{ products_card.featured_image.width }}"
+            height="{{ products_card.featured_image.height }}"
+            loading="lazy" />
+        </div>
+      {% else %}
+        {{ 'product-1' | placeholder_svg_tag: 'w-full h-full object-cover bg-gray-100 transition duration-1000 ease-in-out hover:scale-105 transform' }}
+      {% endif %}
+    </a>
+
+    <div class="flex flex-col p-4">
+      {% if section.settings.display_vendor %}
+        <span class="text-sm text-gray-400">{{ products_card.vendor }}</span>
+      {% endif %}
+
+      <a href="{{ products_card.url }}" class="text-gray-700 uppercase font-medium">{{ products_card.title }}</a>
+
+      <p class="text-gray-500">{{ products_card.price | money }}</p>
+    </div>
+  </div>
+=======
+<div class="w-full">
+  <div class="border bg-white shadow-lg rounded-lg overflow-hidden">
+    <a href="{{ products_card.url }}">
+
+      {% if products_card.featured_image %}
+        <div class="h-80 overflow-hidden">
+          <img
+            class="w-full h-full object-cover transition duration-1000 ease-in-out hover:scale-105 transform"
+            src="{{ products_card.featured_image | img_url: 'medium' }}"
+            alt="{{ products_card.featured_image.alt }}"
+            width="{{ products_card.featured_image.width }}"
+            height="{{ products_card.featured_image.height }}"
+            loading="lazy" />
+        </div>
+      {% else %}
+        {{ 'product-1' | placeholder_svg_tag: 'w-full h-full object-cover bg-gray-100 transition duration-1000 ease-in-out hover:scale-105 transform' }}
+      {% endif %}
+    </a>
+
+    <div class="flex flex-col p-4">
+      {% if section.settings.display_vendor %}
+        <span class="text-sm text-gray-400">{{ products_card.vendor }}</span>
+      {% endif %}
+
+      <a href="{{ products_card.url }}" class="text-gray-700 uppercase font-medium">{{ products_card.title }}</a>
+
+      <p class="text-gray-500">{{ products_card.price | money }}</p>
+    </div>
+  </div>
+>>>>>>> ab45bba2408610fa9551620155b8452781fd489c
+</div>

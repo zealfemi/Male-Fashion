@@ -1,0 +1,42 @@
+{
+  "sections": {
+    "featured-collection": {
+      "type": "featured-collection",
+      "settings": {
+        "featured_collection_title": "Featured Collection",
+        "featured_collection": "all",
+        "number_of_products": 4
+      }
+    },
+    "25e94e23-a2e3-47bb-995f-b97ecb5f077d": {
+      "type": "featured-collection",
+      "settings": {
+        "featured_collection_title": "For men",
+        "featured_collection": "men",
+        "number_of_products": 4
+      }
+    },
+    "44125b7b-d935-4d05-90b2-ead9dc370e8e": {
+      "type": "featured-collection",
+      "settings": {
+        "featured_collection_title": "For Women",
+        "featured_collection": "women",
+        "number_of_products": 4
+      }
+    },
+    "d43be4fc-5e22-47d8-b425-a0ab04e55e82": {
+      "type": "featured-collection",
+      "settings": {
+        "featured_collection_title": "For Kids",
+        "featured_collection": "kids",
+        "number_of_products": 4
+      }
+    }
+  },
+  "order": [
+    "featured-collection",
+    "25e94e23-a2e3-47bb-995f-b97ecb5f077d",
+    "44125b7b-d935-4d05-90b2-ead9dc370e8e",
+    "d43be4fc-5e22-47d8-b425-a0ab04e55e82"
+  ]
+}

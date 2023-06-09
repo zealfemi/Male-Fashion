@@ -1,0 +1,62 @@
+{
+  "current": {
+    "header_text_font": "anonymous_pro_n4",
+    "body_text_font": "alegreya_n4",
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+          "mobile_menu_title": "Menu",
+          "menu": "main-menu"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "72ebf498-e755-497f-9b8b-f7ff32cf28da": {
+            "type": "text",
+            "settings": {
+              "title": "Store information",
+              "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>"
+            }
+          },
+          "78a50f7f-c3d3-4daf-a6fd-1dccc81d51db": {
+            "type": "link_list",
+            "settings": {
+              "title": "Quick Links",
+              "menu": "footer"
+            }
+          },
+          "6710f7fa-122d-4ba7-924f-5fc407356b46": {
+            "type": "link_list",
+            "settings": {
+              "title": "Quick Links",
+              "menu": "collections-menu"
+            }
+          }
+        },
+        "block_order": [
+          "72ebf498-e755-497f-9b8b-f7ff32cf28da",
+          "78a50f7f-c3d3-4daf-a6fd-1dccc81d51db",
+          "6710f7fa-122d-4ba7-924f-5fc407356b46"
+        ],
+        "settings": {
+          "col_num": 3,
+          "enable_payment_type_icons": true
+        }
+      },
+      "translation": {
+        "type": "translation",
+        "settings": {
+        }
+      }
+    },
+    "content_for_index": [
+
+    ]
+  },
+  "presets": {
+    "Default": {
+    }
+  }
+}

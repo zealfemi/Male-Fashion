@@ -1,0 +1,19 @@
+{
+  "sections": {
+    "template": {
+<<<<<<< HEAD
+      "type": "template-customer-activate-account"
+    }
+  },
+  "order": ["template"]
+=======
+      "type": "template-customer-activate-account",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "template"
+  ]
+>>>>>>> ab45bba2408610fa9551620155b8452781fd489c
+}
