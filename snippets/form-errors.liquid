@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 {% if form.errors %}
 
   <div class="relative border border-red-400 bg-red-100 text-red-700 px-4 py-3" role="alert">
@@ -30,37 +29,4 @@
     <div class="text=sm font-medium ml-3">Success</div>
   </div>
 
-=======
-{% if form.errors %}
-
-  <div class="relative border border-red-400 bg-red-100 text-red-700 px-4 py-3" role="alert">
-    <div class="flex flex-row items-center w-full my-3">
-      <div class="text-red-500">{% render 'icon-failed' %}</div>
-      <div class="text-sm font-medium ml-3">Error</div>
-    </div>
-
-    <ul class="px-4 mb-3 ml-7 list-decimal text-sm">
-      {% for error in form.errors %}
-        <li>
-          {% if error == 'form' %}
-            {{ form.errors.messages[error] }}
-          {% else %}
-            {{ form.errors.translated_fields[error] }} - {{ form.errors.messages[error] }}
-          {% endif %}
-        </li>
-      {% endfor %}
-    </ul>
-
-  </div>
-
-{% elsif form.posted_successfully? %}
-
-  <div class="flex flex-row items-center w-full my-3 p-5">
-    <div class="text-green-500">
-      {% render 'icon-success' %}
-    </div>
-    <div class="text=sm font-medium ml-3">Success</div>
-  </div>
-
->>>>>>> ab45bba2408610fa9551620155b8452781fd489c
 {% endif %}
