@@ -74,9 +74,16 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-3 col-md-3">
-        <div class="header__logo">
-          <a href="./index.html"><img src="img/logo.png" alt=""></a>
-        </div>
+        {% if section.settings.logo != blank %}
+          <div class="header__logo">
+            <a href="./index.html"><img src="img/logo.png" alt=""></a>
+          </div>
+
+        {% else %}
+          <a href="{{ shop.url }}">
+            <h1 class="text-xl font-bold truncate uppercase">{{ shop.name }}</h1>
+          </a>
+        {% endif %}
       </div>
       <div class="col-lg-6 col-md-6">
         <nav class="header__menu mobile-menu">
