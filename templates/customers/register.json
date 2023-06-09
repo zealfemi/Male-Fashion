@@ -1,12 +1,6 @@
 {
   "sections": {
     "template": {
-<<<<<<< HEAD
-      "type": "template-customer-register"
-    }
-  },
-  "order": ["template"]
-=======
       "type": "template-customer-register",
       "settings": {
       }
@@ -15,5 +9,4 @@
   "order": [
     "template"
   ]
->>>>>>> ab45bba2408610fa9551620155b8452781fd489c
 }
