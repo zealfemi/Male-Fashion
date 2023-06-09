@@ -1,3 +1,49 @@
 [
-
+  {
+    "name": "theme_info",
+    "theme_name": "Male Fashion",
+    "theme_version": "1.0.0",
+    "theme_author": "Mackie",
+    "theme_documentation_url": "https:\/\/github.com\/zealfemi\/Male-Fashion",
+    "theme_support_url": "https:\/\/github.com\/zealfemi\/Male-Fashion\/issues"
+  },
+  {
+    "name": "Typography",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Heading Styles"
+      },
+      {
+        "type": "font_picker",
+        "id": "header_text_font",
+        "label": "Font",
+        "default": "mono"
+      },
+      {
+        "type": "header",
+        "content": "Body Styles"
+      },
+      {
+        "type": "font_picker",
+        "id": "body_text_font",
+        "label": "Font",
+        "default": "mono"
+      },
+      {
+        "type": "header",
+        "content": "Body Font Size"
+      },
+      {
+        "type": "range",
+        "id": "body_font_size",
+        "label": "Font Size",
+        "default": 16,
+        "unit": "px",
+        "min": 13,
+        "max": 25,
+        "step": 1
+      }
+    ]
+  }
 ]
