@@ -1,13 +1,21 @@
 {
   "sections": {
+    "c1f9707e-d274-49fa-96b1-b52448900b59": {
+      "type": "slideshow",
+      "settings": {
+      }
+    },
     "featured-collection": {
       "type": "featured-collection",
       "settings": {
-        "featured_collection": "all"
+        "featured_collection_title": "Featured Collection",
+        "featured_collection": "all",
+        "number_of_products": 4
       }
     }
   },
   "order": [
+    "c1f9707e-d274-49fa-96b1-b52448900b59",
     "featured-collection"
   ]
 }
