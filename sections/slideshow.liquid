@@ -1,4 +1,7 @@
 <!-- Hero Section Begin -->
+{% for block in section.blocks %}
+  {{ block.settings.title }}
+{% endfor %}
 <section class="hero">
   <div class="hero__slider owl-carousel">
 
