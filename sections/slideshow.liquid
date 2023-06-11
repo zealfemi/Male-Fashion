@@ -1,7 +1,4 @@
 <!-- Hero Section Begin -->
-{% for block in section.blocks %}
-  {{ block.settings.title }}
-{% endfor %}
 <section class="hero">
   <div class="hero__slider owl-carousel">
 
@@ -11,8 +8,8 @@
           <div class="row">
             <div class="col-xl-5 col-lg-7 col-md-8">
               <div class="hero__text">
-                <h6>{{ block.collection.title }}</h6>
-                <h2>{{ block.title }}</h2>
+                <h6>{{ block.settings.collection.title }}</h6>
+                <h2>{{ block.settings.title }}</h2>
                 <p>A specialist label creating luxury essentials. Ethically crafted with an unwavering commitment to exceptional quality.</p>
                 <a href="#" class="primary-btn">Shop now
                   <span class="arrow_right"></span>
