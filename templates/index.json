@@ -2,6 +2,24 @@
   "sections": {
     "c1f9707e-d274-49fa-96b1-b52448900b59": {
       "type": "slideshow",
+      "blocks": {
+        "da96cff6-79dd-4410-8ba6-5f248d929a62": {
+          "type": "image",
+          "settings": {
+            "collection": "",
+            "title": "Title",
+            "description": "Description",
+            "btn_url": "",
+            "btn_text": "",
+            "facebook_url": "",
+            "twitter_url": "",
+            "instagram_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "da96cff6-79dd-4410-8ba6-5f248d929a62"
+      ],
       "settings": {
       }
     },
