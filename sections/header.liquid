@@ -35,9 +35,12 @@
                 {{ link.title }}
               </a>
               <ul class="dropdown-menu">
-                <li>
-                  <a class="dropdown-item" href="{{ childlink.url }}">{{ childlink.title }}</a>
-                </li>
+                {% for childlink in link.links %}
+                  <li>
+                    <a class="dropdown-item" href="{{ childlink.url }}">{{ childlink.title }}</a>
+                  </li>
+                {% endfor %}
+
               </ul>
             </li>
 
