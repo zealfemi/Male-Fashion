@@ -34,7 +34,7 @@
                 aria-expanded="false">
                 {{ link.title }}
               </a>
-              <ul class="dropdown-menu">
+              <ul class="dropdown-menu dropdown">
                 {% for childlink in link.links %}
                   <li>
                     <a class="dropdown-item" href="{{ childlink.url }}">{{ childlink.title }}</a>
