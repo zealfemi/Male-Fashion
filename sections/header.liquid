@@ -30,8 +30,8 @@
 
               <ul class="dropdown">
                 {% for childlink in link.links %}
-                  <li>
-                    <a href="{{ childlink.url }}" class="hover:bg-gray-300 hover:text-gray-900">{{ childlink.title }}</a>
+                  <li class="nav-item">
+                    <a href="{{ childlink.url }}" class="nav-link hover:bg-gray-300 hover:text-gray-900">{{ childlink.title }}</a>
                   </li>
                 {% endfor %}
               </ul>
@@ -39,8 +39,8 @@
 
           {% else %}
 
-            <li class="aactive">
-              <a href="{{ link.url }}">{{ link.title }}</a>
+            <li class="nav-item">
+              <a href="{{ link.url }}" class="nav-link">{{ link.title }}</a>
             </li>
 
           {% endif %}
