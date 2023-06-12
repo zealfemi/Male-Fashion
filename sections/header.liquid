@@ -7,10 +7,9 @@
 %}
 
 <!-- Offcanvas Menu Begin -->
-
-<nav class="container navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand uppercase" href="{{ shop.url }}">{{ shop.name }}</a>
+    <a class="navbar-brand" href="#">Navbar</a>
     <button
       class="navbar-toggler"
       type="button"
@@ -23,38 +22,41 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        {% for link in main_menu_linklist %}
-          {% if link.links != blank %}
-            {% assign link_handle = link.handle | replace: '-', '_' %}
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false">
-                {{ link.title }}
-              </a>
-              <ul class="dropdown-menu">
-                {% for childlink in link.links %}
-                  <li>
-                    <a class="dropdown-item" href="{{ childlink.url }}">{{ childlink.title }}</a>
-                  </li>
-                {% endfor %}
-
-              </ul>
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            aria-current="page"
+            href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" href="#">Action</a>
             </li>
-
-          {% else %}
-            <li class="nav-item">
-              <a href="{{ link.url }}" class="nav-link">{{ link.title }}</a>
+            <li>
+              <a class="dropdown-item" href="#">Another action</a>
             </li>
-
-          {% endif %}
-        {% endfor %}
+            <li><hr class="dropdown-divider"></li>
+            <li>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled">Disabled</a>
+        </li>
       </ul>
-      <a href="" class="d-flex mr-3">Login</a>
-      <a href="" class="d-flex mr-3">Sign up</a>
       <form class="d-flex" role="search">
         <input
           class="form-control me-2"
@@ -67,8 +69,141 @@
   </div>
 </nav>
 
-<!-- Header Section Begin -->
+<div class="offcanvas-menu-overlay"></div>
+<div class="offcanvas-menu-wrapper">
+  <div class="offcanvas__option">
+    <div class="offcanvas__links">
+      <a href="#">Sign in</a>
+      <a href="#">FAQs</a>
+    </div>
+    <div class="offcanvas__top__hover">
+      <span>Usd
+        <i class="arrow_carrot-down"></i>
+      </span>
+      <ul>
+        <li>USD</li>
+        <li>EUR</li>
+        <li>USD</li>
+      </ul>
+    </div>
+  </div>
+  <div class="offcanvas__nav__option">
+    <a href="#" class="search-switch">{% render 'icon-search' %}</a>
+    <a href="#"><img src="img/icon/heart.png" alt=""></a>
+    <a href="#"><img src="img/icon/cart.png" alt="">
+      <span>0</span>
+    </a>
+    <div class="price">$0.00</div>
+  </div>
+  <div id="mobile-menu-wrap"></div>
+  <div class="offcanvas__text">
+    <p>Free shipping, 30-day return or refund guarantee.</p>
+  </div>
+</div>
+<!-- Offcanvas Menu End -->
 
+<!-- Header Section Begin -->
+<header class="header">
+  <div class="header__top">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-md-7">
+          <div class="header__top__left">
+            <p>{{ section.settings.announcement }}</p>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-5">
+          <div class="header__top__right">
+            <div class="header__top__links">
+              {% if shop.customer_accounts_enabled %}
+                {% if customer %}
+                  <a href="{{ routes.account_url }}">Account</a>
+                  {{ 'Log out' | customer_logout_link }}
+                {% else %}
+                  {{ 'Log in ' | customer_login_link }}
+                  {{ 'Register' | customer_register_link }}
+                {% endif %}
+              {% endif %}
+            </div>
+            <div class="header__top__hover">
+              <span>Usd
+                <i class="arrow_carrot-down"></i>
+              </span>
+              <ul>
+                <li>USD</li>
+                <li>EUR</li>
+                <li>USD</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-md-3">
+        {% if section.settings.logo != blank %}
+          <div class="header__logo">
+            <a href="{{ shop.url }}"><img
+                src="{{ section.settings.logo | img_url: 'medium' }}"
+                alt="{{ shop.name }}"
+                width=""
+                height=""
+                loading="lazy"></a>
+          </div>
+
+        {% else %}
+          <a href="{{ shop.url }}">
+            <h1 class="header__logo text-xl font-bold truncate uppercase">{{ shop.name }}</h1>
+          </a>
+        {% endif %}
+      </div>
+      <div class="col-lg-6 col-md-6">
+        <nav class="header__menu mobile-menu">
+          <ul>
+            {% for link in main_menu_linklist %}
+              {% if link.links != blank %}
+                {% assign link_handle = link.handle | replace: '-', '_' %}
+                <li>
+                  <a href="#" x-data="{ {{ link_handle }}: false }">{{ link.title }}</a>
+
+                  <ul class="dropdown">
+                    {% for childlink in link.links %}
+                      <li>
+                        <a href="{{ childlink.url }}" class="hover:bg-gray-300 hover:text-gray-900">{{ childlink.title }}</a>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                </li>
+
+              {% else %}
+
+                <li class="aactive">
+                  <a href="{{ link.url }}">{{ link.title }}</a>
+                </li>
+
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </nav>
+      </div>
+      <div class="col-lg-3 col-md-3">
+        <div class="header__nav__option">
+          <a href="#" class="search-switch"><img src="img/icon/search.png" alt=""></a>
+          <a href="#"><img src="img/icon/heart.png" alt=""></a>
+          <a href="#"><img src="img/icon/cart.png" alt="">
+            <span>0</span>
+          </a>
+          <div class="price">$0.00</div>
+        </div>
+      </div>
+    </div>
+    <div class="canvas__open">
+      <i class="fa fa-bars" aria-hidden="false"></i>
+    </div>
+  </div>
+</header>
 <!-- Header Section End -->
 
 
