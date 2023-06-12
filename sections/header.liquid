@@ -30,11 +30,11 @@
                 class="nav-link dropdown-toggle"
                 href="#"
                 role="button"
-                data-bs-toggle="dropdown"
+                data-bs-toggle="dropdown-menu"
                 aria-expanded="false">
                 {{ link.title }}
               </a>
-              <ul class="dropdown-menu dropdown">
+              <ul class="dropdown-menu">
                 {% for childlink in link.links %}
                   <li>
                     <a class="dropdown-item" href="{{ childlink.url }}">{{ childlink.title }}</a>
