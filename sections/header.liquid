@@ -22,6 +22,29 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        {% for link in main_menu_linklist %}
+          {% if link.links != blank %}
+            {% assign link_handle = link.handle | replace: '-', '_' %}
+            <li>
+              <a href="#" x-data="{ {{ link_handle }}: false }">{{ link.title }}</a>
+
+              <ul class="dropdown">
+                {% for childlink in link.links %}
+                  <li>
+                    <a href="{{ childlink.url }}" class="hover:bg-gray-300 hover:text-gray-900">{{ childlink.title }}</a>
+                  </li>
+                {% endfor %}
+              </ul>
+            </li>
+
+          {% else %}
+
+            <li class="aactive">
+              <a href="{{ link.url }}">{{ link.title }}</a>
+            </li>
+
+          {% endif %}
+        {% endfor %}
         <li class="nav-item">
           <a
             class="nav-link active"
