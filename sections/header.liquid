@@ -190,21 +190,9 @@
       </div>
       <div class="col-lg-3 col-md-3">
         <div class="header__nav__option">
-          <a href="#" class="search-switch">{{ }}<img
-              src="{{ 'search.png' | asset_img_url }}"
-              alt=""
-              width=""
-              height=""></a>
-          <a href="#"><img
-              src="{{ 'heart.png' | asset_img_url }}"
-              alt=""
-              width=""
-              height=""></a>
-          <a href="#"><img
-              src="{{ 'cart.png' | asset_img_url }}"
-              alt=""
-              width=""
-              height="">
+          <a href="#" class="search-switch">{{ 'search.png' | asset_img_url | img_tag }}</a>
+          <a href="#">{{ 'heart.png' | asset_img_url | img_tag }}</a>
+          <a href="#">{{ 'cart.png' | asset_img_url | img_tag }}
             <span>0</span>
           </a>
           <div class="price">$0.00</div>
