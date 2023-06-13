@@ -156,24 +156,6 @@
             {% for link in main_menu_linklist %}
               {% if link.links != blank %}
 
-                <li class="nav-item dropdown pl-3 pr-3">
-                  <a
-                    class="dropdown-toggle top_header_link"
-                    href="#"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    {{ link.title }}
-                  </a>
-                  <ul class="dropdown-menu">
-                    {% for childlink in link.links %}
-                      <li>
-                        <a href="{{ childlink.url }}" class="dropdown-item top_header_link">{{ childlink.title }}</a>
-                      </li>
-                    {% endfor %}
-                  </ul>
-                </li>
-
                 <li>
                   <a href="#">{{ link.title }}</a>
 
