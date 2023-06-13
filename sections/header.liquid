@@ -162,21 +162,12 @@
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false">
-                  Dropdown
+                  {{ link.title }}
                 </a>
                 <ul class="dropdown-menu">
-                  <li>
-                    <a class="dropdown-item" href="#">Action</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="#">{{ link.title }}</a>
-
-                <ul class="dropdown">
                   {% for childlink in link.links %}
                     <li>
-                      <a href="{{ childlink.url }}" class="hover:bg-gray-300 hover:text-gray-900">{{ childlink.title }}</a>
+                      <a href="{{ childlink.url }}" class="dropdown-item">{{ childlink.title }}</a>
                     </li>
                   {% endfor %}
                 </ul>
