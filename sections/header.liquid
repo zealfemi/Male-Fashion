@@ -184,14 +184,13 @@
             {% endfor %}
           </ul>
         </div>
-        <form class="d-flex mt-3" role="search">
-          <input
-            class="form-control me-2"
-            type="search"
-            placeholder="Search"
-            aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
+        <div class="header__nav__option">
+          <a href="#" class="search-switch">{{ 'search.png' | asset_img_url | img_tag }}</a>
+          <a href="#">{{ 'heart.png' | asset_img_url | img_tag }}</a>
+          <a href="#">{{ 'cart.png' | asset_img_url | img_tag }}<span>0</span>
+          </a>
+          <div class="price">$0.00</div>
+        </div>
       </div>
     </div>
   </nav>
