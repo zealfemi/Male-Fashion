@@ -152,7 +152,7 @@
             aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
-          <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+          <ul class="navbar-nav justify-content-center flex-grow-1 pe-3 ">
             {% for link in main_menu_linklist %}
               {% if link.links != blank %}
 
@@ -177,7 +177,7 @@
                 <li>
                   <a href="#">{{ link.title }}</a>
 
-                  <ul class="drop_down">
+                  <ul class="dropdown">
                     {% for childlink in link.links %}
                       <li>
                         <a href="{{ childlink.url }}" class="hover:bg-gray-300 hover:text-gray-900">{{ childlink.title }}</a>
