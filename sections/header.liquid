@@ -111,89 +111,90 @@
 </header>
 
 <!-- Header Section End -->
+<div class="pt-20 pb-20">
+  <nav class="navbar d-lg-none">
+    <div class="container-fluid">
+      {% if section.settings.logo != blank %}
+        <div class="navbar-brand">
+          <a href="{{ shop.url }}"><img
+              src="{{ section.settings.logo | img_url: 'medium' }}"
+              alt="{{ shop.name }}"
+              width=""
+              height=""></a>
+        </div>
 
-<nav class="navbar d-lg-none pt-20 pb-20">
-  <div class="container-fluid">
-    {% if section.settings.logo != blank %}
-      <div class="navbar-brand">
-        <a href="{{ shop.url }}"><img
-            src="{{ section.settings.logo | img_url: 'medium' }}"
-            alt="{{ shop.name }}"
-            width=""
-            height=""></a>
-      </div>
+      {% else %}
+        <a href="{{ shop.url }}">
+          <h1 class="navbar-brand uppercase truncate font-bold" href="{{ shop.url }}">{{ shop.name }}</h1>
+        </a>
+      {% endif %}
+      <button
+        class="canvas_open flex align-content-center align-items-center"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasDarkNavbar"
+        aria-controls="offcanvasDarkNavbar"
+        aria-label="Toggle navigation">
+        {% render 'icon-menu' %}
+      </button>
+      <div
+        class="offcanvas offcanvas-end text-bg-dark"
+        tabindex="-1"
+        id="offcanvasDarkNavbar"
+        aria-labelledby="offcanvasDarkNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title text-white" id="offcanvasDarkNavbarLabel">Dark offcanvas</h5>
+          <button
+            type="button"
+            class="btn-close btn-close-white"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body text-white">
+          <ul class="navbar-nav justify-content-center flex-grow-1 pe-3 header-menu">
+            {% for link in main_menu_linklist %}
+              {% if link.links != blank %}
 
-    {% else %}
-      <a href="{{ shop.url }}">
-        <h1 class="navbar-brand uppercase truncate font-bold" href="{{ shop.url }}">{{ shop.name }}</h1>
-      </a>
-    {% endif %}
-    <button
-      class="canvas_open flex align-content-center align-items-center"
-      type="button"
-      data-bs-toggle="offcanvas"
-      data-bs-target="#offcanvasDarkNavbar"
-      aria-controls="offcanvasDarkNavbar"
-      aria-label="Toggle navigation">
-      {% render 'icon-menu' %}
-    </button>
-    <div
-      class="offcanvas offcanvas-end text-bg-dark"
-      tabindex="-1"
-      id="offcanvasDarkNavbar"
-      aria-labelledby="offcanvasDarkNavbarLabel">
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title text-white" id="offcanvasDarkNavbarLabel">Dark offcanvas</h5>
-        <button
-          type="button"
-          class="btn-close btn-close-white"
-          data-bs-dismiss="offcanvas"
-          aria-label="Close"></button>
-      </div>
-      <div class="offcanvas-body text-white">
-        <ul class="navbar-nav justify-content-center flex-grow-1 pe-3 header-menu">
-          {% for link in main_menu_linklist %}
-            {% if link.links != blank %}
+                <li class="nav-item dropdown pl-3 pr-3">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    {{ link.title }}
+                  </a>
+                  <ul class="dropdown-menu">
+                    {% for childlink in link.links %}
+                      <li>
+                        <a href="{{ childlink.url }}" class="dropdown-item">{{ childlink.title }}</a>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                </li>
 
-              <li class="nav-item dropdown pl-3 pr-3">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false">
-                  {{ link.title }}
-                </a>
-                <ul class="dropdown-menu">
-                  {% for childlink in link.links %}
-                    <li>
-                      <a href="{{ childlink.url }}" class="dropdown-item">{{ childlink.title }}</a>
-                    </li>
-                  {% endfor %}
-                </ul>
-              </li>
+              {% else %}
 
-            {% else %}
+                <li class="nav-item pl-3 pr-3">
+                  <a class="nav-link" href="{{ link.url }}">{{ link.title }}</a>
+                </li>
 
-              <li class="nav-item pl-3 pr-3">
-                <a class="nav-link" href="{{ link.url }}">{{ link.title }}</a>
-              </li>
-
-            {% endif %}
-          {% endfor %}
-        </ul>
-        <form class="d-flex mt-3" role="search">
-          <input
-            class="form-control me-2"
-            type="search"
-            placeholder="Search"
-            aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
+              {% endif %}
+            {% endfor %}
+          </ul>
+          <form class="d-flex mt-3" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
       </div>
     </div>
-  </div>
-</nav>
+  </nav>
+</div>
 
 {% schema %}
   {
