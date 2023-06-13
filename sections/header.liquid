@@ -113,7 +113,7 @@
 <!-- Header Section End -->
 <div class="container align-items-center">
   <nav class="navbar navbar-expand-md">
-    <div class="container-fluid justify-content-between">
+    <div class="container-fluid justify-content-center">
       {% if section.settings.logo != blank %}
         <div class="navbar-brand">
           <a href="{{ shop.url }}"><img
@@ -151,7 +151,7 @@
             data-bs-dismiss="offcanvas"
             aria-label="Close"></button>
         </div>
-        <div class="offcanvas-body header__menu">
+        <div class="offcanvas-body">
           <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
             {% for link in main_menu_linklist %}
               {% if link.links != blank %}
