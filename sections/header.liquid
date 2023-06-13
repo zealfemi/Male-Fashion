@@ -125,10 +125,10 @@
 
     {% else %}
       <a href="{{ shop.url }}">
-        <h1 class="header__logo text-xl font-bold truncate uppercase">{{ shop.name }}</h1>
+        <h1 class="navbar-brand" href="{{ shop.url }}">{{ shop.name }}</h1>
       </a>
     {% endif %}
-    <a class="navbar-brand" href="#">Offcanvas navbar</a>
+
     <button
       class="navbar-toggler"
       type="button"
