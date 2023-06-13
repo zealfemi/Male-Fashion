@@ -113,7 +113,7 @@
 <!-- Header Section End -->
 <div class="container align-items-center">
   <nav class="navbar navbar-expand-md">
-    <div class="container-fluid justify-content-center">
+    <div class="container-fluid justify-content-between">
       {% if section.settings.logo != blank %}
         <div class="navbar-brand">
           <a href="{{ shop.url }}"><img
@@ -152,7 +152,7 @@
             aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
-          <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+          <ul class="navbar-nav justify-content-center flex-grow-1 pe-3 header-menu">
             {% for link in main_menu_linklist %}
               {% if link.links != blank %}
 
@@ -196,20 +196,6 @@
     </div>
   </nav>
 </div>
-
-<!-- Search Begin -->
-<div class="search-model">
-  <div class="h-100 d-flex align-items-center justify-content-center">
-    <div class="search-close-switch">+</div>
-    <form class="search-model-form">
-      <input
-        type="text"
-        id="search-input"
-        placeholder="Search here.....">
-    </form>
-  </div>
-</div>
-<!-- Search End -->
 
 
 {% schema %}
