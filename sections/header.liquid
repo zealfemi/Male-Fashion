@@ -156,21 +156,28 @@
             {% for link in main_menu_linklist %}
               {% if link.links != blank %}
 
-                <li>
-                  <a href="#">{{ link.title }}</a>
-
-                  <ul class="dropdown">
+                <li class="nav-item dropdown pl-3 pr-3">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    {{ link.title }}
+                  </a>
+                  <ul class="dropdown-menu">
                     {% for childlink in link.links %}
                       <li>
-                        <a href="{{ childlink.url }}" class="hover:bg-gray-300 hover:text-gray-900">{{ childlink.title }}</a>
+                        <a href="{{ childlink.url }}" class="dropdown-item">{{ childlink.title }}</a>
                       </li>
                     {% endfor %}
                   </ul>
                 </li>
+
               {% else %}
 
                 <li class="nav-item pl-3 pr-3">
-                  <a class="top_header_link" href="{{ link.url }}">{{ link.title }}</a>
+                  <a class="nav-link" href="{{ link.url }}">{{ link.title }}</a>
                 </li>
 
               {% endif %}
