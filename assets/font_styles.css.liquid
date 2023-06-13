@@ -1,9 +1,14 @@
-.top_header {
-  padding-left: 15px;
-  padding-right: 15px;
+.top_header a {
+  font-size: 18px;
+  color: #111111;
+  display: block;
+  font-weight: 600;
+  position: relative;
+  padding: 3px 0;
 }
 
-{% assign font_header = settings.header_text_font %};
+{% assign font_header = settings.header_text_font %}
+;
 
 {% assign font_body = settings.body_text_font %}
 {{ font_header | font_face}}
