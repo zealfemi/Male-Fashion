@@ -6,6 +6,7 @@
         "da96cff6-79dd-4410-8ba6-5f248d929a62": {
           "type": "image",
           "settings": {
+            "slide_image": "shopify:\/\/shop_images\/hero-1.jpg",
             "collection": "",
             "title": "Title",
             "description": "Description",
@@ -22,18 +23,9 @@
       ],
       "settings": {
       }
-    },
-    "featured-collection": {
-      "type": "featured-collection",
-      "settings": {
-        "featured_collection_title": "Featured Collection",
-        "featured_collection": "all",
-        "number_of_products": 4
-      }
     }
   },
   "order": [
-    "c1f9707e-d274-49fa-96b1-b52448900b59",
-    "featured-collection"
+    "c1f9707e-d274-49fa-96b1-b52448900b59"
   ]
 }
