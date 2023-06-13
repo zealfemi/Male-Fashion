@@ -151,7 +151,7 @@
             data-bs-dismiss="offcanvas"
             aria-label="Close"></button>
         </div>
-        <div class="offcanvas-body header__menu">
+        <div class="offcanvas-body">
           <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
             {% for link in main_menu_linklist %}
               {% if link.links != blank %}
@@ -183,15 +183,14 @@
               {% endif %}
             {% endfor %}
           </ul>
-          <div class="col-lg-3 col-md-3">
-            <div class="header__nav__option">
-              <a href="#" class="search-switch">{{ 'search.png' | asset_img_url | img_tag }}</a>
-              <a href="#">{{ 'heart.png' | asset_img_url | img_tag }}</a>
-              <a href="#">{{ 'cart.png' | asset_img_url | img_tag }}<span>0</span>
-              </a>
-              <div class="price">$0.00</div>
-            </div>
-          </div>
+          <form class="d-flex mt-3" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
         </div>
       </div>
     </div>
