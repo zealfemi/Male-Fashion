@@ -178,9 +178,9 @@ s
           <ul>
             {% for link in main_menu_linklist %}
               {% if link.links != blank %}
-                {% assign link_handle = link.handle | replace: '-', '_' %}
+
                 <li>
-                  <a href="#" x-data="{ {{ link_handle }}: false }">{{ link.title }}</a>
+                  <a href="#">{{ link.title }}</a>
 
                   <ul class="dropdown">
                     {% for childlink in link.links %}
