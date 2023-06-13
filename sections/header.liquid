@@ -237,40 +237,36 @@
           aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
-        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-          <li class="nav-item">
-            <a
-              class="nav-link active"
-              aria-current="page"
-              href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false">
-              Dropdown
-            </a>
-            <ul class="dropdown-menu dropdown-menu-dark">
-              <li>
-                <a class="dropdown-item" href="#">Action</a>
+        <ul class="navbar-nav justify-content-center flex-grow-1 pe-3 header-menu">
+          {% for link in main_menu_linklist %}
+            {% if link.links != blank %}
+
+              <li class="nav-item dropdown pl-3 pr-3">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  {{ link.title }}
+                </a>
+                <ul class="dropdown-menu">
+                  {% for childlink in link.links %}
+                    <li>
+                      <a href="{{ childlink.url }}" class="dropdown-item">{{ childlink.title }}</a>
+                    </li>
+                  {% endfor %}
+                </ul>
               </li>
-              <li>
-                <a class="dropdown-item" href="#">Another action</a>
+
+            {% else %}
+
+              <li class="nav-item pl-3 pr-3">
+                <a class="nav-link" href="{{ link.url }}">{{ link.title }}</a>
               </li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </li>
-            </ul>
-          </li>
+
+            {% endif %}
+          {% endfor %}
         </ul>
         <form class="d-flex mt-3" role="search">
           <input
@@ -278,7 +274,7 @@
             type="search"
             placeholder="Search"
             aria-label="Search">
-          <button class="btn btn-success" type="submit">Search</button>
+          <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
       </div>
     </div>
