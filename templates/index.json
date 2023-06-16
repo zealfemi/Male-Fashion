@@ -1,5 +1,28 @@
 {
   "sections": {
+    "9c8bca83-7121-487e-a298-0efe1a046696": {
+      "type": "slideshow",
+      "blocks": {
+        "41fd683e-a3fc-4930-ae95-b35ce1aa1a48": {
+          "type": "image",
+          "settings": {
+            "collection": "",
+            "title": "Title",
+            "description": "Description",
+            "btn_url": "",
+            "btn_text": "",
+            "facebook_url": "",
+            "twitter_url": "",
+            "instagram_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "41fd683e-a3fc-4930-ae95-b35ce1aa1a48"
+      ],
+      "settings": {
+      }
+    },
     "fbb7f79b-d0c3-44f2-af2a-adcdc58ca508": {
       "type": "banner",
       "blocks": {
@@ -41,6 +64,7 @@
     }
   },
   "order": [
+    "9c8bca83-7121-487e-a298-0efe1a046696",
     "fbb7f79b-d0c3-44f2-af2a-adcdc58ca508"
   ]
 }
