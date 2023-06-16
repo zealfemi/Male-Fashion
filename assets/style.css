@@ -1398,7 +1398,8 @@ ol {
 .shop__sidebar__accordion .card-heading a:after,
 .shop__sidebar__accordion
   .card-heading
-  > a.active[aria-expanded="false"]:after {
+  > a
+  .active[aria-expanded="false"]:after {
   content: "";
   font-family: "FontAwesome";
   font-size: 24px;
@@ -1410,7 +1411,7 @@ ol {
   line-height: 20px;
 }
 
-.shop__sidebar__accordion .card-heading.active a:after {
+.shop__sidebar__accordion .card-heading .active a:after {
   content: "";
   font-family: "FontAwesome";
   font-size: 24px;
@@ -1558,8 +1559,8 @@ ol {
   text-align: center;
 }
 
-.product__details__pic .nav-tabs .nav-item.show .nav-link,
-.product__details__pic .nav-tabs .nav-link.active {
+.product__details__pic .nav-tabs .nav-item .show .nav-link,
+.product__details__pic .nav-tabs .nav-link .active {
   background-color: transparent;
   border-color: transparent;
 }
@@ -1684,7 +1685,7 @@ ol {
   cursor: pointer;
 }
 
-.product__details__option__size label.active {
+.product__details__option__size label .active {
   background: #111111;
   color: #ffffff;
   border-color: #111111;
