@@ -9,7 +9,11 @@
           <div class="col-lg-7 offset-lg-4">
             <div class="banner__item">
               <div class="banner__item__pic">
-                <img src="img/banner/banner-1.jpg" alt="">
+                <img
+                  src="{{ block.settings.banner_pic | img_url: 'master' }}"
+                  alt="{{ block.settings.banner_pic.alt }}"
+                  width=""
+                  height="">
               </div>
               <div class="banner__item__text">
                 <h2>Clothing Collections 2030</h2>
