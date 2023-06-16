@@ -548,17 +548,17 @@ ol {
   Hero
 -----------------------*/
 
-.hero__slider.owl-carousel .owl-item.active .hero__text h6 {
+.hero__slider .owl-carousel .owl-item .active .hero__text h6 {
   top: 0;
   opacity: 1;
 }
 
-.hero__slider.owl-carousel .owl-item.active .hero__text h2 {
+.hero__slider .owl-carousel .owl-item .active .hero__text h2 {
   top: 0;
   opacity: 1;
 }
 
-.hero__slider.owl-carousel .owl-item.active .hero__text p {
+.hero__slider .owl-carousel .owl-item .active .hero__text p {
   top: 0;
   opacity: 1;
 }
