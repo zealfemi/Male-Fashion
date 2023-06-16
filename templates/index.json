@@ -6,6 +6,7 @@
         "41fd683e-a3fc-4930-ae95-b35ce1aa1a48": {
           "type": "image",
           "settings": {
+            "slide_image": "shopify:\/\/shop_images\/hero-1.jpg",
             "collection": "",
             "title": "Title",
             "description": "Description",
