@@ -563,12 +563,12 @@ ol {
   opacity: 1;
 }
 
-.hero__slider.owl-carousel .owl-item.active .hero__text .primary-btn {
+.hero__slider .owl-carousel .owl-item .active .hero__text .primary-btn {
   top: 0;
   opacity: 1;
 }
 
-.hero__slider.owl-carousel .owl-nav button {
+.hero__slider .owl-carousel .owl-nav button {
   font-size: 36px;
   color: #333333;
   position: absolute;
@@ -578,7 +578,7 @@ ol {
   line-height: 29px;
 }
 
-.hero__slider.owl-carousel .owl-nav button.owl-next {
+.hero__slider .owl-carousel .owl-nav button .owl-next {
   left: auto;
   right: 75px;
 }
@@ -935,7 +935,7 @@ ol {
   margin-right: 0;
 }
 
-.filter__controls li.active {
+.filter__controls li .active {
   color: #111111;
 }
 
