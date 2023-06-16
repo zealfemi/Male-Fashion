@@ -2,6 +2,37 @@
   "sections": {
     "fbb7f79b-d0c3-44f2-af2a-adcdc58ca508": {
       "type": "banner",
+      "blocks": {
+        "6a85b37f-e738-4e2e-83e7-032ccb2f7283": {
+          "type": "first_block",
+          "settings": {
+            "collection": "",
+            "button_url": "",
+            "button_text": ""
+          }
+        },
+        "a3ece014-2c6d-4722-a46a-5e24df5fb4fb": {
+          "type": "second_block",
+          "settings": {
+            "collection": "",
+            "button_url": "",
+            "button_text": ""
+          }
+        },
+        "685f74a0-fa1f-4ca3-9c2e-e8028f9803b7": {
+          "type": "third_block",
+          "settings": {
+            "collection": "",
+            "button_url": "",
+            "button_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "6a85b37f-e738-4e2e-83e7-032ccb2f7283",
+        "a3ece014-2c6d-4722-a46a-5e24df5fb4fb",
+        "685f74a0-fa1f-4ca3-9c2e-e8028f9803b7"
+      ],
       "settings": {
       }
     }
