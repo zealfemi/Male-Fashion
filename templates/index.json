@@ -1,31 +1,12 @@
 {
   "sections": {
-    "c1f9707e-d274-49fa-96b1-b52448900b59": {
-      "type": "slideshow",
-      "blocks": {
-        "da96cff6-79dd-4410-8ba6-5f248d929a62": {
-          "type": "image",
-          "settings": {
-            "slide_image": "shopify:\/\/shop_images\/hero-1.jpg",
-            "collection": "",
-            "title": "Title",
-            "description": "Description",
-            "btn_url": "",
-            "btn_text": "",
-            "facebook_url": "",
-            "twitter_url": "",
-            "instagram_url": ""
-          }
-        }
-      },
-      "block_order": [
-        "da96cff6-79dd-4410-8ba6-5f248d929a62"
-      ],
+    "fbb7f79b-d0c3-44f2-af2a-adcdc58ca508": {
+      "type": "banner",
       "settings": {
       }
     }
   },
   "order": [
-    "c1f9707e-d274-49fa-96b1-b52448900b59"
+    "fbb7f79b-d0c3-44f2-af2a-adcdc58ca508"
   ]
 }
