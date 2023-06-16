@@ -3453,7 +3453,7 @@ ol {
   .banner__item .banner__item--middle {
     margin-top: 0;
   }
-  .banner__item.banner__item--last {
+  .banner__item .banner__item--last {
     margin-top: 0;
   }
   .banner__item {
@@ -3532,7 +3532,7 @@ ol {
     transition: all, 0.5s;
     visibility: hidden;
   }
-  .offcanvas-menu-overlay.active {
+  .offcanvas-menu-overlay .active {
     visibility: visible;
   }
   .offcanvas-menu-wrapper {
@@ -3550,7 +3550,7 @@ ol {
     transition: all, 0.5s;
     opacity: 0;
   }
-  .offcanvas-menu-wrapper.active {
+  .offcanvas-menu-wrapper .active {
     opacity: 1;
     left: 0;
   }
@@ -3704,18 +3704,18 @@ ol {
     width: 100%;
     font-size: 24px;
   }
-  .hero__slider.owl-carousel .owl-nav button {
+  .hero__slider .owl-carousel .owl-nav button {
     left: 15px;
     top: 80%;
   }
-  .hero__slider.owl-carousel .owl-nav button.owl-next {
+  .hero__slider .owl-carousel .owl-nav button .owl-next {
     left: 75px;
     right: 0;
   }
-  .banner__item.banner__item--middle {
+  .banner__item .banner__item--middle {
     margin-top: 0;
   }
-  .banner__item.banner__item--last {
+  .banner__item .banner__item--last {
     margin-top: 0;
   }
   .banner__item {
@@ -3799,7 +3799,7 @@ ol {
   .continue__btn {
     text-align: center;
   }
-  .continue__btn.update__btn {
+  .continue__btn .update__btn {
     text-align: center;
     margin-top: 20px;
   }
