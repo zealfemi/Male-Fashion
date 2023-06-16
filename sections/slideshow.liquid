@@ -3,7 +3,7 @@
     <div class="carousel-inner">
 
       {% for block in section.blocks %}
-        <div class="carousel-item active">
+        <div class="carousel-item active set-bg">
           <img
             src="{{ block.settings.slide_image | img_url: 'master' }}"
             class="d-block w-100"
@@ -33,70 +33,44 @@
   </div>
 </section>
 
+
+<!-- Hero Section Begin -->
 <section class="hero">
-  <div class="hero__slider owl-carousel owl-loaded owl-drag">
+  <div class="hero__slider owl-carousel">
 
+    {% for block in section.blocks %}
 
-    <div class="owl-stage-outer">
-      <div class="owl-stage" style="transform: translate3d(-968px, 0px, 0px); transition: all 0s ease 0s; width: 2904px;">
-        {% for block in section.blocks %}
-
-          <div class="hero__items set-bg" data-setbg="{{ block.settings.slide_image | img_url: 'master' }}">
-            <div class="container">
-              <div class="row">
-                <div class="col-xl-5 col-lg-7 col-md-8">
-                  <div class="hero__text">
-                    <h6>{{ block.settings.collection.title }}</h6>
-                    <h2>{{ block.settings.title }}</h2>
-                    <p>{{ block.settings.description }}</p>
-                    <a href="{{ block.settings.btn_url }}" class="primary-btn">
-                      {{ block.settings.btn_text }}<span class="arrow_right"></span>
-                    </a>
-                    <div class="hero__social">
-                      <a href="{{ block.settings.facebook_url }}">
-                        <i class="fa fa-facebook"></i>
-                      </a>
-                      <a href="{{ block.settings.twitter_url }}">
-                        <i class="fa fa-twitter"></i>
-                      </a>
-                      <a href="{{ block.settings.instgram_url }}">
-                        <i class="fa fa-instagram"></i>
-                      </a>
-                    </div>
-                  </div>
+      <div class="hero__items set-bg" data-setbg="{{ block.settings.slide_image | img_url: 'master' }}">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-5 col-lg-7 col-md-8">
+              <div class="hero__text">
+                <h6>{{ block.settings.collection.title }}</h6>
+                <h2>{{ block.settings.title }}</h2>
+                <p>{{ block.settings.description }}</p>
+                <a href="{{ block.settings.btn_url }}" class="primary-btn">
+                  {{ block.settings.btn_text }}<span class="arrow_right"></span>
+                </a>
+                <div class="hero__social">
+                  <a href="{{ block.settings.facebook_url }}">
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                  <a href="{{ block.settings.twitter_url }}">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                  <a href="{{ block.settings.instgram_url }}">
+                    <i class="fa fa-instagram"></i>
+                  </a>
                 </div>
               </div>
             </div>
           </div>
-
-        {% endfor %}
+        </div>
       </div>
-    </div>
-    <div class="owl-nav">
-      <button
-        type="button"
-        role="presentation"
-        class="owl-prev">
-        <span class="arrow_left">
-          <span></span>
-        </span>
-      </button>
-      <button
-        type="button"
-        role="presentation"
-        class="owl-next">
-        <span class="arrow_right">
-          <span></span>
-        </span>
-      </button>
-    </div>
-    <div class="owl-dots disabled"></div>
+
+    {% endfor %}
   </div>
 </section>
-
-<!-- Hero Section Begin -->
-
-
 <!-- Hero Section End -->
 
 {% schema %}
