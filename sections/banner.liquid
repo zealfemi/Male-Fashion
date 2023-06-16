@@ -1,69 +1,66 @@
 <!-- Banner Section Begin -->
-{% for block in section.blocks %}
-  {% case block.type %}
-    <section>
-      <div class="banner spad">
-        <div class="container">
-          <div class="row">
-
-            {% when 'first_block' %}
-            <div class="col-lg-7 offset-lg-4">
-              <div class="banner__item">
-                {% if block.settings.banner_pic != blank %}
-                  <div class="banner__item__pic">
-                    <img
-                      src="{{ block.settings.banner_pic | img_url: 'master' }}"
-                      alt="{{ block.settings.banner_pic.alt }}"
-                      width=""
-                      height="">
-                  </div>
-                {% endif %}
-                <div class="banner__item__text">
-                  <h2>{{ block.settings.title }}</h2>
-                  <a href="{{ block.settings.button_url }}">{{ block.settings.button_text }}</a>
+<section class="banner spad">
+  <div class="container">
+    <div class="row">
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {% when 'first_block' %}
+          <div class="col-lg-7 offset-lg-4">
+            <div class="banner__item">
+              {% if block.settings.banner_pic != blank %}
+                <div class="banner__item__pic">
+                  <img
+                    src="{{ block.settings.banner_pic | img_url: 'master' }}"
+                    alt="{{ block.settings.banner_pic.alt }}"
+                    width=""
+                    height="">
                 </div>
+              {% endif %}
+              <div class="banner__item__text">
+                <h2>{{ block.settings.title }}</h2>
+                <a href="{{ block.settings.button_url }}">{{ block.settings.button_text }}</a>
               </div>
             </div>
-
-            {% when 'second_block' %}
-            <div class="col-lg-5">
-              <div class="banner__item banner__item--middle">
-                {% if block.settings.banner_pic != blank %}
-                  <div class="banner__item__pic">
-                    <img
-                      src="{{ block.settings.banner_pic | img_url: 'master' }}"
-                      alt="{{ block.settings.banner_pic.alt }}"
-                      width=""
-                      height="">
-                  </div>
-                {% endif %}
-                <div class="banner__item__text">
-                  <h2>{{ block.settings.title }}</h2>
-                  <a href="{{ block.settings.button_url }}">{{ block.settings.button_text }}</a>
-                </div>
-              </div>
-            </div>
-
-            {% when 'third_block' %}
-            <div class="col-lg-7">
-              <div class="banner__item banner__item--last">
-                {% if block.settings.banner_pic != blank %}
-                  <div class="banner__item__pic">
-                    <img
-                      src="{{ block.settings.banner_pic | img_url: 'master' }}"
-                      alt="{{ block.settings.banner_pic.alt }}"
-                      width=""
-                      height="">
-                  </div>
-                {% endif %}
-                <div class="banner__item__text">
-                  <h2>{{ block.settings.title }}</h2>
-                  <a href="{{ block.settings.button_url }}">{{ block.settings.button_text }}</a>
-                </div>
-              </div>
-            </div>
-
           </div>
+
+          {% when 'second_block' %}
+          <div class="col-lg-5">
+            <div class="banner__item banner__item--middle">
+              {% if block.settings.banner_pic != blank %}
+                <div class="banner__item__pic">
+                  <img
+                    src="{{ block.settings.banner_pic | img_url: 'master' }}"
+                    alt="{{ block.settings.banner_pic.alt }}"
+                    width=""
+                    height="">
+                </div>
+              {% endif %}
+              <div class="banner__item__text">
+                <h2>{{ block.settings.title }}</h2>
+                <a href="{{ block.settings.button_url }}">{{ block.settings.button_text }}</a>
+              </div>
+            </div>
+          </div>
+
+          {% when 'third_block' %}
+          <div class="col-lg-7">
+            <div class="banner__item banner__item--last">
+              {% if block.settings.banner_pic != blank %}
+                <div class="banner__item__pic">
+                  <img
+                    src="{{ block.settings.banner_pic | img_url: 'master' }}"
+                    alt="{{ block.settings.banner_pic.alt }}"
+                    width=""
+                    height="">
+                </div>
+              {% endif %}
+              <div class="banner__item__text">
+                <h2>{{ block.settings.title }}</h2>
+                <a href="{{ block.settings.button_url }}">{{ block.settings.button_text }}</a>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
