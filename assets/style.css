@@ -3055,15 +3055,15 @@ ol {
   background: #4267b2;
 }
 
-.blog__details__share ul li a.twitter {
+.blog__details__share ul li a .twitter {
   background: #1da1f2;
 }
 
-.blog__details__share ul li a.youtube {
+.blog__details__share ul li a .youtube {
   background: #fe0003;
 }
 
-.blog__details__share ul li a.linkedin {
+.blog__details__share ul li a .linkedin {
   background: #0173b2;
 }
 
@@ -3169,11 +3169,11 @@ ol {
   margin-bottom: 30px;
 }
 
-.blog__details__btns__item.blog__details__btns__item--next {
+.blog__details__btns__item .blog__details__btns__item--next {
   text-align: right;
 }
 
-.blog__details__btns__item.blog__details__btns__item--next p span {
+.blog__details__btns__item .blog__details__btns__item--next p span {
   margin-right: 0;
   margin-left: 5px;
 }
@@ -3424,7 +3424,7 @@ ol {
   .hero__slider .owl-carousel .owl-nav button {
     left: 2px;
   }
-  .hero__slider .owl-carousel .owl-nav button.owl-next {
+  .hero__slider .owl-carousel .owl-nav button .owl-next {
     right: 2px;
   }
   .testimonial__text {
@@ -3447,7 +3447,7 @@ ol {
   .hero__slider .owl-carousel .owl-nav button {
     left: 2px;
   }
-  .hero__slider .owl-carousel .owl-nav button.owl-next {
+  .hero__slider .owl-carousel .owl-nav button .owl-next {
     right: 2px;
   }
   .banner__item .banner__item--middle {
