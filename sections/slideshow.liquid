@@ -1,38 +1,124 @@
-<div id="carouselExampleFade" class="carousel slide carousel-fade">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img
-        src="..."
-        class="d-block w-100"
-        alt="...">
-    </div>
-    <div class="carousel-item">
-      <img
-        src="..."
-        class="d-block w-100"
-        alt="...">
-    </div>
-    <div class="carousel-item">
-      <img
-        src="..."
-        class="d-block w-100"
-        alt="...">
-    </div>
+<!-- Hero Section Begin -->
+<section class="hero">
+  <div class="hero__slider owl-carousel">
+
+    {% for block in section.blocks %}
+      <div id="carouselExampleFade" class="carousel slide carousel-fade">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="{{ block.settings.slide_image }}"
+              class="d-block w-100"
+              alt="...">
+          </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleFade"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleFade"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <div class="hero__items set-bg" data-setbg="{{ block.settings.slide_image | img_url: 'master' }}">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-5 col-lg-7 col-md-8">
+              <div class="hero__text">
+                <h6>{{ block.settings.collection.title }}</h6>
+                <h2>{{ block.settings.title }}</h2>
+                <p>{{ block.settings.description }}</p>
+                <a href="{{ block.settings.btn_url }}" class="primary-btn">
+                  {{ block.settings.btn_text }}<span class="arrow_right"></span>
+                </a>
+                <div class="hero__social">
+                  <a href="{{ block.settings.facebook_url }}">
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                  <a href="{{ block.settings.twitter_url }}">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                  <a href="{{ block.settings.instgram_url }}">
+                    <i class="fa fa-instagram"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    {% endfor %}
   </div>
-  <button
-    class="carousel-control-prev"
-    type="button"
-    data-bs-target="#carouselExampleFade"
-    data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button
-    class="carousel-control-next"
-    type="button"
-    data-bs-target="#carouselExampleFade"
-    data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
+</section>
+<!-- Hero Section End -->
+
+{% schema %}
+  {
+    "name": "SlideShow",
+    "blocks": [
+      {
+        "name": "Slide",
+        "type": "image",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "slide_image",
+            "label": "Slide Image"
+          },
+          {
+            "type": "collection",
+            "id": "collection",
+            "label": "Collection"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default": "Title"
+          },
+          {
+            "type": "text",
+            "id": "description",
+            "label": "Description",
+            "default": "Description"
+          }, {
+            "type": "url",
+            "id": "btn_url",
+            "label": "Button URL"
+          }, {
+            "type": "text",
+            "id": "btn_text",
+            "label": "Button Text"
+          }, {
+            "type": "url",
+            "id": "facebook_url",
+            "label": "Facebook URL"
+          }, {
+            "type": "url",
+            "id": "twitter_url",
+            "label": "Twitter URL"
+          }, {
+            "type": "url",
+            "id": "instagram_url",
+            "label": "Instagram URL"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Slideshow"
+      }
+    ]
+  }
+{% endschema %}
