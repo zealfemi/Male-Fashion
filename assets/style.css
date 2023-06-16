@@ -1119,15 +1119,15 @@ ol {
   cursor: pointer;
 }
 
-.product__item__text .product__color__select label.black {
+.product__item__text .product__color__select label .black {
   background: #404a47;
 }
 
-.product__item__text .product__color__select label.grey {
+.product__item__text .product__color__select label .grey {
   background: #d5a667;
 }
 
-.product__item__text .product__color__select label.active:after {
+.product__item__text .product__color__select label .active:after {
   opacity: 1;
 }
 
