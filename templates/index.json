@@ -17,16 +17,17 @@
           "settings": {
             "banner_pic": "shopify:\/\/shop_images\/banner-2.jpg",
             "title": "Accessories",
-            "button_url": "shopify:\/\/collections\/shoes",
+            "button_url": "shopify:\/\/collections\/women",
             "button_text": "Shop now"
           }
         },
         "685f74a0-fa1f-4ca3-9c2e-e8028f9803b7": {
           "type": "third_block",
           "settings": {
-            "title": "Title",
-            "button_url": "",
-            "button_text": ""
+            "banner_pic": "shopify:\/\/shop_images\/banner-3.jpg",
+            "title": "Shoes Spring 2030",
+            "button_url": "shopify:\/\/collections\/shoes",
+            "button_text": "Shop now"
           }
         }
       },
