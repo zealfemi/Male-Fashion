@@ -1,8 +1,4 @@
-<!-- Hero Section Begin -->
-<section class="hero">
-  <div class="hero__slider owl-carousel">
-
-    {% for block in section.blocks %}
+{% for block in section.blocks %}
       <div id="carouselExampleFade" class="carousel slide carousel-fade">
         <div class="carousel-inner">
           <div class="carousel-item active">
@@ -30,6 +26,13 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
+      {% endfor %}
+
+<!-- Hero Section Begin -->
+<section class="hero">
+  <div class="hero__slider owl-carousel">
+
+    {% for block in section.blocks %}
 
       <div class="hero__items set-bg" data-setbg="{{ block.settings.slide_image | img_url: 'master' }}">
         <div class="container">
