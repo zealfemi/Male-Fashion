@@ -678,15 +678,15 @@ ol {
 	background: #e53637;
 }
 
-.banner__item.banner__item--middle {
+.banner__item .banner__item--middle {
 	margin-top: -75px;
 }
 
-.banner__item.banner__item--middle .banner__item__pic {
+.banner__item .banner__item--middle .banner__item__pic {
 	float: none;
 }
 
-.banner__item.banner__item--middle .banner__item__text {
+.banner__item .banner__item--middle .banner__item__text {
 	position: relative;
 	top: 0;
 	left: 0;
@@ -694,7 +694,7 @@ ol {
 	padding-top: 22px;
 }
 
-.banner__item.banner__item--last {
+.banner__item .banner__item--last {
 	margin-top: 100px;
 }
 
