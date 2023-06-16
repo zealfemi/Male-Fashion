@@ -26,11 +26,15 @@
           <div class="col-lg-5">
             <div class="banner__item banner__item--middle">
               <div class="banner__item__pic">
-                <img src="img/banner/banner-2.jpg" alt="">
+                <img
+                  src="{{ block.settings.banner_pic | img_url: 'master' }}"
+                  alt="{{ block.settings.banner_pic.alt }}"
+                  width=""
+                  height="">
               </div>
               <div class="banner__item__text">
-                <h2>Accessories</h2>
-                <a href="#">Shop now</a>
+                <h2>{{ block.settings.collection.title }}</h2>
+                <a href="{{ block.settings.button_url }}">{{ block.settings.button_text }}</a>
               </div>
             </div>
           </div>
@@ -39,11 +43,15 @@
           <div class="col-lg-7">
             <div class="banner__item banner__item--last">
               <div class="banner__item__pic">
-                <img src="img/banner/banner-3.jpg" alt="">
+                <img
+                  src="{{ block.settings.banner_pic | img_url: 'master' }}"
+                  alt="{{ block.settings.banner_pic.alt }}"
+                  width=""
+                  height="">
               </div>
               <div class="banner__item__text">
-                <h2>Shoes Spring 2030</h2>
-                <a href="#">Shop now</a>
+                <h2>{{ block.settings.collection.title }}</h2>
+                <a href="{{ block.settings.button_url }}">{{ block.settings.button_text }}</a>
               </div>
             </div>
           </div>
