@@ -42,6 +42,55 @@
 {% schema %}
   {
     "name": "Banner Section",
+    "blocks": [
+      {
+        "type": "first_block",
+        "name": "First Banner",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "banner_pic",
+            "label": "Select Banner Image"
+          }, {
+            "type": "collection",
+            "id": "collection",
+            "label": "Select Collection"
+          }, {
+            "type": "url",
+            "id": "button_url",
+            "label": "Select Button URL"
+          }, {
+            "type": "text",
+            "id": "button_text",
+            "label": "Button Text"
+          }
+        ]
+      }, {
+        "type": "image",
+        "name": "Banner 2",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "banner_pic",
+            "label": "Select Banner Image"
+          }, {
+            "type": "collection",
+            "id": "collection",
+            "label": "Select Collection"
+          }, {
+            "type": "url",
+            "id": "button_url",
+            "label": "Select Button URL"
+          }, {
+            "type": "text",
+            "id": "button_text",
+            "label": "Button Text"
+          }
+        ]
+      }
+    ],
     "presets": [
       {
         "name": "Banner Section"
