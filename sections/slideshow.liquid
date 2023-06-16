@@ -1,14 +1,18 @@
-{% for block in section.blocks %}
+<section class="hero">
   <div id="carouselExampleFade" class="carousel slide carousel-fade">
     <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img
-          src="{{ block.settings.slide_image | img_url: 'master' }}"
-          class="d-block w-100"
-          alt="..."
-          width=""
-          height="">
-      </div>
+
+      {% for block in section.blocks %}
+        <div class="carousel-item active">
+          <img
+            src="{{ block.settings.slide_image | img_url: 'master' }}"
+            class="d-block w-100"
+            alt="..."
+            width=""
+            height="">
+        </div>
+      {% endfor %}
+
       <button
         class="carousel-control-prev"
         type="button"
@@ -27,7 +31,7 @@
       </button>
     </div>
   </div>
-{% endfor %}
+</section>
 
 <!-- Hero Section Begin -->
 <section class="hero">
