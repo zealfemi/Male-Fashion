@@ -16,10 +16,25 @@
             "twitter_url": "",
             "instagram_url": ""
           }
+        },
+        "db59d8f4-1b14-4bfe-8579-4dde58336fd7": {
+          "type": "image",
+          "settings": {
+            "slide_image": "shopify:\/\/shop_images\/hero-2.jpg",
+            "collection": "",
+            "title": "Title",
+            "description": "Description",
+            "btn_url": "",
+            "btn_text": "",
+            "facebook_url": "",
+            "twitter_url": "",
+            "instagram_url": ""
+          }
         }
       },
       "block_order": [
-        "41fd683e-a3fc-4930-ae95-b35ce1aa1a48"
+        "41fd683e-a3fc-4930-ae95-b35ce1aa1a48",
+        "db59d8f4-1b14-4bfe-8579-4dde58336fd7"
       ],
       "settings": {
       }
