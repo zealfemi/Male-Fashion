@@ -1,10 +1,10 @@
 <section class="hero">
   <div class="hero__slider">
     <div id="carouselExampleFade" class="carousel slide carousel-fade">
-      <div class="carousel-inner">
+      <div class="carousel-inner active">
 
         {% for block in section.blocks %}
-          <div class="carousel-item active">
+          <div class="carousel-item">
             <div class="hero__items set-bg" data-setbg="{{ block.settings.slide_image | img_url: 'master' }}">
 
 
