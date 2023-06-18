@@ -1,3 +1,51 @@
+<style>
+  .carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8, %3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+  }
+  .carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8, %3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+  }
+</style>
+<div class="">
+  <div
+    class="carousel slide"
+    id="carouselExampleInterval"
+    data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="">
+        <a href="/gender-behaviour"><img
+            class="d-block w-100"
+            src="https://ifepsychologia.org/sites/default/files/inline-images/Banner2.jpg"
+            alt="gender behaviour">&nbsp;</a>
+      </div>
+      <div class="carousel-item" data-bs-interval="">
+        <a href="/ife-psychologia"><img
+            class="d-block w-100"
+            src="https://ifepsychologia.org/sites/default/files/inline-images/Banner11.jpg"
+            alt="ife psychologia">&nbsp;</a>
+      </div>
+    </div>
+    <p>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleInterval"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleInterval"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </p>
+  </div>
+</div>
+
 {% schema %}
   {
     "name": "SlideShow",
