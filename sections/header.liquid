@@ -58,11 +58,7 @@
         </li>
 
       {% else %}
-
-        <li {% if link.active %}class="active"{% endif %}>
-          <a href="{{ link.url }}">{{ link.title }}</a>
-        </li>
-
+        <a href="{{ link.url }}">{{ link.title }}</a>
       {% endif %}
     {% endfor %}
   </div>
