@@ -58,6 +58,92 @@
 <!-- Offcanvas Menu End -->
 
 <!-- Header Section Begin -->
+<header class="header">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xl-3 col-lg-2">
+        {% if section.settings.logo != blank %}
+          <div class="header__logo">
+            <a href="{{ shop.url }}"><img
+                src="{{ section.settings.logo | img_url: 'medium' }}"
+                alt="{{ shop.name }}"
+                width=""
+                height=""
+                loading="lazy"></a>
+          </div>
+
+        {% else %}
+          <a href="{{ shop.url }}">
+            <h1 class="header__logo text-xl font-bold truncate uppercase">{{ shop.name }}</h1>
+          </a>
+        {% endif %}
+      </div>
+      <div class="col-xl-6 col-lg-7">
+        <nav class="header__menu">
+          <ul>
+            {% for link in main_menu_linklist %}
+              {% if link.links != blank %}
+                <li>
+                  <a href="#">{{ link.title }}</a>
+
+                  <ul class="dropdown">
+                    {% for childlink in link.links %}
+                      <li>
+                        <a href="{{ childlink.url }}" class="hover:bg-gray-300 hover:text-gray-900">{{ childlink.title }}</a>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                </li>
+
+              {% else %}
+
+                <li {% if link.active %}class="active"{% endif %}>
+                  <a href="{{ link.url }}">{{ link.title }}</a>
+                </li>
+
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </nav>
+      </div>
+      <div class="col-lg-3">
+        <div class="header__right">
+          <div class="header__right__auth">
+            {% if shop.customer_accounts_enabled %}
+              {% if customer %}
+                <a href="{{ routes.account_url }}">Account</a>
+                {{ 'Log out' | customer_logout_link }}
+              {% else %}
+                {{ 'Log in ' | customer_login_link }}
+                {{ 'Register' | customer_register_link }}
+              {% endif %}
+            {% endif %}
+          </div>
+          <ul class="header__right__widget">
+            <li>
+              <span class="icon_search search-switch"></span>
+            </li>
+            <li>
+              <a href="#">
+                <span class="icon_heart_alt"></span>
+                <div class="tip">2</div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="icon_bag_alt"></span>
+                <div class="tip">2</div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="canvas__open">
+      <i class="fa fa-bars"></i>
+    </div>
+  </div>
+</header>
 
 <header class="header">
   <div class="container-fluid">
