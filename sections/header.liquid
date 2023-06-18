@@ -44,13 +44,15 @@
   {% endif %}
   <div id="mobile-menu-wrap">
     <div class="dropdown">
-      <button
+      <a
         class="btn btn-secondary dropdown-toggle"
-        type="button"
+        href="#"
+        role="button"
         data-bs-toggle="dropdown"
         aria-expanded="false">
-        Dropdown button
-      </button>
+        Dropdown link
+      </a>
+
       <ul class="dropdown-menu">
         <li>
           <a class="dropdown-item" href="#">Action</a>
@@ -166,28 +168,6 @@
   </div>
 </header>
 <!-- Header Section End -->
-<div class="dropdown">
-  <a
-    class="btn btn-secondary dropdown-toggle"
-    href="#"
-    role="button"
-    data-bs-toggle="dropdown"
-    aria-expanded="false">
-    Dropdown link
-  </a>
-
-  <ul class="dropdown-menu">
-    <li>
-      <a class="dropdown-item" href="#">Action</a>
-    </li>
-    <li>
-      <a class="dropdown-item" href="#">Another action</a>
-    </li>
-    <li>
-      <a class="dropdown-item" href="#">Something else here</a>
-    </li>
-  </ul>
-</div>
 
 {% schema %}
   {
