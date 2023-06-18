@@ -22,18 +22,60 @@
     </li>
     <li>
       <a href="#">
-        <span class="icon_bag_alt"></span>
+        <span class="icon_bag_alt">{% render 'icon-shopping-bag' %}</span>
         <div class="tip">2</div>
       </a>
     </li>
   </ul>
-  <div class="offcanvas__logo">
-    <a href="./index.html"><img src="img/logo.png" alt=""></a>
+  {% if section.settings.logo != blank %}
+    <div class="offcanvas__logo">
+      <a href="{{ shop.url }}"><img
+          src="{{ section.settings.logo | img_url: 'medium' }}"
+          alt="{{ shop.name }}"
+          width=""
+          height=""
+          loading="lazy"></a>
+    </div>
+
+  {% else %}
+    <a href="{{ shop.url }}">
+      <h1 class="offcanvas__logo text-xl font-bold truncate uppercase">{{ shop.name }}</h1>
+    </a>
+  {% endif %}
+  <div id="mobile-menu-wrap">
+    {% for link in main_menu_linklist %}
+      {% if link.links != blank %}
+        <li>
+          <a href="#">{{ link.title }}</a>
+
+          <ul class="dropdown">
+            {% for childlink in link.links %}
+              <li>
+                <a href="{{ childlink.url }}" class="hover:bg-gray-300 hover:text-gray-900">{{ childlink.title }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </li>
+
+      {% else %}
+
+        <li {% if link.active %}class="active"{% endif %}>
+          <a href="{{ link.url }}">{{ link.title }}</a>
+        </li>
+
+      {% endif %}
+    {% endfor %}
   </div>
-  <div id="mobile-menu-wrap"></div>
   <div class="offcanvas__auth">
-    <a href="#">Login</a>
-    <a href="#">Register</a>
+    {% if shop.customer_accounts_enabled %}
+      {% if customer %}
+        <a href="{{ routes.account_url }}">Account</a>
+        {{ 'Log out' | customer_logout_link }}
+      {% else %}
+        {{ 'Log in ' | customer_login_link }}
+        {{ 'Register' | customer_register_link }}
+      {% endif %}
+    {% endif %}
   </div>
 </div>
 <!-- Offcanvas Menu End -->
@@ -43,56 +85,62 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-xl-3 col-lg-2">
-        <div class="header__logo">
-          <a href="./index.html"><img src="img/logo.png" alt=""></a>
-        </div>
+        {% if section.settings.logo != blank %}
+          <div class="header__logo">
+            <a href="{{ shop.url }}"><img
+                src="{{ section.settings.logo | img_url: 'medium' }}"
+                alt="{{ shop.name }}"
+                width=""
+                height=""
+                loading="lazy"></a>
+          </div>
+
+        {% else %}
+          <a href="{{ shop.url }}">
+            <h1 class="header__logo text-xl font-bold truncate uppercase">{{ shop.name }}</h1>
+          </a>
+        {% endif %}
       </div>
       <div class="col-xl-6 col-lg-7">
         <nav class="header__menu">
           <ul>
-            <li class="active">
-              <a href="./index.html">Home</a>
-            </li>
-            <li>
-              <a href="#">Women’s</a>
-            </li>
-            <li>
-              <a href="#">Men’s</a>
-            </li>
-            <li>
-              <a href="./shop.html">Shop</a>
-            </li>
-            <li>
-              <a href="#">Pages</a>
-              <ul class="dropdown">
+            {% for link in main_menu_linklist %}
+              {% if link.links != blank %}
                 <li>
-                  <a href="./product-details.html">Product Details</a>
+                  <a href="#">{{ link.title }}</a>
+
+                  <ul class="dropdown">
+                    {% for childlink in link.links %}
+                      <li>
+                        <a href="{{ childlink.url }}" class="hover:bg-gray-300 hover:text-gray-900">{{ childlink.title }}</a>
+                      </li>
+                    {% endfor %}
+                  </ul>
                 </li>
-                <li>
-                  <a href="./shop-cart.html">Shop Cart</a>
+
+              {% else %}
+
+                <li {% if link.active %}class="active"{% endif %}>
+                  <a href="{{ link.url }}">{{ link.title }}</a>
                 </li>
-                <li>
-                  <a href="./checkout.html">Checkout</a>
-                </li>
-                <li>
-                  <a href="./blog-details.html">Blog Details</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a href="./blog.html">Blog</a>
-            </li>
-            <li>
-              <a href="./contact.html">Contact</a>
-            </li>
+
+              {% endif %}
+            {% endfor %}
           </ul>
         </nav>
       </div>
       <div class="col-lg-3">
         <div class="header__right">
           <div class="header__right__auth">
-            <a href="#">Login</a>
-            <a href="#">Register</a>
+            {% if shop.customer_accounts_enabled %}
+              {% if customer %}
+                <a href="{{ routes.account_url }}">Account</a>
+                {{ 'Log out' | customer_logout_link }}
+              {% else %}
+                {{ 'Log in ' | customer_login_link }}
+                {{ 'Register' | customer_register_link }}
+              {% endif %}
+            {% endif %}
           </div>
           <ul class="header__right__widget">
             <li>
@@ -120,7 +168,6 @@
   </div>
 </header>
 <!-- Header Section End -->
-
 
 {% schema %}
   {
