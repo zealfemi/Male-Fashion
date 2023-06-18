@@ -45,17 +45,14 @@
   <div id="mobile-menu-wrap">
     {% for link in main_menu_linklist %}
       {% if link.links != blank %}
-        <li>
-          <a href="#">{{ link.title }}</a>
-
-          <ul class="dropdown">
-            {% for childlink in link.links %}
-              <li>
-                <a href="{{ childlink.url }}" class="hover:bg-gray-300 hover:text-gray-900">{{ childlink.title }}</a>
-              </li>
-            {% endfor %}
-          </ul>
-        </li>
+        <a href="#">{{ link.title }}</a>
+        <ul class="dropdown">
+          {% for childlink in link.links %}
+            <li>
+              <a href="{{ childlink.url }}" class="hover:bg-gray-300 hover:text-gray-900">{{ childlink.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
 
       {% else %}
         <a href="{{ link.url }}">{{ link.title }}</a>
