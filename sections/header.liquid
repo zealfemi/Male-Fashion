@@ -98,7 +98,7 @@
 
               {% else %}
 
-                <li>
+                <li {% if link.active %}class="active"{% endif %}>
                   <a href="{{ link.url }}">{{ link.title }}</a>
                 </li>
 
