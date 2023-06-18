@@ -27,21 +27,9 @@
       </a>
     </li>
   </ul>
-  {% if section.settings.logo != blank %}
-    <div class="offcanvas__logo">
-      <a href="{{ shop.url }}"><img
-          src="{{ section.settings.logo | img_url: 'medium' }}"
-          alt="{{ shop.name }}"
-          width=""
-          height=""
-          loading="lazy"></a>
-    </div>
 
-  {% else %}
-    <a href="{{ shop.url }}">
-      <h1 class="text-xl truncate">{{ shop.name }}</h1>
-    </a>
-  {% endif %}
+  <h1 class="text-xl truncate">Menu</h1>
+
   <div id="mobile-menu-wrap"></div>
   <div class="offcanvas__auth">
     {% if shop.customer_accounts_enabled %}
