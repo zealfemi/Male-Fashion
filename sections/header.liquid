@@ -43,33 +43,31 @@
     </a>
   {% endif %}
   <div id="mobile-menu-wrap">
-    <nav class="">
-      <ul>
-        {% for link in main_menu_linklist %}
-          {% if link.links != blank %}
+    <ul>
+      {% for link in main_menu_linklist %}
+        {% if link.links != blank %}
 
-            <li>
-              <a href="#">{{ link.title }}</a>
+          <li>
+            <a href="#">{{ link.title }}</a>
 
-              <ul class="dropdown">
-                {% for childlink in link.links %}
-                  <li>
-                    <a href="{{ childlink.url }}" class="hover:bg-gray-300 hover:text-gray-900">{{ childlink.title }}</a>
-                  </li>
-                {% endfor %}
-              </ul>
-            </li>
+            <ul class="dropdown">
+              {% for childlink in link.links %}
+                <li>
+                  <a href="{{ childlink.url }}" class="hover:bg-gray-300 hover:text-gray-900">{{ childlink.title }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          </li>
 
-          {% else %}
+        {% else %}
 
-            <li {% if link.active %}class="active"{% endif %}>
-              <a href="{{ link.url }}">{{ link.title }}</a>
-            </li>
+          <li {% if link.active %}class="active"{% endif %}>
+            <a href="{{ link.url }}">{{ link.title }}</a>
+          </li>
 
-          {% endif %}
-        {% endfor %}
-      </ul>
-    </nav>
+        {% endif %}
+      {% endfor %}
+    </ul>
   </div>
   <div class="offcanvas__auth">
     {% if shop.customer_accounts_enabled %}
