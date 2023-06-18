@@ -27,11 +27,8 @@
       </a>
     </li>
   </ul>
-  <div class="offcanvas__logo">
-    <a href="./index.html"><img src="img/logo.png" alt=""></a>
-  </div>
   {% if section.settings.logo != blank %}
-    <div class="header__logo">
+    <div class="offcanvas__logo">
       <a href="{{ shop.url }}"><img
           src="{{ section.settings.logo | img_url: 'medium' }}"
           alt="{{ shop.name }}"
@@ -42,7 +39,7 @@
 
   {% else %}
     <a href="{{ shop.url }}">
-      <h1 class="header__logo text-xl font-bold truncate uppercase">{{ shop.name }}</h1>
+      <h1 class="offcanvas__logo text-xl font-bold truncate uppercase">{{ shop.name }}</h1>
     </a>
   {% endif %}
   <div id="mobile-menu-wrap"></div>
