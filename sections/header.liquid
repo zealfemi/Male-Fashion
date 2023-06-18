@@ -44,8 +44,15 @@
   {% endif %}
   <div id="mobile-menu-wrap"></div>
   <div class="offcanvas__auth">
-    <a href="#">Login</a>
-    <a href="#">Register</a>
+    {% if shop.customer_accounts_enabled %}
+      {% if customer %}
+        <a href="{{ routes.account_url }}">Account</a>
+        {{ 'Log out' | customer_logout_link }}
+      {% else %}
+        {{ 'Log in ' | customer_login_link }}
+        {{ 'Register' | customer_register_link }}
+      {% endif %}
+    {% endif %}
   </div>
 </div>
 <!-- Offcanvas Menu End -->
