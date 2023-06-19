@@ -4,7 +4,7 @@
     <div class="row">
 
       {% for block in section.blocks %}
-        {% case "block.type" %}
+        {% case block.type %}
 
           {% when "large_banner" %}
           <div class="col-lg-6 p-0">
