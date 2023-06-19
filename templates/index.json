@@ -1,86 +1,66 @@
 {
   "sections": {
-    "9c8bca83-7121-487e-a298-0efe1a046696": {
-      "type": "slideshow",
-      "blocks": {
-        "41fd683e-a3fc-4930-ae95-b35ce1aa1a48": {
-          "type": "image",
-          "settings": {
-            "slide_image": "shopify:\/\/shop_images\/hero-1.jpg",
-            "collection": "",
-            "title": "Title",
-            "description": "Description",
-            "btn_url": "",
-            "btn_text": "",
-            "facebook_url": "",
-            "twitter_url": "",
-            "instagram_url": ""
-          }
-        },
-        "db59d8f4-1b14-4bfe-8579-4dde58336fd7": {
-          "type": "image",
-          "settings": {
-            "slide_image": "shopify:\/\/shop_images\/hero-2.jpg",
-            "collection": "",
-            "title": "Title",
-            "description": "Description",
-            "btn_url": "",
-            "btn_text": "",
-            "facebook_url": "",
-            "twitter_url": "",
-            "instagram_url": ""
-          }
-        }
-      },
-      "block_order": [
-        "41fd683e-a3fc-4930-ae95-b35ce1aa1a48",
-        "db59d8f4-1b14-4bfe-8579-4dde58336fd7"
-      ],
-      "settings": {
-      }
-    },
     "fbb7f79b-d0c3-44f2-af2a-adcdc58ca508": {
       "type": "banner",
       "blocks": {
-        "6a85b37f-e738-4e2e-83e7-032ccb2f7283": {
-          "type": "first_block",
+        "3c640a1e-9c94-470e-8da8-e9e791a053ea": {
+          "type": "large_banner",
           "settings": {
-            "banner_pic": "shopify:\/\/shop_images\/banner-1.jpg",
-            "title": "Clothing Collections 2030",
-            "button_url": "shopify:\/\/collections\/men",
-            "button_text": "Shop now"
+            "collection": "",
+            "description": "Description",
+            "button_url": "",
+            "button_text": "Button Text"
           }
         },
-        "a3ece014-2c6d-4722-a46a-5e24df5fb4fb": {
-          "type": "second_block",
+        "331b970a-ae55-4d28-bcd9-c425dc4eb077": {
+          "type": "small_banner",
           "settings": {
-            "banner_pic": "shopify:\/\/shop_images\/banner-2.jpg",
-            "title": "Accessories",
-            "button_url": "shopify:\/\/collections\/women",
-            "button_text": "Shop now"
+            "collection": "",
+            "description": "Description",
+            "button_url": "",
+            "button_text": "Button Text"
           }
         },
-        "685f74a0-fa1f-4ca3-9c2e-e8028f9803b7": {
-          "type": "third_block",
+        "4f38fe16-0406-4d1e-8e80-90f4caff4070": {
+          "type": "small_banner",
           "settings": {
-            "banner_pic": "shopify:\/\/shop_images\/banner-3.jpg",
-            "title": "Shoes Spring 2030",
-            "button_url": "shopify:\/\/collections\/shoes",
-            "button_text": "Shop now"
+            "collection": "",
+            "description": "Description",
+            "button_url": "",
+            "button_text": "Button Text"
+          }
+        },
+        "a8b7da13-bfdf-43af-9090-582d74107ea3": {
+          "type": "small_banner",
+          "settings": {
+            "collection": "",
+            "description": "Description",
+            "button_url": "",
+            "button_text": "Button Text"
+          }
+        },
+        "940744f3-1d3a-431f-a1f0-2e428b225ec2": {
+          "type": "small_banner",
+          "settings": {
+            "collection": "",
+            "description": "Description",
+            "button_url": "",
+            "button_text": "Button Text"
           }
         }
       },
       "block_order": [
-        "6a85b37f-e738-4e2e-83e7-032ccb2f7283",
-        "a3ece014-2c6d-4722-a46a-5e24df5fb4fb",
-        "685f74a0-fa1f-4ca3-9c2e-e8028f9803b7"
+        "3c640a1e-9c94-470e-8da8-e9e791a053ea",
+        "331b970a-ae55-4d28-bcd9-c425dc4eb077",
+        "4f38fe16-0406-4d1e-8e80-90f4caff4070",
+        "a8b7da13-bfdf-43af-9090-582d74107ea3",
+        "940744f3-1d3a-431f-a1f0-2e428b225ec2"
       ],
       "settings": {
       }
     }
   },
   "order": [
-    "9c8bca83-7121-487e-a298-0efe1a046696",
     "fbb7f79b-d0c3-44f2-af2a-adcdc58ca508"
   ]
 }
