@@ -2,61 +2,32 @@
   "sections": {
     "fbb7f79b-d0c3-44f2-af2a-adcdc58ca508": {
       "type": "banner",
-      "blocks": {
-        "c2a794d2-f755-4590-8f47-6f786ff1557e": {
-          "type": "large_banner",
-          "settings": {
-            "title": "Title",
-            "description": "Description",
-            "button_url": "",
-            "button_text": "Button Text"
-          }
-        },
-        "21596e42-038f-4990-9542-cad50538cdbe": {
-          "type": "small_banner_1",
-          "settings": {
-            "title": "Title",
-            "description": "Description",
-            "button_url": "",
-            "button_text": "Button Text"
-          }
-        },
-        "ab5e5bf6-7c79-4f2c-985e-8bcbfad05bbf": {
-          "type": "small_banner_2",
-          "settings": {
-            "title": "Title",
-            "description": "Description",
-            "button_url": "",
-            "button_text": "Button Text"
-          }
-        },
-        "1fbcb984-448e-43d9-95e5-7c5d87987531": {
-          "type": "small_banner_3",
-          "settings": {
-            "title": "Title",
-            "description": "Description",
-            "button_url": "",
-            "button_text": "Button Text"
-          }
-        },
-        "24c7a71b-0e2e-4797-9cf7-83b3b796ea83": {
-          "type": "small_banner_4",
-          "settings": {
-            "title": "Title",
-            "description": "Description",
-            "button_url": "",
-            "button_text": "Button Text"
-          }
-        }
-      },
-      "block_order": [
-        "c2a794d2-f755-4590-8f47-6f786ff1557e",
-        "21596e42-038f-4990-9542-cad50538cdbe",
-        "ab5e5bf6-7c79-4f2c-985e-8bcbfad05bbf",
-        "1fbcb984-448e-43d9-95e5-7c5d87987531",
-        "24c7a71b-0e2e-4797-9cf7-83b3b796ea83"
-      ],
       "settings": {
+        "banner": "shopify:\/\/shop_images\/category-1.jpg",
+        "title": "Title",
+        "description": "Description",
+        "button_url": "",
+        "button_text": "Button Text",
+        "banner1": "shopify:\/\/shop_images\/category-2.jpg",
+        "title1": "Title",
+        "description1": "Description",
+        "button_url1": "",
+        "button_text1": "Button Text",
+        "banner2": "shopify:\/\/shop_images\/category-3.jpg",
+        "title2": "Title",
+        "description2": "Description",
+        "button_url2": "",
+        "button_text2": "Button Text",
+        "banner3": "shopify:\/\/shop_images\/category-4.jpg",
+        "title3": "Title",
+        "description3": "Description",
+        "button_url3": "",
+        "button_text3": "Button Text",
+        "banner4": "shopify:\/\/shop_images\/category-5.jpg",
+        "title4": "Title",
+        "description4": "Description",
+        "button_url4": "",
+        "button_text4": "Button Text"
       }
     }
   },
