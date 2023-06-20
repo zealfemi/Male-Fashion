@@ -12,7 +12,7 @@
             "button_text": "Button Text"
           }
         },
-        "8d95a58c-b30c-475c-a94b-378871e15609": {
+        "21596e42-038f-4990-9542-cad50538cdbe": {
           "type": "small_banner_1",
           "settings": {
             "title": "Title",
@@ -21,8 +21,8 @@
             "button_text": "Button Text"
           }
         },
-        "f611aa40-e8b6-4621-a2d4-e462b148309f": {
-          "type": "small_banner_1",
+        "ab5e5bf6-7c79-4f2c-985e-8bcbfad05bbf": {
+          "type": "small_banner_2",
           "settings": {
             "title": "Title",
             "description": "Description",
@@ -30,8 +30,8 @@
             "button_text": "Button Text"
           }
         },
-        "8257241c-fa3c-4248-a6d0-793d1ee6af1c": {
-          "type": "small_banner_1",
+        "1fbcb984-448e-43d9-95e5-7c5d87987531": {
+          "type": "small_banner_3",
           "settings": {
             "title": "Title",
             "description": "Description",
@@ -39,8 +39,8 @@
             "button_text": "Button Text"
           }
         },
-        "876490bb-225a-43a4-bc79-66ebda3b8c43": {
-          "type": "small_banner_1",
+        "24c7a71b-0e2e-4797-9cf7-83b3b796ea83": {
+          "type": "small_banner_4",
           "settings": {
             "title": "Title",
             "description": "Description",
@@ -51,10 +51,10 @@
       },
       "block_order": [
         "c2a794d2-f755-4590-8f47-6f786ff1557e",
-        "8d95a58c-b30c-475c-a94b-378871e15609",
-        "f611aa40-e8b6-4621-a2d4-e462b148309f",
-        "8257241c-fa3c-4248-a6d0-793d1ee6af1c",
-        "876490bb-225a-43a4-bc79-66ebda3b8c43"
+        "21596e42-038f-4990-9542-cad50538cdbe",
+        "ab5e5bf6-7c79-4f2c-985e-8bcbfad05bbf",
+        "1fbcb984-448e-43d9-95e5-7c5d87987531",
+        "24c7a71b-0e2e-4797-9cf7-83b3b796ea83"
       ],
       "settings": {
       }
