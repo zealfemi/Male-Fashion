@@ -3,10 +3,19 @@
     "fbb7f79b-d0c3-44f2-af2a-adcdc58ca508": {
       "type": "banner",
       "blocks": {
+        "c2a794d2-f755-4590-8f47-6f786ff1557e": {
+          "type": "large_banner",
+          "settings": {
+            "title": "Title",
+            "description": "Description",
+            "button_url": "",
+            "button_text": "Button Text"
+          }
+        },
         "572c584f-4da1-494a-994f-145a0843148a": {
           "type": "small_banner_1",
           "settings": {
-            "collection": "",
+            "title": "Title",
             "description": "Description",
             "button_url": "",
             "button_text": "Button Text"
@@ -15,7 +24,7 @@
         "f03f5cd7-e9ab-42fa-b7c0-931eeeb87da9": {
           "type": "small_banner_2",
           "settings": {
-            "collection": "",
+            "title": "Title",
             "description": "Description",
             "button_url": "",
             "button_text": "Button Text"
@@ -24,7 +33,7 @@
         "83889dc1-f367-4f8a-8547-59ca1d04f9ec": {
           "type": "small_banner_3",
           "settings": {
-            "collection": "Title",
+            "title": "Title",
             "description": "Description",
             "button_url": "",
             "button_text": "Button Text"
@@ -33,16 +42,7 @@
         "c448f140-5954-4b9f-9a92-488eee764bb1": {
           "type": "small_banner_4",
           "settings": {
-            "collection": "Title",
-            "description": "Description",
-            "button_url": "",
-            "button_text": "Button Text"
-          }
-        },
-        "c2a794d2-f755-4590-8f47-6f786ff1557e": {
-          "type": "large_banner",
-          "settings": {
-            "collection": "Title",
+            "title": "Title",
             "description": "Description",
             "button_url": "",
             "button_text": "Button Text"
@@ -50,11 +50,11 @@
         }
       },
       "block_order": [
+        "c2a794d2-f755-4590-8f47-6f786ff1557e",
         "572c584f-4da1-494a-994f-145a0843148a",
         "f03f5cd7-e9ab-42fa-b7c0-931eeeb87da9",
         "83889dc1-f367-4f8a-8547-59ca1d04f9ec",
-        "c448f140-5954-4b9f-9a92-488eee764bb1",
-        "c2a794d2-f755-4590-8f47-6f786ff1557e"
+        "c448f140-5954-4b9f-9a92-488eee764bb1"
       ],
       "settings": {
       }
