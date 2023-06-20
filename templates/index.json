@@ -6,6 +6,7 @@
         "3c640a1e-9c94-470e-8da8-e9e791a053ea": {
           "type": "large_banner",
           "settings": {
+            "banner": "shopify:\/\/shop_images\/category-1.jpg",
             "collection": "",
             "description": "Description",
             "button_url": "",
