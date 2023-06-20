@@ -16,6 +16,7 @@
               </div>
             </div>
           </div>
+        {% else %}
 
           <div class="col-lg-6">
             <div class="row">
@@ -30,6 +31,7 @@
                   </div>
                 </div>
               </div>
+            {% else %}
 
               {% when "small_banner_2" %}
               <div class="col-lg-6 col-md-6 col-sm-6 p-0">
@@ -41,7 +43,7 @@
                   </div>
                 </div>
               </div>
-
+            {% else %}
               {% when "small_banner_3" %}
               <div class="col-lg-6 col-md-6 col-sm-6 p-0">
                 <div class="categories__item set-bg" data-setbg="{{ block.settings.banner | img_url: 'master' }}">
@@ -52,7 +54,7 @@
                   </div>
                 </div>
               </div>
-
+            {% else %}
               {% when "small_banner_4" %}
               <div class="col-lg-6 col-md-6 col-sm-6 p-0">
                 <div class="categories__item set-bg" data-setbg="{{ block.settings.banner | img_url: 'master' }}">
