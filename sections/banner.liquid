@@ -50,10 +50,10 @@
             <div class="categories__item set-bg" data-setbg="{{ section.settings.banner4 | img_url: 'master' }}">
               <div class="categories__text">
                 <h4>{{ section.settings.collection4.title }}</h4>
-                {% if section.settings.select4.value.count %}
+                {% if section.settings.select4.value == count %}
                   <p>{{ section.settings.collection4.products_count }}</p>
                 {% endif %}
-                {% if section.settings.select4.value.description %}
+                {% if section.settings.select4.value == description %}
                   <p>{{ section.settings.collection4.description }}</p>
                 {% endif %}
                 <a href="{{ section.settings.collection4.url }}">{{ section.settings.button_text4 }}</a>
