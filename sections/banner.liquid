@@ -6,9 +6,10 @@
       <div class="col-lg-6 p-0">
         <div class="categories__item categories__large__item set-bg" data-setbg="{{ section.settings.banner | img_url: 'master' }}">
           <div class="categories__text">
-            <h1>{{ section.settings.title }}</h1>
-            <p>{{ section.settings.description }}</p>
-            <a href="{{ section.settings.button_url }}">{{ section.settings.button_text }}</a>
+            <h1>{{ section.settings.collection.title }}</h1>
+
+            <p>{{ section.settings.collection.description }}</p>
+            <a href="{{ section.settings.collection.url }}">{{ section.settings.button_text }}</a>
           </div>
         </div>
       </div>
@@ -79,25 +80,11 @@
       },
       {
         "type": "text",
-        "id": "title",
-        "label": "Title",
-        "default": "Title"
-      },
-      {
-        "type": "text",
-        "id": "description",
-        "label": "Description",
-        "default": "Description"
-      }, {
-        "type": "url",
-        "id": "button_url",
-        "label": "Button URL"
-      }, {
-        "type": "text",
         "id": "button_text",
         "label": "Button Text",
         "default": "Button Text"
-      }, {
+      },
+      {
         "type": "image_picker",
         "id": "banner1",
         "label": "Select a Picture"
@@ -105,20 +92,6 @@
         "type": "collection",
         "id": "collection1",
         "label": "Select a Collection"
-      }, {
-        "type": "text",
-        "id": "title1",
-        "label": "Title",
-        "default": "Title"
-      }, {
-        "type": "text",
-        "id": "description1",
-        "label": "Description",
-        "default": "Description"
-      }, {
-        "type": "url",
-        "id": "button_url1",
-        "label": "Button URL"
       }, {
         "type": "text",
         "id": "button_text1",
@@ -134,20 +107,6 @@
         "label": "Select a Collection"
       }, {
         "type": "text",
-        "id": "title2",
-        "label": "Title",
-        "default": "Title"
-      }, {
-        "type": "text",
-        "id": "description2",
-        "label": "Description",
-        "default": "Description"
-      }, {
-        "type": "url",
-        "id": "button_url2",
-        "label": "Button URL"
-      }, {
-        "type": "text",
         "id": "button_text2",
         "label": "Button Text",
         "default": "Button Text"
@@ -161,20 +120,6 @@
         "label": "Select a Collection"
       }, {
         "type": "text",
-        "id": "title3",
-        "label": "Title",
-        "default": "Title"
-      }, {
-        "type": "text",
-        "id": "description3",
-        "label": "Description",
-        "default": "Description"
-      }, {
-        "type": "url",
-        "id": "button_url3",
-        "label": "Button URL"
-      }, {
-        "type": "text",
         "id": "button_text3",
         "label": "Button Text",
         "default": "Button Text"
@@ -186,20 +131,6 @@
         "type": "collection",
         "id": "collection4",
         "label": "Select a Collection"
-      }, {
-        "type": "text",
-        "id": "title4",
-        "label": "Title",
-        "default": "Title"
-      }, {
-        "type": "text",
-        "id": "description4",
-        "label": "Description",
-        "default": "Description"
-      }, {
-        "type": "url",
-        "id": "button_url4",
-        "label": "Button URL"
       }, {
         "type": "text",
         "id": "button_text4",
