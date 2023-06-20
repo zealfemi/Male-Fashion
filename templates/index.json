@@ -3,16 +3,6 @@
     "fbb7f79b-d0c3-44f2-af2a-adcdc58ca508": {
       "type": "banner",
       "blocks": {
-        "3c640a1e-9c94-470e-8da8-e9e791a053ea": {
-          "type": "large_banner",
-          "settings": {
-            "banner": "shopify:\/\/shop_images\/category-1.jpg",
-            "collection": "",
-            "description": "Description",
-            "button_url": "",
-            "button_text": "Button Text"
-          }
-        },
         "572c584f-4da1-494a-994f-145a0843148a": {
           "type": "small_banner_1",
           "settings": {
@@ -31,19 +21,28 @@
             "button_text": "Button Text"
           }
         },
-        "dd54986f-895e-48f7-b8d4-79732a0b32a3": {
+        "83889dc1-f367-4f8a-8547-59ca1d04f9ec": {
           "type": "small_banner_3",
           "settings": {
-            "collection": "",
+            "collection": "Title",
             "description": "Description",
             "button_url": "",
             "button_text": "Button Text"
           }
         },
-        "bdcf6c66-f75c-4919-8265-dcfbb5744a5d": {
+        "c448f140-5954-4b9f-9a92-488eee764bb1": {
           "type": "small_banner_4",
           "settings": {
-            "collection": "",
+            "collection": "Title",
+            "description": "Description",
+            "button_url": "",
+            "button_text": "Button Text"
+          }
+        },
+        "c2a794d2-f755-4590-8f47-6f786ff1557e": {
+          "type": "large_banner",
+          "settings": {
+            "collection": "Title",
             "description": "Description",
             "button_url": "",
             "button_text": "Button Text"
@@ -51,11 +50,11 @@
         }
       },
       "block_order": [
-        "3c640a1e-9c94-470e-8da8-e9e791a053ea",
         "572c584f-4da1-494a-994f-145a0843148a",
         "f03f5cd7-e9ab-42fa-b7c0-931eeeb87da9",
-        "dd54986f-895e-48f7-b8d4-79732a0b32a3",
-        "bdcf6c66-f75c-4919-8265-dcfbb5744a5d"
+        "83889dc1-f367-4f8a-8547-59ca1d04f9ec",
+        "c448f140-5954-4b9f-9a92-488eee764bb1",
+        "c2a794d2-f755-4590-8f47-6f786ff1557e"
       ],
       "settings": {
       }
