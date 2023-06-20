@@ -8,12 +8,11 @@
 
           {% when "large_banner" %}
           <div class="col-lg-6 p-0">
-            <div class="categories__item categories__large__item set-bg" data-setbg="img/categories/category-1.jpg">
+            <div class="categories__item categories__large__item set-bg" data-setbg="{{ block.settings.banner | img_url: 'master' }}">
               <div class="categories__text">
-                <h1>Women’s fashion</h1>
-                <p>Sitamet, consectetur adipiscing elit, sed do eiusmod tempor incidid-unt labore
-                  edolore magna aliquapendisse ultrices gravida.</p>
-                <a href="#">Shop now</a>
+                <h1>{{ block.settings.collection.title }}</h1>
+                <p>{{ block.settings.description }}</p>
+                <a href="{{ block.settings.button_url }}">{{ block.settings.button_text }}</a>
               </div>
             </div>
           </div>
@@ -23,11 +22,11 @@
 
               {% when "small_banner_1" %}
               <div class="col-lg-6 col-md-6 col-sm-6 p-0">
-                <div class="categories__item set-bg" data-setbg="img/categories/category-2.jpg">
+                <div class="categories__item set-bg" data-setbg="{{ block.settings.banner | img_url: 'master' }}">
                   <div class="categories__text">
-                    <h4>Men’s fashion</h4>
-                    <p>358 items</p>
-                    <a href="#">Shop now</a>
+                    <h1>{{ block.settings.collection.title }}</h1>
+                    <p>{{ block.settings.description }}</p>
+                    <a href="{{ block.settings.button_url }}">{{ block.settings.button_text }}</a>
                   </div>
                 </div>
               </div>
