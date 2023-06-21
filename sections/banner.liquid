@@ -51,10 +51,10 @@
               <div class="categories__text">
                 <h4>{{ section.settings.collection4.title }}</h4>
 
-                {% if section.settings.select4.count %}
+                {% if section.settings.select4 == count %}
                   <p>{{ section.settings.collection4.products_count }}</p>
                 {% endif %}
-                {% if section.settings.select4.description %}
+                {% if section.settings.select4 != count %}
                   <p>{{ section.settings.collection4.description }}</p>
                 {% endif %}
                 <a href="{{ section.settings.collection4.url }}">{{ section.settings.button_text4 }}</a>
