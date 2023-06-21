@@ -8,10 +8,10 @@
           <div class="categories__text">
             <h1>{{ section.settings.collection.title }}</h1>
 
-            {% if section.settings.select4 == "count" %}
-              <p>{{ section.settings.collection4.products_count }} items</p>
+            {% if section.settings.select == "count" %}
+              <p>{{ section.settings.collection.products_count }} items</p>
             {% else %}
-              <p>{{ section.settings.collection4.description }}</p>
+              <p>{{ section.settings.collection.description }}</p>
             {% endif %}
 
             <a href="{{ section.settings.collection.url }}">{{ section.settings.button_text }}</a>
