@@ -34,7 +34,7 @@
             "image": "shopify:\/\/shop_images\/banner-1_13d1ab31-e191-4fc1-9219-2dc323475256.jpg",
             "collection": "men",
             "product": "men-2",
-            "btn_text": "Button text"
+            "btn_text": "shop now"
           }
         },
         "5b721510-3528-43b3-b496-42c4732a0f30": {
@@ -42,7 +42,7 @@
           "settings": {
             "collection": "women",
             "product": "ladies-2",
-            "btn_text": "Button text"
+            "btn_text": "shop now"
           }
         },
         "81ed1bfc-cd52-41f7-bbbc-6b5fd6bec4ea": {
@@ -50,7 +50,7 @@
           "settings": {
             "collection": "kids",
             "product": "kid-2",
-            "btn_text": "Button text"
+            "btn_text": "shop now"
           }
         }
       },
