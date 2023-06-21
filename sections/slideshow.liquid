@@ -23,16 +23,19 @@
 {% schema %}
   {
     "name": "SlideShow",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Select picture"
+      }
+    ],
     "blocks": [
       {
         "type": "image",
         "name": "Slide",
         "settings": [
           {
-            "type": "image_picker",
-            "id": "image",
-            "label": "Select picture"
-          }, {
             "type": "collection",
             "id": "collection",
             "label": "Choose collection"
