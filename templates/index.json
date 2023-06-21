@@ -61,10 +61,19 @@
       "settings": {
         "image": "shopify:\/\/shop_images\/banner-3_77968aef-3b80-4c0f-9867-3bc3f0781e63.jpg"
       }
+    },
+    "eb2d6b2c-eceb-41bb-8713-537cfb9d45ec": {
+      "type": "featured-collection",
+      "settings": {
+        "featured_collection_title": "Featured Collection",
+        "featured_collection": "featured-collection",
+        "number_of_products": 4
+      }
     }
   },
   "order": [
     "fbb7f79b-d0c3-44f2-af2a-adcdc58ca508",
-    "614eda1a-a4f6-45ab-9561-96069114c2cb"
+    "614eda1a-a4f6-45ab-9561-96069114c2cb",
+    "eb2d6b2c-eceb-41bb-8713-537cfb9d45ec"
   ]
 }
