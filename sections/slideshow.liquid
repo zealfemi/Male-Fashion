@@ -5,7 +5,7 @@
       <div class="col-xl-7 col-lg-8 m-auto">
         <div class="banner__slider owl-carousel">
           {% for block in section.blocks %}
-            <div class="banner__item">
+            <div class="banner__item set-bg" data-setbg="{{ section.blocks.settings.image | img_url: 'master' }}">
               <div class="banner__text">
                 <span>{{ block.settings.collection.title }}</span>
                 <h1>{{ block.settings.product.title }}</h1>
