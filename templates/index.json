@@ -40,6 +40,7 @@
         "5b721510-3528-43b3-b496-42c4732a0f30": {
           "type": "image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/banner-2_b33b7ed8-9466-4906-90b1-152150b373a1.jpg",
             "collection": "women",
             "product": "ladies-2",
             "btn_text": "shop now"
@@ -48,6 +49,7 @@
         "81ed1bfc-cd52-41f7-bbbc-6b5fd6bec4ea": {
           "type": "image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/banner-3_77968aef-3b80-4c0f-9867-3bc3f0781e63.jpg",
             "collection": "kids",
             "product": "kid-2",
             "btn_text": "shop now"
