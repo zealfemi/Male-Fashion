@@ -1,5 +1,9 @@
 <!-- Banner Section Begin -->
-<section class="banner set-bg" data-setbg="{{ section.blocks.settings.image | img_url: 'master' }}">
+<section
+  class="banner set-bg"
+  {% for block in section.blocks %}
+  data-setbg="{{ section.blocks.settings.image | img_url: 'master' }}"
+  {% endfor %}>
   <div class="container">
     <div class="row">
       <div class="col-xl-7 col-lg-8 m-auto">
