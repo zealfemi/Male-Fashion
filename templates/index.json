@@ -24,9 +24,15 @@
         "select4": "count",
         "button_text4": "shop now"
       }
+    },
+    "614eda1a-a4f6-45ab-9561-96069114c2cb": {
+      "type": "slideshow",
+      "settings": {
+      }
     }
   },
   "order": [
-    "fbb7f79b-d0c3-44f2-af2a-adcdc58ca508"
+    "fbb7f79b-d0c3-44f2-af2a-adcdc58ca508",
+    "614eda1a-a4f6-45ab-9561-96069114c2cb"
   ]
 }
