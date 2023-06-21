@@ -30,7 +30,13 @@
             <div class="categories__item set-bg" data-setbg="{{ section.settings.banner2 | img_url: 'master' }}">
               <div class="categories__text">
                 <h4>{{ section.settings.collection2.title }}</h4>
-                <p>{{ section.settings.collection2.description }}</p>
+
+                {% if section.settings.select2 == "count" %}
+                  <p>{{ section.settings.collection2.products_count }} items</p>
+                {% else %}
+                  <p>{{ section.settings.collection2.description }}</p>
+                {% endif %}
+
                 <a href="{{ section.settings.collection2.url }}">{{ section.settings.button_text2 }}</a>
               </div>
             </div>
@@ -40,11 +46,13 @@
             <div class="categories__item set-bg" data-setbg="{{ section.settings.banner3 | img_url: 'master' }}">
               <div class="categories__text">
                 <h4>{{ section.settings.collection3.title }}</h4>
-                {% if section.settings.select4 == "count" %}
-                  <p>{{ section.settings.collection4.products_count }} items</p>
+
+                {% if section.settings.select3 == "count" %}
+                  <p>{{ section.settings.collection3.products_count }} items</p>
                 {% else %}
-                  <p>{{ section.settings.collection4.description }}</p>
+                  <p>{{ section.settings.collection3.description }}</p>
                 {% endif %}
+
                 <a href="{{ section.settings.collection3.url }}">{{ section.settings.button_text3 }}</a>
               </div>
             </div>
