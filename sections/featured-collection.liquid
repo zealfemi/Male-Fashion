@@ -9,8 +9,8 @@
       </div>
       <div class="col-lg-8 col-md-8">
         <ul class="filter__controls">
-          {% for collecton in collections %}
-            <li class="active" data-filter="{{ collection.title }}">{{ collection.title }}</li>
+          {% for collection in collections %}
+            <li class="active" data-filter="{{ collection.id }}">{{ collection.title }}</li>
           {% endfor %}
 
           <li data-filter=".women">Women’s</li>
