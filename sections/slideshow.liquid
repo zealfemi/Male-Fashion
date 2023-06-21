@@ -7,9 +7,9 @@
           {% for block in section.blocks %}
             <div class="banner__item">
               <div class="banner__text">
-                <span>The Chloe Collection</span>
-                <h1>The Project Jacket</h1>
-                <a href="#">Shop now</a>
+                <span>{{ block.settings.collection.title }}</span>
+                <h1>{{ block.settings.product.title }}</h1>
+                <a href="{{ block.settings.product.url }}">{{ block.settings.btn_text }}</a>
               </div>
             </div>
           {% endfor %}
