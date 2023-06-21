@@ -1,6 +1,20 @@
 <div class="col-lg-3 col-md-4 col-sm-6 mix men">
   <div class="product__item">
-    <div class="product__item__pic set-bg" data-setbg="img/product/product-2.jpg">
+    <div 
+    class="product__item__pic set-bg" 
+    data-setbg="{% if products_card.featured_image %}
+        <div class="h-80 overflow-hidden">
+          <img
+            class="w-full h-full object-cover transition duration-1000 ease-in-out hover:scale-105 transform"
+            src="{{ products_card.featured_image | img_url: 'medium' }}"
+            alt="{{ products_card.featured_image.alt }}"
+            width="{{ products_card.featured_image.width }}"
+            height="{{ products_card.featured_image.height }}"
+            loading="lazy" />
+        </div>
+      {% else %}
+        {{ 'product-1' | placeholder_svg_tag: 'w-full h-full object-cover bg-gray-100 transition duration-1000 ease-in-out hover:scale-105 transform' }}
+      {% endif %}">
       <ul class="product__hover">
         <li>
           <a href="img/product/product-2.jpg" class="image-popup">
