@@ -18,7 +18,15 @@
         </ul>
       </div>
     </div>
-    <div class="row property__gallery"></div>
+    <div class="row property__gallery">
+      {% for product in section.settings.featured_collection.products limit: section.settings.number_of_products %}
+        {% render 'product-card', products_card: product %}
+      {% else %}
+        {% for item in (1..4) %}
+          {% render 'product-card-placeholder' %}
+        {% endfor %}
+      {% endfor %}
+    </div>
   </div>
 </section>
 <!-- Product Section End -->
