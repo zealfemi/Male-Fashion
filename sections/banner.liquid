@@ -53,10 +53,10 @@
 
                 {% if section.settings.select4 == "count" %}
                   <p>{{ section.settings.collection4.products_count }} items</p>
-                {% endif %}
-                {% if section.settings.select4 == "description" %}
+                {% else %}
                   <p>{{ section.settings.collection4.description }}</p>
                 {% endif %}
+
                 <a href="{{ section.settings.collection4.url }}">{{ section.settings.button_text4 }}</a>
               </div>
             </div>
