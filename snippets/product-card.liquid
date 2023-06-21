@@ -6,7 +6,7 @@
       {% if products_card.featured_image %}
         {{ products_card.featured_image | img_url: 'medium' }}
       {% else %}
-        {{ 'product-1' | placeholder_svg_tag: 'w-full h-full object-cover bg-gray-100 transition duration-1000 ease-in-out hover:scale-105 transform' }}
+        {{ 'product-1' | placeholder_svg_tag }}
       {% endif %}'>
       <ul class="product__hover">
         <li>
