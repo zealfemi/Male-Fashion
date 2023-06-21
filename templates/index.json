@@ -27,6 +27,40 @@
     },
     "614eda1a-a4f6-45ab-9561-96069114c2cb": {
       "type": "slideshow",
+      "blocks": {
+        "c759263b-1c26-4a6e-bcfb-7adc5941bb7c": {
+          "type": "image",
+          "settings": {
+          }
+        },
+        "5b721510-3528-43b3-b496-42c4732a0f30": {
+          "type": "image",
+          "settings": {
+          }
+        },
+        "81ed1bfc-cd52-41f7-bbbc-6b5fd6bec4ea": {
+          "type": "image",
+          "settings": {
+          }
+        },
+        "c2417c2d-0562-4341-aaed-d3f6dd53563d": {
+          "type": "image",
+          "settings": {
+          }
+        },
+        "5dc0328a-6b5d-46ee-8f67-f38d73ce6b00": {
+          "type": "image",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "c759263b-1c26-4a6e-bcfb-7adc5941bb7c",
+        "5b721510-3528-43b3-b496-42c4732a0f30",
+        "81ed1bfc-cd52-41f7-bbbc-6b5fd6bec4ea",
+        "c2417c2d-0562-4341-aaed-d3f6dd53563d",
+        "5dc0328a-6b5d-46ee-8f67-f38d73ce6b00"
+      ],
       "settings": {
       }
     }
