@@ -5,18 +5,23 @@
       "settings": {
         "banner": "shopify:\/\/shop_images\/category-1.jpg",
         "collection": "featured-collection",
+        "select": "description",
         "button_text": "Button Text",
         "banner1": "shopify:\/\/shop_images\/category-2.jpg",
         "collection1": "men",
+        "select1": "count",
         "button_text1": "Button Text",
         "banner2": "shopify:\/\/shop_images\/category-4.jpg",
         "collection2": "women",
+        "select2": "count",
         "button_text2": "Button Text",
         "banner3": "shopify:\/\/shop_images\/category-5.jpg",
         "collection3": "kids",
+        "select3": "count",
         "button_text3": "Button Text",
         "banner4": "shopify:\/\/shop_images\/category-3.jpg",
         "collection4": "shoes",
+        "select4": "count",
         "button_text4": "Button Text"
       }
     }
