@@ -50,7 +50,7 @@
             <div class="categories__item set-bg" data-setbg="{{ section.settings.banner4 | img_url: 'master' }}">
               <div class="categories__text">
                 <h4>{{ section.settings.collection4.title }}</h4>
-
+                {{ section.settings.select4 }}
                 {% assign select = section.setting.select4 %}
                 {% if select == "Products Count" %}
                   <p>{{ section.settings.collection4.products_count }}</p>
