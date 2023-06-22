@@ -12,7 +12,7 @@
         <li>
           {% if products_card.featured_image %}
             <a href="{{ products_card.featured_image | img_url: 'master' }}" class="image-popup">
-              <span class="icon-expand"></span>
+              <span class="icon-expand" data-icon="&#x30;"></span>
             </a>
           {% else %}
             <a href="{{ 'product-1' | placeholder_svg_tag }}" class="image-popup">
