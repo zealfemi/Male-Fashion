@@ -4,14 +4,14 @@
       class="product__item__pic set-bg"
       data-setbg='
       {% if products_card.featured_image %}
-        {{ products_card.featured_image | img_url: 'medium' }}
+        {{ products_card.featured_image | img_url: 'master' }}
       {% else %}
         {{ 'product-1' | placeholder_svg_tag }}
       {% endif %}'>
       <ul class="product__hover">
         <li>
           {% if products_card.featured_image %}
-            <a href="{{ products_card.featured_image }}" class="image-popup">
+            <a href="{{ products_card.featured_image | img_url: 'master' }}" class="image-popup">
               <span class="arrow_expand"></span>
             </a>
           {% else %}
