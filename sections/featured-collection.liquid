@@ -10,7 +10,7 @@
       <div class="col-lg-8 col-md-8">
         <ul class="filter__controls">
           {% for collection in collections %}
-            <li class="active" data-filter="{% for product in collection.products %}{{ product.id }}{% endfor %}">{{ collection.title }}</li>
+            <li class="active" data-filter="{{ product.id }}">{{ collection.title }}</li>
           {% endfor %}
         </ul>
       </div>
