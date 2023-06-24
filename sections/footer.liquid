@@ -10,11 +10,17 @@
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
             cilisis.</p>
           <div class="footer__payment">
-            <a href="#"><img src="img/payment/payment-1.png" alt=""></a>
-            <a href="#"><img src="img/payment/payment-2.png" alt=""></a>
-            <a href="#"><img src="img/payment/payment-3.png" alt=""></a>
-            <a href="#"><img src="img/payment/payment-4.png" alt=""></a>
-            <a href="#"><img src="img/payment/payment-5.png" alt=""></a>
+            {% if section.settings.enable_payment_type_icons %}
+              <div class="flex justify-center text-center items-center mt-10">
+                {% for payment_type in shop.enabled_payment_types %}
+                  <img
+                    src="{{ payment_type | payment_type_img_url }}"
+                    width=""
+                    height=""
+                    loading="lazy">
+                {% endfor %}
+              </div>
+            {% endif %}
           </div>
         </div>
       </div>
