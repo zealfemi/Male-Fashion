@@ -9,19 +9,17 @@
           </div>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
             cilisis.</p>
-          <div class="footer__payment">
-            {% if section.settings.enable_payment_type_icons %}
-              <div class="flex justify-center text-center items-center mt-10">
-                {% for payment_type in shop.enabled_payment_types %}
-                  <img
-                    src="{{ payment_type | payment_type_img_url }}"
-                    width=""
-                    height=""
-                    loading="lazy">
-                {% endfor %}
-              </div>
-            {% endif %}
-          </div>
+          {% if section.settings.enable_payment_type_icons %}
+            <div class="footer__payment">
+              {% for payment_type in shop.enabled_payment_types %}
+                <img
+                  src="{{ payment_type | payment_type_img_url }}"
+                  width=""
+                  height=""
+                  loading="lazy">
+              {% endfor %}
+            </div>
+          {% endif %}
         </div>
       </div>
       <div class="col-lg-2 col-md-3 col-sm-5">
