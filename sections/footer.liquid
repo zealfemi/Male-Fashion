@@ -12,7 +12,7 @@
           {% if section.settings.enable_payment_type_icons %}
             <div class="footer__payment flex justify-center text-center items-center">
               {% for payment_type in shop.enabled_payment_types %}
-                <a href=""><img
+                <a href="#"><img
                     src="{{ payment_type | payment_type_img_url }}"
                     width=""
                     height=""
