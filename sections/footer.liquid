@@ -17,7 +17,9 @@
                       width=""
                       height=""></a>
                 {% else %}
-                  <a href="{{ shop.url }}">{{ shop.name }}</a>
+                  <a href="{{ shop.url }}">
+                    <h6>{{ shop.name }}</h6>
+                  </a>
                 {% endif %}
               </div>
               <p>{{ item.description }}</p>
