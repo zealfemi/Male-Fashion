@@ -35,15 +35,9 @@
               <ul class="list-unstyled text-small">
                 {% for link in linklists[footer_linklist].links %}
                   <li>
-                    <a href="{{ link.url }}" class="mb-1 hover:text-gray-400">{{ link.title | escape }}</a>
+                    <a href="{{ link.url }}">{{ link.title | escape }}</a>
                   </li>
                 {% endfor %}
-              </ul>
-              <ul>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Blogs</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">FAQ</a></li>
               </ul>
             </div>
           </div>
