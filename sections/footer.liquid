@@ -10,11 +10,19 @@
           <div class="col-lg-4 col-md-6 col-sm-7">
             <div class="footer__about">
               <div class="footer__logo">
-                <a href="{{ shop.url }}"><img
-                    src="{{ item.logo | img_url: 'large' }}"
-                    alt="{{ shop.name }}"
-                    width=""
-                    height=""></a>
+                {% if item.logo != blank %}
+                  <a href="{{ shop.url }}"><img
+                      src="{{ item.logo | img_url: 'large' }}"
+                      alt="{{ shop.name }}"
+                      width=""
+                      height=""></a>
+                {% else %}
+                  <a href="{{ shop.url }}"><img
+                      src="{{ item.logo | img_url: 'large' }}"
+                      alt="{{ shop.name }}"
+                      width=""
+                      height=""></a>
+                {% endif %}
               </div>
               <p>{{ item.description }}</p>
               {% if section.settings.enable_payment_type_icons %}
