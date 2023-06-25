@@ -18,11 +18,9 @@
                       height=""></a>
 
                 {% else %}
-                  <div class="categories_text">
-                    <a href="{{ shop.url }}">
-                      <h1>{{ shop.name }}</h1>
-                    </a>
-                  </div>
+                  <a href="{{ shop.url }}" class="categories_text">
+                    <h1>{{ shop.name }}</h1>
+                  </a>
                 {% endif %}
               </div>
               <p>{{ item.description }}</p>
