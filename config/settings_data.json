@@ -3,6 +3,11 @@
     "header_text_font": "anonymous_pro_n4",
     "body_text_font": "alegreya_n4",
     "sections": {
+      "translation": {
+        "type": "translation",
+        "settings": {
+        }
+      },
       "header": {
         "type": "header",
         "settings": {
@@ -13,41 +18,41 @@
       "footer": {
         "type": "footer",
         "blocks": {
-          "72ebf498-e755-497f-9b8b-f7ff32cf28da": {
-            "type": "text",
+          "5a5aab12-dbad-4747-a3c7-385f6981a719": {
+            "type": "store_details",
             "settings": {
               "title": "Store information",
-              "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>"
+              "description": ""
             }
           },
-          "78a50f7f-c3d3-4daf-a6fd-1dccc81d51db": {
+          "9b572e75-81cd-4c81-9360-d7182977dba9": {
             "type": "link_list",
             "settings": {
               "title": "Quick Links",
-              "menu": "footer"
+              "menu": ""
             }
           },
-          "6710f7fa-122d-4ba7-924f-5fc407356b46": {
+          "bc8fe133-42ef-4e91-ba07-81fe43ff3aa3": {
             "type": "link_list",
             "settings": {
               "title": "Quick Links",
-              "menu": "collections-menu"
+              "menu": ""
+            }
+          },
+          "3990e75f-b338-447e-81d3-7cf4f4f2d57e": {
+            "type": "newsletter",
+            "settings": {
             }
           }
         },
         "block_order": [
-          "72ebf498-e755-497f-9b8b-f7ff32cf28da",
-          "78a50f7f-c3d3-4daf-a6fd-1dccc81d51db",
-          "6710f7fa-122d-4ba7-924f-5fc407356b46"
+          "5a5aab12-dbad-4747-a3c7-385f6981a719",
+          "9b572e75-81cd-4c81-9360-d7182977dba9",
+          "bc8fe133-42ef-4e91-ba07-81fe43ff3aa3",
+          "3990e75f-b338-447e-81d3-7cf4f4f2d57e"
         ],
         "settings": {
-          "col_num": 3,
           "enable_payment_type_icons": true
-        }
-      },
-      "translation": {
-        "type": "translation",
-        "settings": {
         }
       }
     },
