@@ -30,7 +30,14 @@
           {% when "link_list" %}
           <div class="col-lg-2 col-md-3 col-sm-5">
             <div class="footer__widget">
-              <h6>Quick links</h6>
+              <h6>{{ item.title }}</h6>
+              {% assign footer_linklist = item.menu %}
+            <ul class="list-unstyled text-small">
+              {% for link in linklists[footer_linklist].links %}
+                <li>
+                  <a href="{{ link.url }}" class="mb-1 hover:text-gray-400">{{ link.title | escape }}</a>
+                </li>
+              {% endfor %}
               <ul>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Blogs</a></li>
