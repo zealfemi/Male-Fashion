@@ -2,74 +2,73 @@
 <footer class="footer">
   <div class="container">
     <div class="row">
-      <div class="col-lg-4 col-md-6 col-sm-7">
-        <div class="footer__about">
-          <div class="footer__logo">
-            <a href="./index.html"><img src="img/logo.png" alt=""></a>
-          </div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-            cilisis.</p>
-          {% if section.settings.enable_payment_type_icons %}
-            <div class="footer__payment flex justify-space-evenly text-center g-5 items-center">
-              {% for payment_type in shop.enabled_payment_types %}
-                <img
-                  src="{{ payment_type | payment_type_img_url }}"
-                  width=""
-                  height=""
-                  loading="lazy">
-              {% endfor %}
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {% assign item = block.settings %}
+
+          {% when "store_details" %}
+          <div class="col-lg-4 col-md-6 col-sm-7">
+            <div class="footer__about">
+              <div class="footer__logo">
+                <a href="{{ shop.url }}">{{ item.logo | img_url: 'large' }}</a>
+              </div>
+              <p>{{ item.description }}</p>
+              {% if section.settings.enable_payment_type_icons %}
+                <div class="footer__payment flex justify-space-evenly text-center g-5 items-center">
+                  {% for payment_type in shop.enabled_payment_types %}
+                    <img
+                      src="{{ payment_type | payment_type_img_url }}"
+                      width=""
+                      height=""
+                      loading="lazy">
+                  {% endfor %}
+                </div>
+              {% endif %}
             </div>
-          {% endif %}
-        </div>
-      </div>
-      <div class="col-lg-2 col-md-3 col-sm-5">
-        <div class="footer__widget">
-          <h6>Quick links</h6>
-          <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Blogs</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">FAQ</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-lg-2 col-md-3 col-sm-4">
-        <div class="footer__widget">
-          <h6>Account</h6>
-          <ul>
-            <li><a href="#">My Account</a></li>
-            <li><a href="#">Orders Tracking</a></li>
-            <li><a href="#">Checkout</a></li>
-            <li><a href="#">Wishlist</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-8 col-sm-8">
-        <div class="footer__newslatter">
-          <h6>NEWSLETTER</h6>
-          <form action="#">
-            <input type="text" placeholder="Email">
-            <button type="submit" class="site-btn">Subscribe</button>
-          </form>
-          <div class="footer__social">
-            <a href="#">
-              <i class="fa fa-facebook"></i>
-            </a>
-            <a href="#">
-              <i class="fa fa-twitter"></i>
-            </a>
-            <a href="#">
-              <i class="fa fa-youtube-play"></i>
-            </a>
-            <a href="#">
-              <i class="fa fa-instagram"></i>
-            </a>
-            <a href="#">
-              <i class="fa fa-pinterest"></i>
-            </a>
           </div>
-        </div>
-      </div>
+
+          {% when "link_list" %}
+          <div class="col-lg-2 col-md-3 col-sm-5">
+            <div class="footer__widget">
+              <h6>Quick links</h6>
+              <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Blogs</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">FAQ</a></li>
+              </ul>
+            </div>
+          </div>
+
+          {% when "newsletter" %}
+          <div class="col-lg-4 col-md-8 col-sm-8">
+            <div class="footer__newslatter">
+              <h6>NEWSLETTER</h6>
+              <form action="#">
+                <input type="text" placeholder="Email">
+                <button type="submit" class="site-btn">Subscribe</button>
+              </form>
+              <div class="footer__social">
+                <a href="#">
+                  <i class="fa fa-facebook"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-twitter"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-youtube-play"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-instagram"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-pinterest"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        {% endcase %}
+      {% endfor %}
     </div>
     <div class="row">
       <div class="col-lg-12">
@@ -146,13 +145,6 @@
     "name": "Footer",
     "settings": [
       {
-        "type": "range",
-        "id": "col_num",
-        "default": 3,
-        "min": 2,
-        "max": 4,
-        "label": "Number of Columns"
-      }, {
         "type": "checkbox",
         "id": "enable_payment_type_icons",
         "label": "Enable Payment Type Icons",
@@ -178,7 +170,7 @@
 
         ]
       }, {
-        "type": "text",
+        "type": "store_details",
         "name": "Store details",
         "settings": [
           {
