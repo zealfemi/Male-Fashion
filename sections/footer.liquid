@@ -16,10 +16,13 @@
                       alt="{{ shop.name }}"
                       width=""
                       height=""></a>
+
                 {% else %}
-                  <a href="{{ shop.url }}">
-                    <h6>{{ shop.name }}</h6>
-                  </a>
+                  <div class="footer__widget">
+                    <a href="{{ shop.url }}">
+                      <h6>{{ shop.name }}</h6>
+                    </a>
+                  </div>
                 {% endif %}
               </div>
               <p>{{ item.description }}</p>
