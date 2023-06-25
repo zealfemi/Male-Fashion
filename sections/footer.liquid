@@ -17,11 +17,7 @@
                       width=""
                       height=""></a>
                 {% else %}
-                  <a href="{{ shop.url }}"><img
-                      src="{{ item.logo | img_url: 'large' }}"
-                      alt="{{ shop.name }}"
-                      width=""
-                      height=""></a>
+                  <a href="{{ shop.url }}">{{ shop.name }}</a>
                 {% endif %}
               </div>
               <p>{{ item.description }}</p>
