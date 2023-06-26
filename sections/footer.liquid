@@ -57,27 +57,27 @@
           <div class="col-lg-4 col-md-8 col-sm-8">
             {% render 'newsletter' %}
             <div class="footer__social">
-              {% if item.facebook != blank %}
+              {% if item.facebook.link != blank %}
                 <a href="#">
                   <i class="fa fa-facebook"></i>
                 </a>
               {% endif %}
-              {% if item.twitter != blank %}
+              {% if item.twitter.link != blank %}
                 <a href="#">
                   <i class="fa fa-twitter"></i>
                 </a>
               {% endif %}
-              {% if item.youtube != blank %}
+              {% if item.youtube.link != blank %}
                 <a href="#">
                   <i class="fa fa-youtube-play"></i>
                 </a>
               {% endif %}
-              {% if item.instagram != blank %}
+              {% if item.instagram.link != blank %}
                 <a href="#">
                   <i class="fa fa-instagram"></i>
                 </a>
               {% endif %}
-              {% if item.pinterest != blank %}
+              {% if item.pinterest.link != blank %}
                 <a href="#">
                   <i class="fa fa-pinterest"></i>
                 </a>
