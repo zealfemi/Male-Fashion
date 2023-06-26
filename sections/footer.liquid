@@ -67,15 +67,21 @@
                   <i class="fa fa-twitter"></i>
                 </a>
               {% endif %}
-              <a href="#">
-                <i class="fa fa-youtube-play"></i>
-              </a>
-              <a href="#">
-                <i class="fa fa-instagram"></i>
-              </a>
-              <a href="#">
-                <i class="fa fa-pinterest"></i>
-              </a>
+              {% if item.youtube != blank %}
+                <a href="#">
+                  <i class="fa fa-youtube-play"></i>
+                </a>
+              {% endif %}
+              {% if item.instagram != blank %}
+                <a href="#">
+                  <i class="fa fa-instagram"></i>
+                </a>
+              {% endif %}
+              {% if item.pinterest != blank %}
+                <a href="#">
+                  <i class="fa fa-pinterest"></i>
+                </a>
+              {% endif %}
             </div>
           </div>
         {% endcase %}
