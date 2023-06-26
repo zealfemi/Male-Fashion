@@ -41,6 +41,11 @@
           "3990e75f-b338-447e-81d3-7cf4f4f2d57e": {
             "type": "newsletter",
             "settings": {
+              "facebook": "#",
+              "twitter": "#",
+              "youtube": "#",
+              "instagram": "#",
+              "pinterest": "#"
             }
           }
         },
