@@ -1,25 +1,6 @@
-<div class="w-full px-3 py-6">
-  <div class="border bg-white shadow-lg rounded-lg overflow-hidden">
-
-    {{ 'product-1' | placeholder_svg_tag: 'w-full h-full object-cover bg-gray-100 transition duration-1000 ease-in-out hover:scale-105 transform' }}
-
-    <div class="flex flex-col p-4">
-
-      <span class="text-sm text-gray-400">Vendor</span>
-
-      <span class="text-gray-700 uppercase font-medium">Placeholder Title</span>
-
-      <span class="text-gray-500">{{ 1000 | money }}</span>
-    </div>
-  </div>
-</div>
-
-
 <div class="col-lg-3 col-md-4 col-sm-6 mix">
   <div class="product__item">
-    <div
-      class="product__item__pic set-bg"
-      data-setbg='{{ 'product-1' | placeholder_svg_tag }}'>
+    <div class="product__item__pic set-bg" data-setbg='{{ 'product-1' | placeholder_svg_tag }}'>
       <ul class="product__hover">
         <li>
           <a href="{{ 'product-1' | placeholder_svg_tag }}" class="image-popup">
