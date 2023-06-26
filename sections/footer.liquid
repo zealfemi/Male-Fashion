@@ -57,9 +57,12 @@
           <div class="col-lg-4 col-md-8 col-sm-8">
             {% render 'newsletter' %}
             <div class="footer__social">
-              <a href="#">
-                <i class="fa fa-facebook"></i>
-              </a>
+              {% if item.facebook != blank %}
+                <a href="#">
+                  <i class="fa fa-facebook"></i>
+                </a>
+              {% endif %}
+              {% if item.twitter != blank %}{% endif %}
               <a href="#">
                 <i class="fa fa-twitter"></i>
               </a>
