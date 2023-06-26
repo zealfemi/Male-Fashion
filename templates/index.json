@@ -77,6 +77,19 @@
     },
     "ccd86c20-b868-475a-82d4-c9b361a1117b": {
       "type": "instagram-posts",
+      "blocks": {
+        "331cd7a9-7a9a-4285-8049-3a7e5951d1ff": {
+          "type": "picture",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/insta-1.jpg",
+            "instagram_handle": "@zf_mackie",
+            "instagram_url": "https:\/\/instagram.com\/zf_mackie"
+          }
+        }
+      },
+      "block_order": [
+        "331cd7a9-7a9a-4285-8049-3a7e5951d1ff"
+      ],
       "settings": {
       }
     }
