@@ -48,6 +48,7 @@
       aria-label="Subscribe">
       Subscribe
     </button>
+
     {%- if form.errors -%}
       <small class="newsletter-form__message form__message" id="Newsletter-error--{{ section.id }}">
         {%- render 'icon-error' -%}
@@ -55,6 +56,7 @@
         {{ form.errors.messages.email -}}
       </small>
     {%- endif -%}
+
     {%- if form.posted_successfully? -%}
       <h3
         class="newsletter-form__message newsletter-form__message--success form__message"
