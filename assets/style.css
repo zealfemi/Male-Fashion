@@ -3674,13 +3674,13 @@ ol {
   .discount__text {
     padding: 75px 0px 50px;
   }
-  .footer__newslatter form {
+  .footer__newsletter form {
     text-align: center;
   }
-  .footer__newslatter form input {
+  .footer__newsletter form input {
     margin-bottom: 10px;
   }
-  .footer__newslatter form button {
+  .footer__newsletter form button {
     position: relative;
     right: 0;
     top: 0;
@@ -3722,4 +3722,4 @@ ol {
 
 .header_text {
   font-family: Cookie, cursive;
-}
+}e
