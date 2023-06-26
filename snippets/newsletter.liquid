@@ -1,13 +1,5 @@
-<div class="footer__newsletter">
-  <h6>NEWSLETTER</h6>
-  <form action="#">
-    <input type="text" placeholder="Email">
-    <button type="submit" class="site-btn">Subscribe</button>
-  </form>
-
-</div>
-
 <div {{ block.shopify_attributes }} class="footer__newsletter">
+  <h6>{{ section.settings.title }}</h6>
   {% form 'customer', class: 'footer__newsletter' %}
     <input
       type="hidden"
