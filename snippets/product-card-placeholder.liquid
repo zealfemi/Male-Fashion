@@ -13,6 +13,8 @@
     </div>
   </div>
 </div>
+
+
 <div class="col-lg-3 col-md-4 col-sm-6 mix {{ products_card.collections.last.id }}">
   <div class="product__item">
     <div
@@ -25,16 +27,9 @@
       {% endif %}'>
       <ul class="product__hover">
         <li>
-          {% if products_card.featured_image %}
-            <a href="{{ products_card.featured_image | img_url: 'master' }}" class="image-popup">
-              <span class="icon_expand"></span>
-            </a>
-          {% else %}
-            <a href="{{ 'product-1' | placeholder_svg_tag }}" class="image-popup">
-              <span class="icon_expand"></span>
-            </a>
-          {% endif %}
-
+          <a href="{{ 'product-1' | placeholder_svg_tag }}" class="image-popup">
+            <span class="icon_expand"></span>
+          </a>
         </li>
         <li>
           <a href="#">
@@ -49,8 +44,7 @@
       </ul>
     </div>
     <div class="product__item__text">
-      <h6>
-        <a href="{{ products_card.url }}">{{ products_card.title }}</a>
+      <h6>Product Title
       </h6>
       <div class="rating">
         <i class="fa fa-star"></i>
@@ -59,7 +53,7 @@
         <i class="fa fa-star"></i>
         <i class="fa fa-star"></i>
       </div>
-      <div class="product__price">{{ products_card.price | money }}</div>
+      <div class="product__price">{{ 1000 | money }}</div>
     </div>
   </div>
 </div>
