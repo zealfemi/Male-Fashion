@@ -19,12 +19,7 @@
   <div class="product__item">
     <div
       class="product__item__pic set-bg"
-      data-setbg='
-      {% if products_card.featured_image %}
-        {{ products_card.featured_image | img_url: 'master' }}
-      {% else %}
-        {{ 'product-1' | placeholder_svg_tag }}
-      {% endif %}'>
+      data-setbg='{{ 'product-1' | placeholder_svg_tag }}'>
       <ul class="product__hover">
         <li>
           <a href="{{ 'product-1' | placeholder_svg_tag }}" class="image-popup">
