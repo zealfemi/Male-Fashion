@@ -1,24 +1,26 @@
-<div class="px-4 py-8">
-  <a href="{{ routes.collections_url }}" class="text-base text-gray-500 hover:underline text-center block my-4">Go back to collections</a>
-  {% paginate collection.products by section.settings.number_of_products_per_page %}
-    <h1 class="text-3xl text-center font-medium uppercase">{{ collection.title }}</h1>
+<section class="product spad">
+  <div class="container">
+    <a href="{{ routes.collections_url }}" class="text-base text-gray-500 hover:underline text-center block my-4">Go back to collections</a>
+    {% paginate collection.products by section.settings.number_of_products_per_page %}
+      <h1 class="text-3xl text-center font-medium uppercase">{{ collection.title }}</h1>
 
-    <div class="max-w-6xl mx-auto my-3">
-      <div class="row property__gallery">
-        {% for product in collection.products %}
-          {% render 'product-card', products_card: product %}
+      <div class="max-w-6xl mx-auto my-3">
+        <div class="row property__gallery">
+          {% for product in collection.products %}
+            {% render 'product-card', products_card: product %}
 
-        {% else %}
-          {% for item in (1..3) %}
-            {% render 'product-card-placeholder' %}
+          {% else %}
+            {% for item in (1..3) %}
+              {% render 'product-card-placeholder' %}
+            {% endfor %}
+            <p>There are no products available</p>
           {% endfor %}
-          <p>There are no products available</p>
-        {% endfor %}
+        </div>
       </div>
-    </div>
 
-    {% render 'pagination', pagination: paginate %}
-  {% endpaginate %}
+      {% render 'pagination', pagination: paginate %}
+    {% endpaginate %}
+  </div>
 </div>
 
 {% schema %}
