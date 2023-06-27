@@ -23,7 +23,7 @@
     <li>
       <a href="{{ routes.cart_url }}">
         <span class="">{% render 'icon-shopping-bag' %}</span>
-        <div class="tip">{{ cart.item_count }}</div>
+        <div class="tip">{{ cart.items.size }}</div>
       </a>
     </li>
   </ul>
