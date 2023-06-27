@@ -1,12 +1,12 @@
 {% if pagination.pages > 1 %}
 
-  <nav role="navigation" class="grid justify-between items-center my-8">
+  <nav role="navigation" class="flex justify-center items-center my-8">
     {% if pagination.previous %}
-      <a href="{{ pagination.previous.url }}" class="primary-btn">Previous</a>
+      <a href="{{ pagination.previous.url }}" class="primary-btn my-3">Previous</a>
     {% endif %}
 
     {% if pagination.next %}
-      <a href="{{ pagination.next.url }}" class="primary-btn">Next</a>
+      <a href="{{ pagination.next.url }}" class="primary-btn my-3">Next</a>
     {% endif %}
   </nav>
 
