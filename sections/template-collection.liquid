@@ -2,7 +2,7 @@
   <div class="container">
     <a href="{{ routes.collections_url }}" class="text-base text-gray-500 hover:underline text-center block my-4">Go back to collections</a>
     {% paginate collection.products by section.settings.number_of_products_per_page %}
-      <h1 class="text-3xl text-center font-medium uppercase">{{ collection.title }}</h1>
+      <div class="section-title">{{ collection.title }}</div>
 
       <div class="max-w-6xl mx-auto my-3">
         <div class="row property__gallery">
