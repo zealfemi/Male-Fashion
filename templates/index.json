@@ -3,21 +3,26 @@
     "dcd66ae4-6341-4c68-9e42-9e355cd11f0f": {
       "type": "banner",
       "settings": {
-        "collection": "",
-        "select": "count",
-        "button_text": "Button Text",
-        "collection1": "",
+        "banner": "shopify:\/\/shop_images\/category-1.jpg",
+        "collection": "featured-collection",
+        "select": "description",
+        "button_text": "shop now",
+        "banner1": "shopify:\/\/shop_images\/category-2.jpg",
+        "collection1": "men",
         "select1": "count",
-        "button_text1": "Button Text",
-        "collection2": "",
+        "button_text1": "shop now",
+        "banner2": "shopify:\/\/shop_images\/category-4.jpg",
+        "collection2": "women",
         "select2": "count",
-        "button_text2": "Button Text",
-        "collection3": "",
+        "button_text2": "shop now",
+        "banner3": "shopify:\/\/shop_images\/category-5.jpg",
+        "collection3": "kids",
         "select3": "count",
-        "button_text3": "Button Text",
-        "collection4": "",
+        "button_text3": "shop now",
+        "banner4": "shopify:\/\/shop_images\/category-3.jpg",
+        "collection4": "shoes",
         "select4": "count",
-        "button_text4": "Button Text"
+        "button_text4": "shop now"
       }
     },
     "featured-collection": {
@@ -34,16 +39,35 @@
         "d1dc1660-0a35-49aa-bcd8-10c7edf2ba43": {
           "type": "image",
           "settings": {
-            "collection": "",
-            "product": "",
-            "btn_text": "Button text"
+            "collection": "men",
+            "product": "men-2",
+            "btn_text": "shop now"
+          }
+        },
+        "1d8c818e-d836-4e52-8153-af7a3a276c6f": {
+          "type": "image",
+          "settings": {
+            "collection": "women",
+            "product": "ladies-1",
+            "btn_text": "shop now"
+          }
+        },
+        "841b2bc0-a332-49f1-a92c-e3ea13a76121": {
+          "type": "image",
+          "settings": {
+            "collection": "kids",
+            "product": "kid-2",
+            "btn_text": "shop now"
           }
         }
       },
       "block_order": [
-        "d1dc1660-0a35-49aa-bcd8-10c7edf2ba43"
+        "d1dc1660-0a35-49aa-bcd8-10c7edf2ba43",
+        "1d8c818e-d836-4e52-8153-af7a3a276c6f",
+        "841b2bc0-a332-49f1-a92c-e3ea13a76121"
       ],
       "settings": {
+        "image": "shopify:\/\/shop_images\/banner-3_77968aef-3b80-4c0f-9867-3bc3f0781e63.jpg"
       }
     },
     "38634a14-b264-47cb-849d-5b63d2791919": {
@@ -58,6 +82,42 @@
     },
     "83e1057b-c675-41ae-826f-b8ee29540f0a": {
       "type": "services",
+      "blocks": {
+        "c1300b8b-be3f-43d9-90eb-907214919ac2": {
+          "type": "shipping",
+          "settings": {
+            "title": "Title",
+            "description": "Description"
+          }
+        },
+        "cf04f63a-94f9-4275-afec-b651b3a7aa29": {
+          "type": "money_back",
+          "settings": {
+            "title": "Title",
+            "description": "Description"
+          }
+        },
+        "059e31f5-402a-4040-ab6f-3621db7f3c2a": {
+          "type": "support",
+          "settings": {
+            "title": "Title",
+            "description": "Description"
+          }
+        },
+        "437d04cf-b9cf-411b-8dd3-cb71d0ea4978": {
+          "type": "payment",
+          "settings": {
+            "title": "Title",
+            "description": "Description"
+          }
+        }
+      },
+      "block_order": [
+        "c1300b8b-be3f-43d9-90eb-907214919ac2",
+        "cf04f63a-94f9-4275-afec-b651b3a7aa29",
+        "059e31f5-402a-4040-ab6f-3621db7f3c2a",
+        "437d04cf-b9cf-411b-8dd3-cb71d0ea4978"
+      ],
       "settings": {
       }
     },
