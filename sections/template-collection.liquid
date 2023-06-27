@@ -9,13 +9,14 @@
             <a href="{{ shop.url }}">
               <i class="fa fa-home"></i>
               Home</a>
-            <span>{{ section.settings.featured_collection_title }}</span>
+            <span>{{ collection.title }}</span>
           </div>
         </div>
       </div>
     </div>
   </div>
   <!-- Breadcrumb End -->
+
   <div class="container">
     <a href="{{ routes.collections_url }}" class="text-base text-gray-500 hover:underline text-center block">Go back to collections</a>
     {% paginate collection.products by section.settings.number_of_products_per_page %}
