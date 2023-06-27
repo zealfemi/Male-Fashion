@@ -81,29 +81,29 @@
         "3dd96df8-2b05-48eb-994a-4535013220e9": {
           "type": "shipping",
           "settings": {
-            "title": "Title",
-            "description": "Description"
+            "title": "Free Shipping",
+            "description": "For all orders over $99"
           }
         },
         "8bcd6927-1395-4bbb-a788-abe77cc721c0": {
           "type": "money_back",
           "settings": {
-            "title": "Title",
-            "description": "Description"
+            "title": "Money Back Guarantee",
+            "description": "If goods have problems"
           }
         },
         "90d4309b-286e-4989-b02d-1d772ef65d14": {
           "type": "support",
           "settings": {
-            "title": "Title",
-            "description": "Description"
+            "title": "Online Support",
+            "description": "24\/7 Dedicated support"
           }
         },
         "3f441bb8-3c08-41d8-bb52-182ed8d4e557": {
           "type": "payment",
           "settings": {
-            "title": "Title",
-            "description": "Description"
+            "title": "Payment Secure",
+            "description": "100% secure payment"
           }
         }
       },
