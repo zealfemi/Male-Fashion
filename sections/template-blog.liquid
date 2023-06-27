@@ -24,14 +24,19 @@
       <div class="section-title">
         <h4>{{ blog.title }}</h4>
       </div>
+
       <div class="row">
         {% for article in blog.articles %}
           <div class="col-lg-4 col-md-4 col-sm-6">
             <div class="blog__item shadow-xl">
-              <div class="blog__item__pic set-bg" data-setbg="{{ article.image | img_url: 'master' }}"></div>
+              <div class="blog__item__pic set-bg" data-setbg="{{ article.image | img_url: 'master' }}">
+                {% if article.image == blank %}
+                  {{ 'image' | placeholder_svg_tag: 'blog__item__pic set-bg' }}
+                {% endif %}
+              </div>
               <div class="blog__item__text pl-4">
                 <h6>
-                  <a href="{{ article.url }}">{{ article.title }}</a>
+                  <a href="{{ article.url }}">{{ article.title | truncatewords: 15 }}</a>
                 </h6>
                 <ul>
                   <li>by
