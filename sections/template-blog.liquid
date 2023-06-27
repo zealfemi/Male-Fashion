@@ -29,9 +29,11 @@
         {% for article in blog.articles %}
           <div class="col-lg-4 col-md-4 col-sm-6">
             <div class="blog__item shadow-xl">
-              <div class="blog__item__pic set-bg align-items-center" {% if article.image != blank %}data-setbg="{{ article.image | img_url: 'master' }}"{% endif %}>
+              <div class="blog__item__pic set-bg" {% if article.image != blank %}data-setbg="{{ article.image | img_url: 'master' }}"{% endif %}>
                 {% if article.image == blank %}
-                  {{ 'image' | placeholder_svg_tag: 'blog__item__pic' }}
+                  <center>
+                    {{ 'image' | placeholder_svg_tag: 'blog__item__pic' }}
+                  </center>
                 {% endif %}
               </div>
               <div class="blog__item__text pl-4">
