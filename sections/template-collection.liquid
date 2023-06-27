@@ -1,47 +1,45 @@
-<div class="product spad">
-
-  <!-- Breadcrumb Begin -->
-  <div class="breadcrumb-option">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="breadcrumb__links">
-            <a href="{{ shop.url }}">
-              <i class="fa fa-home"></i>
-              Home</a>
-            <span>{{ collection.title }}</span>
-          </div>
+<!-- Breadcrumb Begin -->
+<div class="breadcrumb-option">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="breadcrumb__links">
+          <a href="{{ shop.url }}">
+            <i class="fa fa-home"></i>
+            Home</a>
+          <span>{{ collection.title }}</span>
         </div>
       </div>
     </div>
   </div>
-  <!-- Breadcrumb End -->
-
-  <div class="container">
-    <a href="{{ routes.collections_url }}" class="text-base text-gray-500 hover:underline text-center block">Go back to collections</a>
-    {% paginate collection.products by section.settings.number_of_products_per_page %}
-      <div class="section-title">
-        <h4>{{ collection.title }}</h4>
-      </div>
-
-      <div class="max-w-6xl mx-auto">
-        <div class="row property__gallery">
-          {% for product in collection.products %}
-            {% render 'product-card', products_card: product %}
-
-          {% else %}
-            {% for item in (1..3) %}
-              {% render 'product-card-placeholder' %}
-            {% endfor %}
-            <p>There are no products available</p>
-          {% endfor %}
-        </div>
-      </div>
-
-      {% render 'pagination', pagination: paginate %}
-    {% endpaginate %}
-  </div>
 </div>
+<!-- Breadcrumb End -->
+
+<div class="container">
+  <a href="{{ routes.collections_url }}" class="text-base text-gray-500 hover:underline text-center block">Go back to collections</a>
+  {% paginate collection.products by section.settings.number_of_products_per_page %}
+    <div class="section-title">
+      <h4>{{ collection.title }}</h4>
+    </div>
+
+    <div class="max-w-6xl mx-auto">
+      <div class="row property__gallery">
+        {% for product in collection.products %}
+          {% render 'product-card', products_card: product %}
+
+        {% else %}
+          {% for item in (1..3) %}
+            {% render 'product-card-placeholder' %}
+          {% endfor %}
+          <p>There are no products available</p>
+        {% endfor %}
+      </div>
+    </div>
+
+    {% render 'pagination', pagination: paginate %}
+  {% endpaginate %}
+</div>
+
 
 {% schema %}
   {
