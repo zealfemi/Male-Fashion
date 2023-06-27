@@ -75,6 +75,11 @@
       "settings": {
       }
     },
+    "504d3775-da25-483b-baaf-331a24274487": {
+      "type": "discount-countdown",
+      "settings": {
+      }
+    },
     "cf4f9e5b-1c18-4c34-875e-77c4b4a163cb": {
       "type": "services",
       "blocks": {
@@ -185,6 +190,7 @@
     "eb2d6b2c-eceb-41bb-8713-537cfb9d45ec",
     "614eda1a-a4f6-45ab-9561-96069114c2cb",
     "9856d104-ad27-4f4b-a56a-9f8507fca71d",
+    "504d3775-da25-483b-baaf-331a24274487",
     "cf4f9e5b-1c18-4c34-875e-77c4b4a163cb",
     "ccd86c20-b868-475a-82d4-c9b361a1117b"
   ]
