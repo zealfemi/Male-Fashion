@@ -21,6 +21,9 @@
   <!-- Blog Section Begin -->
   <section class="blog spad">
     <div class="container">
+      <div class="section-title">
+        <h4>{{ blog.title }}</h4>
+      </div>
       <div class="row">
         {% for article in blog.articles %}
           <div class="col-lg-4 col-md-4 col-sm-6">
@@ -50,9 +53,7 @@
 
   <div class="product spad">
     <div class="container">
-      <div class="section-title">
-        <h4>{{ blog.title }}</h4>
-      </div>
+
       <div class="max-w-6xl mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
 
