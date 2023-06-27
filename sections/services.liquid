@@ -4,7 +4,8 @@
     <div class="row">
       {% for block in section.blocks %}
         {% case block.type %}
-          {% when condition %}
+
+          {% when 'shipping' %}
           <div class="col-lg-3 col-md-4 col-sm-6">
             <div class="services__item">
               <i class="fa fa-car"></i>
@@ -12,13 +13,18 @@
               <p>For all oder over $99</p>
             </div>
           </div>
-          <div class="col-lg-3 col-md-4 col-sm-6">
+
+          {% when 'money_back' %}
+          <div
+            class="col-lg-3 col-md-4 col-sm-6">
             <div class="services__item">
               <i class="fa fa-money"></i>
               <h6>Money Back Guarantee</h6>
               <p>If good have Problems</p>
             </div>
           </div>
+
+          {% when 'support' %}
           <div class="col-lg-3 col-md-4 col-sm-6">
             <div class="services__item">
               <i class="fa fa-support"></i>
@@ -26,6 +32,8 @@
               <p>Dedicated support</p>
             </div>
           </div>
+
+          {% when 'payment' %}
           <div class="col-lg-3 col-md-4 col-sm-6">
             <div class="services__item">
               <i class="fa fa-headphones"></i>
