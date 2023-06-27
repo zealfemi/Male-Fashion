@@ -75,6 +75,47 @@
       "settings": {
       }
     },
+    "cf4f9e5b-1c18-4c34-875e-77c4b4a163cb": {
+      "type": "services",
+      "blocks": {
+        "3dd96df8-2b05-48eb-994a-4535013220e9": {
+          "type": "shipping",
+          "settings": {
+            "title": "Title",
+            "description": "Description"
+          }
+        },
+        "8bcd6927-1395-4bbb-a788-abe77cc721c0": {
+          "type": "money_back",
+          "settings": {
+            "title": "Title",
+            "description": "Description"
+          }
+        },
+        "90d4309b-286e-4989-b02d-1d772ef65d14": {
+          "type": "support",
+          "settings": {
+            "title": "Title",
+            "description": "Description"
+          }
+        },
+        "3f441bb8-3c08-41d8-bb52-182ed8d4e557": {
+          "type": "payment",
+          "settings": {
+            "title": "Title",
+            "description": "Description"
+          }
+        }
+      },
+      "block_order": [
+        "3dd96df8-2b05-48eb-994a-4535013220e9",
+        "8bcd6927-1395-4bbb-a788-abe77cc721c0",
+        "90d4309b-286e-4989-b02d-1d772ef65d14",
+        "3f441bb8-3c08-41d8-bb52-182ed8d4e557"
+      ],
+      "settings": {
+      }
+    },
     "ccd86c20-b868-475a-82d4-c9b361a1117b": {
       "type": "instagram-posts",
       "blocks": {
@@ -137,47 +178,6 @@
       ],
       "settings": {
       }
-    },
-    "cf4f9e5b-1c18-4c34-875e-77c4b4a163cb": {
-      "type": "services",
-      "blocks": {
-        "3dd96df8-2b05-48eb-994a-4535013220e9": {
-          "type": "shipping",
-          "settings": {
-            "title": "Title",
-            "description": "Description"
-          }
-        },
-        "8bcd6927-1395-4bbb-a788-abe77cc721c0": {
-          "type": "money_back",
-          "settings": {
-            "title": "Title",
-            "description": "Description"
-          }
-        },
-        "90d4309b-286e-4989-b02d-1d772ef65d14": {
-          "type": "support",
-          "settings": {
-            "title": "Title",
-            "description": "Description"
-          }
-        },
-        "3f441bb8-3c08-41d8-bb52-182ed8d4e557": {
-          "type": "payment",
-          "settings": {
-            "title": "Title",
-            "description": "Description"
-          }
-        }
-      },
-      "block_order": [
-        "3dd96df8-2b05-48eb-994a-4535013220e9",
-        "8bcd6927-1395-4bbb-a788-abe77cc721c0",
-        "90d4309b-286e-4989-b02d-1d772ef65d14",
-        "3f441bb8-3c08-41d8-bb52-182ed8d4e557"
-      ],
-      "settings": {
-      }
     }
   },
   "order": [
@@ -185,7 +185,7 @@
     "eb2d6b2c-eceb-41bb-8713-537cfb9d45ec",
     "614eda1a-a4f6-45ab-9561-96069114c2cb",
     "9856d104-ad27-4f4b-a56a-9f8507fca71d",
-    "ccd86c20-b868-475a-82d4-c9b361a1117b",
-    "cf4f9e5b-1c18-4c34-875e-77c4b4a163cb"
+    "cf4f9e5b-1c18-4c34-875e-77c4b4a163cb",
+    "ccd86c20-b868-475a-82d4-c9b361a1117b"
   ]
 }
