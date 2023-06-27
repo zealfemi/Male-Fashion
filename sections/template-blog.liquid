@@ -28,7 +28,7 @@
       <div class="row">
         {% for article in blog.articles %}
           <div class="col-lg-4 col-md-4 col-sm-6">
-            <div class="blog__item shadow-xl">
+            <div class="blog__item shadow-xxl">
               <div class="blog__item__pic set-bg" {% if article.image != blank %}data-setbg="{{ article.image | img_url: 'master' }}"{% endif %}>
                 {% if article.image == blank %}
                   <center>
