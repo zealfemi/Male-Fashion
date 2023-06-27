@@ -17,13 +17,14 @@
     <li>
       <a href="#">
         <span class="">{% render 'icon-heart' %}</span>
-        <div class="tip">2</div>
+        <div
+          class="tip">2</div>
       </a>
     </li>
     <li>
       <a href="#">
         <span class="">{% render 'icon-shopping-bag' %}</span>
-        <div class="tip">2</div>
+        <div class="tip">{{ cart.item_count }}</div>
       </a>
     </li>
   </ul>
