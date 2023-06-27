@@ -119,9 +119,9 @@
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="{{ routes.cart_url }}">
                 <span class="">{% render 'icon-shopping-bag' %}</span>
-                <div class="tip">2</div>
+                <div class="tip">{{ cart.item_count }}</div>
               </a>
             </li>
           </ul>
