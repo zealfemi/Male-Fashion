@@ -6,7 +6,7 @@
         <h4>{{ collection.title }}</h4>
       </div>
 
-      <div class="max-w-6xl mx-auto my-3">
+      <div class="max-w-6xl mx-auto">
         <div class="row property__gallery">
           {% for product in collection.products %}
             {% render 'product-card', products_card: product %}
