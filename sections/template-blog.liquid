@@ -49,14 +49,13 @@
           </div>
         {% endfor %}
         <div class="col-lg-12 text-center">
-          <div class="max-w-6xl mx-auto">
-            {% render 'pagination', pagination: paginate %}
-          </div>
+          {% render 'pagination', pagination: paginate %}
         </div>
       </div>
     </div>
   </section>
   <!-- Blog Section End -->
+
 {% endpaginate %}
 
 
