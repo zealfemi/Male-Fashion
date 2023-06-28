@@ -156,7 +156,7 @@
               </h4>
               <ul itemscope itemtype="http://schema.org/Person">
                 <li>by <span itemprop="author">{{ article.author }}</span></li>
-                <li>{{ article.published_at | date: '%B, %Y' }}</li>
+                <li><time datetime="{{ article.created_at | date: '%Y-%m-%d' }}" itemprop="dateCreated datePublished">{{ article.published_at | date: '%B, %Y' }}</time></li>
                 <li>{{ article.comments_count }} Comment{% if article.comments_count > 1 %}s{% endif %}</li>
               </ul>
             </div>
