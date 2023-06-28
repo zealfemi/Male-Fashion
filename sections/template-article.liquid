@@ -196,7 +196,7 @@
           </div>
 
           {% if blog.comments_enabled? %}
-            <div class="blog__details__comment">
+            <div class="blog__details__comment" itemprop="comment">
               <h5>{{ article.comments_count }} Comment{% if article.comments_count > 1 %}s{% endif %}</h5>
               <a href="#comment-form" class="leave-btn">Leave a comment</a>
 
