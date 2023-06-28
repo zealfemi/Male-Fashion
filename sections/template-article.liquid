@@ -23,7 +23,11 @@
 
           <div class="blog__details__item">
             <div itemprop="image">
+              {% if article.image != blank %}
               <img src="{{ article.image | img_url: 'master' }}" alt="{{ article.image.alt }}" width="" height="" />
+                {% else %}
+                  {{ 'image' | placeholder_svg_tag }}
+              {% endif %}
             </div>
             <div class="blog__details__item__title">
               <span class="tip">{{ blog.title }}</span>
