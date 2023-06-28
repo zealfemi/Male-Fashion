@@ -259,7 +259,7 @@
               <a href="#" class="blog__feature__item">
                 <div class="blog__feature__item__pic">
                   {% if article.image != blank %}
-                  <img src="{{ article.image | img_url: '110x75' }}" alt="{{ article.image.alt }}" width="" height="" />
+                  <img src="{{ article.image | img_url: 'medium' }}" alt="{{ article.image.alt }}" width="110" height="75" />
                     {% else %}
                       <img src="{{ 'image' | placeholder_svg_tag | img_url: '40x40'}}" alt="{{ article.image.alt }}" width="" height="" />
                   {% endif %}
