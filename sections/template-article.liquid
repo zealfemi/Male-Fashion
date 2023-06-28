@@ -197,35 +197,35 @@
             <a href="#" class="leave-btn">Leave a comment</a>
 
             {% paginate article.comments by 2 %}
-            {% for commentt in article.comments %}
-              <div class="blog__comment__item">
-                <div class="blog__comment__item__text">
-                  <h6>{{ commentt.author }}</h6>
-                  <p>
-                    {{ commentt.content }}
-                  </p>
-                  <ul>
-                    <li><i class="fa fa-clock-o"></i> {{ commentt.created_at | date: '%B, %Y' }}</li>
-                  </ul>
-                </div>
-              </div>
-
-              {% for reply in commentt.replies %}
-                <div class="blog__comment__item blog__comment__item--reply">
+              {% for commentt in article.comments %}
+                <div class="blog__comment__item">
                   <div class="blog__comment__item__text">
-                    <h6>{{ reply.author }}</h6>
+                    <h6>{{ commentt.author }}</h6>
                     <p>
-                      {{ reply.content }}
+                      {{ commentt.content }}
                     </p>
                     <ul>
-                      <li><i class="fa fa-clock-o"></i> {{ reply.created_at | date: '%B, %Y' }}</li>
+                      <li><i class="fa fa-clock-o"></i> {{ commentt.created_at | date: '%B, %Y' }}</li>
                     </ul>
                   </div>
                 </div>
-              {% endfor %}
-            {% endfor %}
 
-            {% render 'pagination', pagination: paginate %}
+                {% for reply in commentt.replies %}
+                  <div class="blog__comment__item blog__comment__item--reply">
+                    <div class="blog__comment__item__text">
+                      <h6>{{ reply.author }}</h6>
+                      <p>
+                        {{ reply.content }}
+                      </p>
+                      <ul>
+                        <li><i class="fa fa-clock-o"></i> {{ reply.created_at | date: '%B, %Y' }}</li>
+                      </ul>
+                    </div>
+                  </div>
+                {% endfor %}
+              {% endfor %}
+
+              {% render 'pagination', pagination: paginate %}
 
             {% endpaginate %}
           </div>
