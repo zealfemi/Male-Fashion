@@ -141,7 +141,7 @@
 </article>
 
 <!-- Blog Details Section Begin -->
-<article class="blog-details spad">
+<article class="blog-details spad" itemscope itemtype="http://schema.org/BlogPosting">
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-md-8">
@@ -151,11 +151,11 @@
             <img src="{{ article.image | img_url: 'master' }}" alt="{{ article.image.alt }}" width="" height="" />
             <div class="blog__details__item__title">
               <span class="tip">{{ blog.title }}</span>
-              <h4>
+              <h4 itemprop="headline">
                 {{ article.title }}
               </h4>
-              <ul>
-                <li>by <span>{{ article.author }}</span></li>
+              <ul itemscope itemtype="http://schema.org/Person">
+                <li>by <span itemprop="author">{{ article.author }}</span></li>
                 <li>{{ article.published_at | date: '%B, %Y' }}</li>
                 <li>{{ article.comments_count }} Comment{% if article.comments_count > 1 %}s{% endif %}</li>
               </ul>
