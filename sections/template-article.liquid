@@ -26,7 +26,7 @@
               {% if article.image != blank %}
               <img src="{{ article.image | img_url: 'master' }}" alt="{{ article.image.alt }}" width="" height="" />
                 {% else %}
-                  {{ 'collection-2' | placeholder_svg_tag: 'bg-gray-200' }}
+                  {{ 'lifestyle-2' | placeholder_svg_tag: 'bg-gray-200' }}
               {% endif %}
             </div>
             <div class="blog__details__item__title">
@@ -183,7 +183,7 @@
                         {% if article.image != blank %}
                           <img src="{{ article.image | img_url: 'small' }}" alt="{{ article.image.alt }}" width="" height="" class="" />
                         {% else %}
-                          {{ 'collection-4' | placeholder_svg_tag: 'bg-gray-200 w-20' }}
+                          {{ 'lifestyle-1' | placeholder_svg_tag: 'bg-gray-200 w-20' }}
                         {% endif %}
                       </div>
                       <div class="blog__feature__item__text">
