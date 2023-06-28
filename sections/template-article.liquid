@@ -198,7 +198,7 @@
           {% if blog.comments_enabled? %}
             <div class="blog__details__comment">
               <h5>{{ article.comments_count }} Comment{% if article.comments_count > 1 %}s{% endif %}</h5>
-              <a href="#" class="leave-btn">Leave a comment</a>
+              <a href="#comment-form" class="leave-btn">Leave a comment</a>
 
               {% paginate article.comments by 2 %}
                 {% for commentt in article.comments %}
