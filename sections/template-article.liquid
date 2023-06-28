@@ -163,34 +163,42 @@
 
       <div class="col-lg-4 col-md-4">
         <div class="blog__sidebar">
-          <div class="blog__sidebar__item">
-            <div class="section-title">
-              <h4>Recent Articles</h4>
-            </div>
-            {% for article in blog.articles limit: 3 %}
-              <a href="#" class="blog__feature__item">
-                <div class="blog__feature__item__pic">
-                  {% if article.image != blank %}
-                  <img src="{{ article.image | img_url: 'small' }}" alt="{{ article.image.alt }}" width="" height="" />
-                  {% endif %}
+          {% for block in section.blocks %}
+            {% case block.type %}
+              {% when 'recent_articles' %}
+                <div class="blog__sidebar__item">
+                  <div class="section-title">
+                    <h4>Recent Articles</h4>
+                  </div>
+                  {% for article in blog.articles limit: 3 %}
+                    <a href="#" class="blog__feature__item">
+                      <div class="blog__feature__item__pic">
+                        {% if article.image != blank %}
+                        <img src="{{ article.image | img_url: 'small' }}" alt="{{ article.image.alt }}" width="" height="" />
+                        {% endif %}
+                      </div>
+                      <div class="blog__feature__item__text">
+                        <h6>{{ article.title }}</h6>
+                        <span>{{ article.published_at | date: '%B, %Y' }}</span>
+                      </div>
+                    </a>
+                  {% endfor %}
                 </div>
-                <div class="blog__feature__item__text">
-                  <h6>{{ article.title }}</h6>
-                  <span>{{ article.published_at | date: '%B, %Y' }}</span>
+
+              {% when 'sidebar_tags' %}
+                <div class="blog__sidebar__item">
+                  <div class="section-title">
+                    <h4>Tags</h4>
+                  </div>
+                  <div class="blog__sidebar__tags">
+                    {% for tag in article.tags %}
+                      <a href="{{ tag.url }}">{{ tag.title }}</a>
+                    {% endfor %}
+                  </div>
                 </div>
-              </a>
-            {% endfor %}
-          </div>
-          <div class="blog__sidebar__item">
-            <div class="section-title">
-              <h4>Tags</h4>
-            </div>
-            <div class="blog__sidebar__tags">
-              {% for tag in article.tags %}
-                <a href="{{ tag.url }}">{{ tag.title }}</a>
-              {% endfor %}
-            </div>
-          </div>
+                
+            {% endcase %}
+          {% endfor %}
         </div>
       </div>
     </div>
