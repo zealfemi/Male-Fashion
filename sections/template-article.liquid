@@ -173,7 +173,7 @@
                   <div class="section-title">
                     <h4>Recent Articles</h4>
                   </div>
-                  {% for article in blog.articles limit: 3 %}
+                  {% for article in blog.articles limit: block.settings.number_of_recent_articles %}
                     <a href="#" class="blog__feature__item">
                       <div class="blog__feature__item__pic">
                         {% if article.image != blank %}
@@ -266,6 +266,12 @@
             "id": "title",
             "label": "Title",
             "default": "Recent Articles"
+          },
+          {
+            "type": "number",
+            "id": "number_of_recent_articles",
+            "label": "Number of Recent Articles",
+            "default": 3
           }
         ]
       },
