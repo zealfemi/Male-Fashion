@@ -228,20 +228,18 @@
                 <img src="img/blog/details/comment-1.jpg" alt="" />
               </div>
               <div class="blog__comment__item__text">
-                <h6>Brandon Kelley</h6>
+                <h6>{{ commentt.author }}</h6>
                 <p>
-                  Duis voluptatum. Id vis consequat consetetur dissentiet,
-                  ceteros commune perpetua mei et. Simul viderer facilisis
-                  egimus tractatos splendi.
+                  {{ commentt.content }}
                 </p>
                 <ul>
-                  <li><i class="fa fa-clock-o"></i> Seb 17, 2019</li>
+                  <li><i class="fa fa-clock-o"></i> {{ commentt.created_at | date: '%B, %Y' }}</li>
                   <li><i class="fa fa-heart-o"></i> 12</li>
                   <li><i class="fa fa-share"></i> 1</li>
                 </ul>
               </div>
             </div>
-            
+
             {% for reply in commentt.replies %}
               <div class="blog__comment__item blog__comment__item--reply">
                 <div class="blog__comment__item__pic">
@@ -261,7 +259,6 @@
                 </div>
               </div>
             {% endfor %}
-              
 
             {% endfor %}
             {% endpaginate %}
