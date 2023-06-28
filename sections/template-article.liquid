@@ -156,7 +156,7 @@
               <ul>
                 <li>by <span>{{ article.author }}</span></li>
                 <li>{{ article.published_at | date: '%B, %Y' }}</li>
-                <li>{{ article.comments_count }} Comments</li>
+                <li>{{ article.comments_count }} Comment{% if article.comments_count > 1 %}s{% endif %}</li>
               </ul>
             </div>
           </div>
