@@ -164,10 +164,9 @@
             {{ article.content }}
           </div>
           <div class="blog__details__tags">
-            <a href="#">Fashion</a>
-            <a href="#">Street style</a>
-            <a href="#">Diversity</a>
-            <a href="#">Beauty</a>
+          {% for tag in article.tags %}
+            <a href="{{ tag.url }}">{{ tag.title }}</a>
+          {% endfor %}
           </div>
           <div class="blog__details__btns">
             <div class="row">
