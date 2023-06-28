@@ -183,7 +183,7 @@
                         {% if article.image != blank %}
                           <img src="{{ article.image | img_url: 'small' }}" alt="{{ article.image.alt }}" width="" height="" class="" />
                         {% else %}
-                          {{ 'lifestyle-2' | placeholder_svg_tag: 'bg-gray-200' }}
+                          {{ 'lifestyle-2' | placeholder_svg_tag: 'w-100' }}
                         {% endif %}
                       </div>
                       <div class="blog__feature__item__text">
