@@ -154,9 +154,9 @@
                 {{ article.title }}
               </h4>
               <ul>
-                <li>by <span>Ema Timahe</span></li>
-                <li>Seb 17, 2019</li>
-                <li>39 Comments</li>
+                <li>by <span>{{ article.author }}</span></li>
+                <li>{{ article.published_at | date: '%B, %Y' }}</li>
+                <li>{{ article.comments_count }} Comments</li>
               </ul>
             </div>
           </div>
