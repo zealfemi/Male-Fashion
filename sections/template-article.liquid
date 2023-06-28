@@ -25,13 +25,13 @@
             <div itemprop="image">
               <img src="{{ article.image | img_url: 'master' }}" alt="{{ article.image.alt }}" width="" height="" />
             </div>
-            <div class="blog__details__item__title" itemscope itemtype="http://schema.org/Person">
+            <div class="blog__details__item__title">
               <span class="tip">{{ blog.title }}</span>
               <h4 itemprop="headline">
                 {{ article.title }}
               </h4>
               <ul>
-                <li>by <span itemprop="author">{{ article.author }}</span></li>
+                <li itemscope itemtype="http://schema.org/Person">by <span itemprop="author">{{ article.author }}</span></li>
                 <li><time datetime="{{ article.created_at | date: '%Y-%m-%d' }}" itemprop="dateCreated datePublished">{{ article.published_at | date: '%B, %Y' }}</time></li>
                 <li>{{ article.comments_count }} Comment{% if article.comments_count > 1 %}s{% endif %}</li>
               </ul>
