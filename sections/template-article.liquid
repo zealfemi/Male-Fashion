@@ -38,7 +38,7 @@
                 {% if section.settings.show_article_date %}
                 <li><time datetime="{{ article.created_at | date: '%Y-%m-%d' }}" itemprop="dateCreated datePublished">{{ article.published_at | date: '%B, %Y' }}</time></li>
                 {% endif %}
-                
+
                 <li>{{ article.comments_count }} Comment{% if article.comments_count > 1 %}s{% endif %}</li>
               </ul>
             </div>
@@ -235,31 +235,18 @@
         "id": "show_article_date",
         "label": "Show Article Date",
         "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "show_recent_articles",
+        "label": "Show Recent Articles",
+        "default": true
       }
     ],
     "blocks": [
       {
-        "type": "article_title",
-        "name": "Article Title",
-        "limit": 1
-      },
-      {
-        "type": "article_author",
-        "name": "Article Author",
-        "limit": 1
-      },
-      {
-        "type": "article_date",
-        "name": "Article Date",
-        "limit": 1
-      },
-      {
-        "type": "article_image",
-        "name": "Article Image",
-        "limit": 1
-      }, {
-        "type": "article_content",
-        "name": "Article Content",
+        "type": "recent_articles",
+        "name": "Recent Articles",
         "limit": 1
       }
     ]
