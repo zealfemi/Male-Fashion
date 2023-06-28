@@ -192,7 +192,6 @@
           </div>
 
             {% if blog.comments_enabled? %}
-    <div id="comment" class="my-8">
       {% if article.comments_count > 0 %}
         <div class="flex-1 items-center justify-center mx-auto max-w-4xl px-4">
           <h1 class="text-lg mb-4 font-medium">Comments</h1>
@@ -215,12 +214,14 @@
         <h1 class="text-lg mb-4 font-medium">There are no comments</h1>
       </div>
       {% endif %}
-    </div>
   {% endif %}
           {% if blog.comments_enabled %}
           <div class="blog__details__comment">
             <h5>{{ article.comments_count }} Comment{% if article.comments_count > 1 %}s{% endif %}</h5>
             <a href="#" class="leave-btn">Leave a comment</a>
+
+            {% paginate article.comments by 2 %}
+            {% for commentt in article.comments %}
             <div class="blog__comment__item">
               <div class="blog__comment__item__pic">
                 <img src="img/blog/details/comment-1.jpg" alt="" />
@@ -256,24 +257,9 @@
                 </ul>
               </div>
             </div>
-            <div class="blog__comment__item">
-              <div class="blog__comment__item__pic">
-                <img src="img/blog/details/comment-3.jpg" alt="" />
-              </div>
-              <div class="blog__comment__item__text">
-                <h6>Brandon Kelley</h6>
-                <p>
-                  Duis voluptatum. Id vis consequat consetetur dissentiet,
-                  ceteros commune perpetua mei et. Simul viderer facilisis
-                  egimus tractatos splendi.
-                </p>
-                <ul>
-                  <li><i class="fa fa-clock-o"></i> Seb 17, 2019</li>
-                  <li><i class="fa fa-heart-o"></i> 12</li>
-                  <li><i class="fa fa-share"></i> 1</li>
-                </ul>
-              </div>
-            </div>
+
+            {% endfor %}
+            {% endpaginate %}
           </div>
           {% endif %}
         </div>
