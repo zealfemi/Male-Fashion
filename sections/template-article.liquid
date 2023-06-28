@@ -146,7 +146,7 @@
     <div class="row">
       <div class="col-lg-8 col-md-8">
         <div class="blog__details__content">
-          
+
           <div class="blog__details__item">
             <img src="{{ article.image | img_url: 'master' }}" alt="{{ article.image.alt }}" width="" height="" />
             <div class="blog__details__item__title">
@@ -196,43 +196,43 @@
           </div>
 
           {% if blog.comments_enabled? %}
-          <div class="blog__details__comment">
-            <h5>{{ article.comments_count }} Comment{% if article.comments_count > 1 %}s{% endif %}</h5>
-            <a href="#" class="leave-btn">Leave a comment</a>
+            <div class="blog__details__comment">
+              <h5>{{ article.comments_count }} Comment{% if article.comments_count > 1 %}s{% endif %}</h5>
+              <a href="#" class="leave-btn">Leave a comment</a>
 
-            {% paginate article.comments by 2 %}
-              {% for commentt in article.comments %}
-                <div class="blog__comment__item">
-                  <div class="blog__comment__item__text">
-                    <h6>{{ commentt.author }}</h6>
-                    <p>
-                      {{ commentt.content }}
-                    </p>
-                    <ul>
-                      <li><i class="fa fa-clock-o"></i> {{ commentt.created_at | date: '%B, %Y' }}</li>
-                    </ul>
-                  </div>
-                </div>
-
-                {% for reply in commentt.replies %}
-                  <div class="blog__comment__item blog__comment__item--reply">
+              {% paginate article.comments by 2 %}
+                {% for commentt in article.comments %}
+                  <div class="blog__comment__item">
                     <div class="blog__comment__item__text">
-                      <h6>{{ reply.author }}</h6>
+                      <h6>{{ commentt.author }}</h6>
                       <p>
-                        {{ reply.content }}
+                        {{ commentt.content }}
                       </p>
                       <ul>
-                        <li><i class="fa fa-clock-o"></i> {{ reply.created_at | date: '%B, %Y' }}</li>
+                        <li><i class="fa fa-clock-o"></i> {{ commentt.created_at | date: '%B, %Y' }}</li>
                       </ul>
                     </div>
                   </div>
+
+                  {% for reply in commentt.replies %}
+                    <div class="blog__comment__item blog__comment__item--reply">
+                      <div class="blog__comment__item__text">
+                        <h6>{{ reply.author }}</h6>
+                        <p>
+                          {{ reply.content }}
+                        </p>
+                        <ul>
+                          <li><i class="fa fa-clock-o"></i> {{ reply.created_at | date: '%B, %Y' }}</li>
+                        </ul>
+                      </div>
+                    </div>
+                  {% endfor %}
                 {% endfor %}
-              {% endfor %}
 
-              {% render 'pagination', pagination: paginate %}
+                {% render 'pagination', pagination: paginate %}
 
-            {% endpaginate %}
-          </div>
+              {% endpaginate %}
+            </div>
           {% endif %}
         </div>
       </div>
