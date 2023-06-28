@@ -215,6 +215,7 @@
       </div>
       {% endif %}
   {% endif %}
+
           {% if blog.comments_enabled %}
           <div class="blog__details__comment">
             <h5>{{ article.comments_count }} Comment{% if article.comments_count > 1 %}s{% endif %}</h5>
@@ -240,23 +241,26 @@
                 </ul>
               </div>
             </div>
-            <div class="blog__comment__item blog__comment__item--reply">
-              <div class="blog__comment__item__pic">
-                <img src="img/blog/details/comment-2.jpg" alt="" />
+            {% for reply in commentt.replies %}
+              <div class="blog__comment__item blog__comment__item--reply">
+                <div class="blog__comment__item__pic">
+                  <img src="img/blog/details/comment-2.jpg" alt="" />
+                </div>
+                <div class="blog__comment__item__text">
+                  <h6>Brandon Kelley</h6>
+                  <p>
+                    Consequat consetetur dissentiet, ceteros commune perpetua mei
+                    et. Simul viderer facilisis egimus ulla mcorper.
+                  </p>
+                  <ul>
+                    <li><i class="fa fa-clock-o"></i> Seb 17, 2019</li>
+                    <li><i class="fa fa-heart-o"></i> 12</li>
+                    <li><i class="fa fa-share"></i> 1</li>
+                  </ul>
+                </div>
               </div>
-              <div class="blog__comment__item__text">
-                <h6>Brandon Kelley</h6>
-                <p>
-                  Consequat consetetur dissentiet, ceteros commune perpetua mei
-                  et. Simul viderer facilisis egimus ulla mcorper.
-                </p>
-                <ul>
-                  <li><i class="fa fa-clock-o"></i> Seb 17, 2019</li>
-                  <li><i class="fa fa-heart-o"></i> 12</li>
-                  <li><i class="fa fa-share"></i> 1</li>
-                </ul>
-              </div>
-            </div>
+            {% endfor %}
+              
 
             {% endfor %}
             {% endpaginate %}
