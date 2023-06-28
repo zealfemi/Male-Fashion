@@ -48,11 +48,13 @@
             {{ article.content }}
           </div>
 
+          {% if section.settings.show_tags_in_article %}
           <div class="blog__details__tags">
           {% for tag in article.tags %}
             <a href="{{ tag.url }}">{{ tag.title }}</a>
           {% endfor %}
           </div>
+        {% endif %}
 
           <div class="blog__details__btns">
             <div class="row">
