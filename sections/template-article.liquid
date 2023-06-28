@@ -257,14 +257,14 @@
             </div>
             {% for article in blog.articles limit: 3 %}
               <a href="#" class="blog__feature__item">
+                <div class="blog__feature__item__pic">
+                  {% if article.image != blank %}
+                  <img src="{{ article.image | img_url: 'small' }}" alt="{{ article.image.alt }}" width="" height="" />
+                  {% endif %}
+                </div>
                 <div class="blog__feature__item__text">
                   <h6>{{ article.title }}</h6>
                   <span>{{ article.published_at | date: '%B, %Y' }}</span>
-                </div>
-                <div class="blog__feature__item__pic">
-                  {% if article.image != blank %}
-                  <img src="{{ article.image | img_url: 'small' }}" alt="{{ article.image.alt }}" width="110" height="75" />
-                  {% endif %}
                 </div>
               </a>
             {% endfor %}
