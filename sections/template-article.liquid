@@ -122,7 +122,7 @@
               {% endpaginate %}
             </div>
 
-            <div id="comment_form #comment-form" class="mb-8">
+            <div id="comment_form #comment-form" class="mb-3">
               {% form 'new_comment', article %}
                 <div class="flex-1 mx-auto items-center justify-center max-w-4xl px-4">
                   {% render 'form-errors', form: form %}
@@ -154,7 +154,7 @@
                       <textarea class="w-full text-gray-700 resize-none h-20 py-2 px-3 focus:outline-none border" name="comment[body]" id="comment_content" required></textarea>
                     </div>
                   </div>
-                  <div class="md:flex mb-3">
+                  <div class="md:flex">
                     <div class="md:w-full px-1">
                       <input type="submit" class="w-full cursor-pointer px-4 py-2 border text-base font-medium text-white bg-gray-900 hover:bg-gray-500 text-center" value="Post Comment">
                     </div>
