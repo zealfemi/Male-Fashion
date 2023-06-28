@@ -63,9 +63,9 @@
           {% paginate article.comments by 2 %}
             {% for commentt in article.comments %}
               <div class="flex-1 border my-4 px-4 py-2 sm:px-6 sm:py-4 leading relaxed" itemprop="comment">
-                <span class="comment-author">{{ comment.author }}</span>
-                <span class="text-xs text-gray-400">{{ comment.created_at | date: format: 'default' }}</span>
-                <p class="text-sm">{{ comment.content }}</p>
+                <span class="comment-author">{{ commentt.author }}</span>
+                <span class="text-xs text-gray-400">{{ commentt.created_at | date: format: 'default' }}</span>
+                <p class="text-sm">{{ commentt.content }}</p>
               </div>
             {% endfor %}
             <div class="max-w-6xl mx-auto">
