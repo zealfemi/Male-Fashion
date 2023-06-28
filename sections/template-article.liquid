@@ -261,8 +261,8 @@
                   <img src="{{ article.image | img_url: 'master' }}" alt="{{ article.image.alt }}" width="" height="" />
                 </div>
                 <div class="blog__feature__item__text">
-                  <h6>Amf Cannes Red Carpet Celebrities Kend...</h6>
-                  <span>Seb 17, 2019</span>
+                  <h6>{{ article.title | truncatewords: 15 }}</h6>
+                  <span>{{ article.published_at | date: '%B, %Y' }}</span>
                 </div>
               </a>
             {% endfor %}
