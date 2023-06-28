@@ -31,7 +31,7 @@
                 {{ article.title }}
               </h4>
               <ul>
-                <li itemscope itemtype="http://schema.org/Person">by <span itemprop="author">{{ article.author }}</span></li>
+                <li><div itemscope itemtype="http://schema.org/Person">by <span itemprop="author">{{ article.author }}</span></div></li>
                 <li><time datetime="{{ article.created_at | date: '%Y-%m-%d' }}" itemprop="dateCreated datePublished">{{ article.published_at | date: '%B, %Y' }}</time></li>
                 <li>{{ article.comments_count }} Comment{% if article.comments_count > 1 %}s{% endif %}</li>
               </ul>
