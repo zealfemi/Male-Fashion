@@ -261,7 +261,7 @@
                   {% if article.image != blank %}
                   <img src="{{ article.image | img_url: 'small' }}" alt="{{ article.image.alt }}" width="" height="" />
                     {% else %}
-                      {{ '' }}
+                      {{ 'image' | placeholder_svg_tag: 'blog__item__pic' }}
                   {% endif %}
                 </div>
                 <div class="blog__feature__item__text">
