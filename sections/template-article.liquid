@@ -258,7 +258,11 @@
             {% for article in blog.articles limit: 3 %}
               <a href="#" class="blog__feature__item">
                 <div class="blog__feature__item__pic">
+                  {% if article.image != blank %}
                   <img src="{{ article.image | img_url: 'small' }}" alt="{{ article.image.alt }}" width="" height="" />
+                    {% else %}
+                      {{ '' }}
+                  {% endif %}
                 </div>
                 <div class="blog__feature__item__text">
                   <h6>{{ article.title }}</h6>
