@@ -181,7 +181,7 @@
                     <a href="#" class="blog__feature__item">
                       <div class="blog__feature__item__pic">
                         {% if article.image != blank %}
-                          <img src="{{ article.image | img_url: 'medium' }}" alt="{{ article.image.alt }}" width="" height="" class="w-20" />
+                          <img src="{{ article.image | img_url: 'medium' }}" alt="{{ article.image.alt }}" width="" height="" class="" />
                         {% else %}
                           {{ 'image' | placeholder_svg_tag: 'bg-gray-200 h-16 w-20' }}
                         {% endif %}
