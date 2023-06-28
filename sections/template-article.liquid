@@ -162,7 +162,7 @@
             </div>
           </div>
 
-          <div class="blog__details__desc">
+          <div class="blog__details__desc" itemprop="articleBody">
             {{ article.content }}
           </div>
 
@@ -218,7 +218,7 @@
                     <div class="blog__comment__item blog__comment__item--reply">
                       <div class="blog__comment__item__text">
                         <h6>{{ reply.author }}</h6>
-                        <p itemprop="articleBody">
+                        <p>
                           {{ reply.content }}
                         </p>
                         <ul>
