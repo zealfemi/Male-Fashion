@@ -191,7 +191,7 @@
             </div>
           </div>
 
-          
+          {% if blog.comments_enabled? %}
           <div class="blog__details__comment">
             <h5>{{ article.comments_count }} Comment{% if article.comments_count > 1 %}s{% endif %}</h5>
             <a href="#" class="leave-btn">Leave a comment</a>
@@ -227,6 +227,7 @@
             {% endfor %}
             {% endpaginate %}
           </div>
+          {% endif %}
         </div>
       </div>
       <div class="col-lg-4 col-md-4">
