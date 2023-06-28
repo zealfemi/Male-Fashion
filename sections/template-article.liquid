@@ -21,8 +21,10 @@
       <div class="col-lg-8 col-md-8">
         <div class="blog__details__content">
 
-          <div class="blog__details__item" itemprop="image">
-            <img src="{{ article.image | img_url: 'master' }}" alt="{{ article.image.alt }}" width="" height="" />
+          <div class="blog__details__item">
+            <div itemprop="image">
+              <img src="{{ article.image | img_url: 'master' }}" alt="{{ article.image.alt }}" width="" height="" />
+            </div>
             <div class="blog__details__item__title" itemscope itemtype="http://schema.org/Person">
               <span class="tip">{{ blog.title }}</span>
               <h4 itemprop="headline">
