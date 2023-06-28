@@ -223,8 +223,10 @@
                 </div>
               </div>
             {% endfor %}
-
             {% endfor %}
+
+            {% render 'pagination', pagination: paginate %}
+            
             {% endpaginate %}
           </div>
           {% endif %}
