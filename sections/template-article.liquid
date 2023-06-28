@@ -72,11 +72,11 @@
                 </div>
               </div>
               <div class="col-lg-6 col-md-6 col-sm-6">
-                <div
-                  class="blog__details__btn__item blog__details__btn__item--next"
-                >
+                <div class="blog__details__btn__item blog__details__btn__item--next">
                   <h6>
-                    <a href="{{ blog.next_article.url }}">Next article <i class="fa fa-angle-right"></i></a>
+                    {% if blog.next_article.url != blank %}
+                      <a href="{{ blog.next_article.url }}">Next article <i class="fa fa-angle-right"></i></a>
+                    {% endif %}
                   </h6>
                 </div>
               </div>
