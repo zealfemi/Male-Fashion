@@ -261,7 +261,7 @@
                   {% if article.image != blank %}
                   <img src="{{ article.image | img_url: 'medium' }}" alt="{{ article.image.alt }}" width="110" height="75" />
                     {% else %}
-                      <img src="{{ 'image' | placeholder_svg_tag }}" alt="{{ article.image.alt }}" width="110" height="75" />
+                      {{ 'image' | placeholder_svg_tag: 'style="width: 100; height: 75;"' }}
                   {% endif %}
                 </div>
                 <div class="blog__feature__item__text">
