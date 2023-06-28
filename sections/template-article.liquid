@@ -258,7 +258,7 @@
             {% for article in blog.articles limit: 3 %}
               <a href="#" class="blog__feature__item">
                 <div class="blog__feature__item__pic">
-                  <img src="{{ article.image | img_url: 'medium' }}" alt="{{ article.image.alt }}" width="" height="" />
+                  <img src="{{ article.image | img_url: 'small' }}" alt="{{ article.image.alt }}" width="" height="" />
                 </div>
                 <div class="blog__feature__item__text">
                   <h6>{{ article.title }}</h6>
