@@ -23,7 +23,7 @@
         <p class="text-center my-10 text-gray-500">{{ search.results.size }} results found for the search term
           <b>{{ search.terms | escape }}</b>
         </p>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 py-6">
+        <div class="row property__gallery">
           {% for item in search.results %}
             {% case item.object_type %}
               {% when 'product' %}
