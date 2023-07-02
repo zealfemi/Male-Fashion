@@ -6,15 +6,15 @@
       <form
         action="{{ routes.search_url }}"
         method="get"
-        class="border flex rounded">
+        class="footer__newsletter">
         <input
           type="search"
           name="q"
           placeholder="Search"
           value"{{ search.terms | escape }}"
-          class="px-4 py-2 w-80 border-none">
+          class="field__input">
 
-        <button type="submit" class="bg-gray-900 text-white hover:bg-gray-700 border px-4">Search</button>
+        <button type="submit" class="site-btn">Search</button>
       </form>
     </div>
 
