@@ -50,7 +50,11 @@
                   {% for item in cart.items %}
                     <tr>
                       <td class="cart__product__item">
-                        <img src="img/shop-cart/cp-1.jpg" alt="" />
+                        <img
+                          src="{{ item.image | img_url: 'medium' }}"
+                          alt="{{ item.image.alt }}"
+                          width=""
+                          height="" />
                         <div class="cart__product__item__title">
                           <h6>Chain bucket bag</h6>
                         </div>
