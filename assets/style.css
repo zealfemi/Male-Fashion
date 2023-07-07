@@ -2201,8 +2201,9 @@ ol {
   text-align: right;
 }
 
-.shop__cart__table tbody tr .cart__close svg {
-  
+.shop__cart__table tbody tr .cart__close .cart__svg {
+  height: 45px;
+  width: 45px;
   background: #f2f2f2;
   border-radius: 50%;
   font-size: 18px;
@@ -2212,7 +2213,6 @@ ol {
   display: inline-block;
   font-weight: 600;
   cursor: pointer;
-  padding: 20px;
 }
 
 .cart__btn {
