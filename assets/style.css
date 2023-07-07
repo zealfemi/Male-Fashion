@@ -2320,7 +2320,7 @@ ol {
   float: right;
 }
 
-.cart__total__procced .primary-btn {
+.cart__total__procced .primary-btn button {
   display: block;
   border-radius: 50px;
   text-align: center;
