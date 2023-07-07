@@ -72,6 +72,34 @@
     },
     "38634a14-b264-47cb-849d-5b63d2791919": {
       "type": "template-trend",
+      "blocks": {
+        "437494b9-e8ac-4796-8ef2-03ddabd18c03": {
+          "type": "trends",
+          "settings": {
+            "title": "HOT TREND",
+            "collection": "men"
+          }
+        },
+        "795ed494-c9e3-4a43-83aa-65e31f81b7e8": {
+          "type": "trends",
+          "settings": {
+            "title": "BEST SELLER",
+            "collection": "women"
+          }
+        },
+        "93890975-fbd5-4beb-a3fd-56e60a0aa318": {
+          "type": "trends",
+          "settings": {
+            "title": "FEATURE",
+            "collection": "kids"
+          }
+        }
+      },
+      "block_order": [
+        "437494b9-e8ac-4796-8ef2-03ddabd18c03",
+        "795ed494-c9e3-4a43-83aa-65e31f81b7e8",
+        "93890975-fbd5-4beb-a3fd-56e60a0aa318"
+      ],
       "settings": {
       }
     },
