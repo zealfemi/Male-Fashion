@@ -63,14 +63,13 @@
                       </td>
                       <td class="cart__price">{{ item.price | money }}</td>
                       <td class="cart__quantity">
-                        <div class="pro-qty">
+                        <div class="pro-qty border">
                           <input
                             type="number"
                             name="updates[]"
                             id="updates_{{ forloop.index }}"
                             value="{{ item.quantity }}"
-                            min="0"
-                            class="border">
+                            min="0">
                         </div>
                       </td>
                       <td class="cart__total">{{ item.line_price | money }}</td>
