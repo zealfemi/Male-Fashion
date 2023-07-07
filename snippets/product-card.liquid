@@ -12,17 +12,13 @@
         <div class="label stockout">out of stock</div>
       {% endunless %}
       <ul class="product__hover">
-        <li>
-          {% if products_card.featured_image %}
+        {% if products_card.featured_image %}
+          <li>
             <a href="{{ products_card.featured_image | img_url: 'master' }}" class="image-popup">
               <span class="">{% render 'icon-expand' %}</span>
             </a>
-          {% else %}
-            <a href="{{ 'product-1' | placeholder_svg_tag }}" class="image-popup">
-              <span class="">{% render 'icon-expand' %}</span>
-            </a>
-          {% endif %}
-        </li>
+          </li>
+        {% endif %}
         <li>
           <a href="#">
             <span class="">{% render 'icon-shopping-bag' %}</span>
