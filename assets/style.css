@@ -1193,6 +1193,7 @@ ol {
   position: absolute;
   left: 0;
   width: 100%;
+  bottom: 30px;
   text-align: center;
 }
 
@@ -1241,7 +1242,11 @@ ol {
 .product__hover li a {
   font-size: 18px;
   color: #111111;
+  display: block;
+  height: 45px;
+  width: 45px;
   background: #ffffff;
+  line-height: 48px;
   text-align: center;
   border-radius: 50%;
   -webkit-transition: all, 0.5s;
@@ -1258,7 +1263,6 @@ ol {
   -o-transition: all, 0.3s;
   transition: all, 0.3s;
   display: inline-block;
-  padding: 15px;
 }
 
 .product__item__text {
