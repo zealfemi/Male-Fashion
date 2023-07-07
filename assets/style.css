@@ -506,6 +506,7 @@ ol {
 
 .banner {
   height: 500px;
+  margin-bottom: 50px;
 }
 
 .banner__text span {
