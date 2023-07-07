@@ -1243,8 +1243,7 @@ ol {
   font-size: 18px;
   color: #111111;
   display: block;
-  height: 45px;
-  width: 45px;
+  padding: 20px;
   background: #ffffff;
   line-height: 48px;
   text-align: center;
