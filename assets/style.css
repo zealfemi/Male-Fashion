@@ -1242,8 +1242,6 @@ ol {
 .product__hover li a {
   font-size: 18px;
   color: #111111;
-  display: block;
-  padding: 15px;
   background: #ffffff;
   line-height: 48px;
   text-align: center;
@@ -1262,6 +1260,7 @@ ol {
   -o-transition: all, 0.3s;
   transition: all, 0.3s;
   display: inline-block;
+  padding: 15px;
 }
 
 .product__item__text {
