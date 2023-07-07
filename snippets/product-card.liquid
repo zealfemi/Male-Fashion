@@ -15,23 +15,18 @@
         <li>
           {% if products_card.featured_image %}
             <a href="{{ products_card.featured_image | img_url: 'master' }}" class="image-popup">
-              <span class="icon_expand"></span>
+              <span class="">{% render 'icon-expand' %}</span>
             </a>
           {% else %}
             <a href="{{ 'product-1' | placeholder_svg_tag }}" class="image-popup">
-              <span class="icon_expand"></span>
+              <span class="">{% render 'icon-expand' %}</span>
             </a>
           {% endif %}
 
         </li>
         <li>
           <a href="#">
-            <span class="icon_heart_alt"></span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <span class="icon_bag_alt"></span>
+            <span class="">{% render 'icon-shopping-bag' %}</span>
           </a>
         </li>
       </ul>
