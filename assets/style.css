@@ -2202,8 +2202,7 @@ ol {
 }
 
 .shop__cart__table tbody tr .cart__close .cart__svg {
-  height: 45px;
-  width: 45px;
+  padding: 45px;
   background: #f2f2f2;
   border-radius: 50%;
   font-size: 18px;
