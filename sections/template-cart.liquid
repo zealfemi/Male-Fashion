@@ -75,7 +75,7 @@
                       <td class="cart__total">{{ item.line_price | money }}</td>
                       <td class="cart__close">
                         <a href="{{ routes.cart_change_url }}?line={{ forloop.index }}&quantity=0" class="text-sm font-medium text-red-500 my-1">
-                          <div class="cart__svg">{% render 'icon-remove' %}</div>
+                          <span class="cart__svg">{% render 'icon-remove' %}</span>
                         </a>
                       </td>
                     </tr>
