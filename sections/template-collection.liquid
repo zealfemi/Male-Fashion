@@ -70,7 +70,7 @@
                 {%- when 'price_range' -%}
                   <div class="filter-group-display__price-range">
                     <div class="filter-group-display__price-range-from">
-                      {{ filter.range_max | money_without_currency | replace: ',', '' }}
+                      The highest price is {{ filter.range_max | money_without_currency | replace: ',', '' }}
                       <span>{{ cart.currency.symbol }}</span>
 
                       <input name="{{ filter.min_value.param_name }}"
@@ -83,8 +83,6 @@
                         min="0"
                         max="{{ filter.range_max | money_without_currency | replace: ',', '' }}"
                       >
-
-                      <label for="Filter-{{ filter.min_value.param_name }}">From</label>
                     </div>
                     <div class="filter-group-display__price-range-to">
                       <span>{{ cart.currency.symbol }}</span>
@@ -99,8 +97,6 @@
                         min="0"
                         max="{{ filter.range_max | money_without_currency | replace: ',', '' }}"
                       >
-
-                      <label for="Filter-{{ filter.max_value.param_name }}">To</label>
                     </div>
                   </div>
 
