@@ -29,9 +29,13 @@
         <label for="sort-by">Sort by</label> 
         <select id="sort-by" class="sort-by">
           {% for option in collection.sort_options %}
-            {% if option.value == "title-descending" %}
-          <option value="{{ option.value }}"{% if option.value == collection.sort_by %} selected{% endif %}>{{ option.name }}</option>
+            {% if option.value == "title-ascending" %}
+              <option value="{{ option.value }}"{% if option.value == collection.sort_by %} selected{% endif %}>{{ option.name }}</option>
               
+            {% elsif option.value == "title-descending"%}
+<option value="{{ option.value }}"{% if option.value == collection.sort_by %} selected{% endif %}>{{ option.name }}</option>
+
+            {% else %}
             {% endif %}
           {% endfor %}
         </select>
