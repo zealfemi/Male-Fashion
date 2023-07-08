@@ -78,7 +78,7 @@
                           value="{{ filter.min_value.value | money_without_currency | replace: ',', '' }}"
                         {%- endif %}
                         type="number"
-                        placeholder="0"
+                        placeholder="From"
                         min="0"
                         max="{{ filter.range_max | money_without_currency | replace: ',', '' }}"
                       >
@@ -94,7 +94,7 @@
                           value="{{ filter.max_value.value | money_without_currency | replace: ',', '' }}"
                         {%- endif %}
                         type="number"
-                        placeholder="{{ filter.range_max | money_without_currency | replace: ',', '' }}"
+                        placeholder="To"
                         min="0"
                         max="{{ filter.range_max | money_without_currency | replace: ',', '' }}"
                       >
