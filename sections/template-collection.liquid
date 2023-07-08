@@ -25,11 +25,14 @@
         <h4>{{ collection.title }}</h4>
       </div>
 
-      <div class="sort-by--container">
+      <div class="container">
         <label for="sort-by">Sort by</label> 
         <select id="sort-by" class="sort-by">
           {% for option in collection.sort_options %}
-            <option value="{{ option.value }}"{% if option.value == collection.sort_by %} selected{% endif %}>{{ option.name }}</option>
+            {% if option.value == "title-descending" %}
+          <option value="{{ option.value }}"{% if option.value == collection.sort_by %} selected{% endif %}>{{ option.name }}</option>
+              
+            {% endif %}
           {% endfor %}
         </select>
       </div>
