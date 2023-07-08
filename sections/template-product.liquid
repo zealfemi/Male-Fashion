@@ -1,5 +1,5 @@
 {{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag }}
-<script src="{{ 'swiper-bundle.min.js' | asset_url }}" async></script>
+<script src="{{ 'swiper-bundle.min.js' | asset_url }}" defer></script>
 
 {% assign selected_variant = product.selected_or_first_available_variant %}
 
@@ -289,8 +289,8 @@
 <script type="application/ld+json">
   {
   "@context": "http://schema.org/",
-                "@type": "Product",
-                "name": {{ product.title | json }},
+                  "@type": "Product",
+                  "name": {{ product.title | json }},
   "url": {{ request.origin | append: product.url | json }},
   {% if seo_media %}
     "image": [
@@ -303,7 +303,7 @@
   {% endif %}
   "brand": {
   "@type": "Brand",
-                  "name": {{ product.vendor | json }}
+                    "name": {{ product.vendor | json }}
   },
   "offers": [
   {% for variant in product.variants %}
