@@ -110,7 +110,6 @@
         {%- endfor -%}
 
         <div class="active-filters">
-          <a href="{{ collection.url }}" class="active-filters__clear">Clear all</a>
 
           {%- for filter in collection.filters -%}
             {%- if filter.type == "price_range" -%}
@@ -129,6 +128,8 @@
               {%- endfor -%}
             {%- endif- %}
           {%- endfor -%}
+
+          <a href="{{ collection.url }}" class="active-filters__clear">Clear all</a>
         </div>
       </form>
 
