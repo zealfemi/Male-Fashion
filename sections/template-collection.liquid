@@ -21,6 +21,15 @@
   <div class="product spad">
     {% paginate collection.products by section.settings.number_of_products_per_page %}
 
+      <div class="sort-by--container">
+        <label for="sort-by">Sort by</label> 
+        <select id="sort-by" class="sort-by">
+          {% for option in collection.sort_options %}
+            <option value="{{ option.value }}"{% if option.value == collection.sort_by %} selected{% endif %}>{{ option.name }}</option>
+          {% endfor %}
+        </select>
+      </div>
+
       <div class="section-title">
         <h4>{{ collection.title }}</h4>
       </div>
