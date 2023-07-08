@@ -30,10 +30,10 @@
         <select id="sort-by" class="sort-by">
           {% for option in collection.sort_options %}
             {% if option.value == "title-ascending" %}
-              <option value="{{ option.value }}"{% if option.value == collection.sort_by %} selected{% endif %}>{{ option.name }}</option>
+              <option value="{{ option.value }}"{% if option.value == collection.sort_by %} selected{% endif %}>A - Z</option>
               
             {% elsif option.value == "title-descending"%}
-              <option value="{{ option.value }}"{% if option.value == collection.sort_by %} selected{% endif %}>{{ option.name }}</option>
+              <option value="{{ option.value }}"{% if option.value == collection.sort_by %} selected{% endif %}>Z - A</option>
 
             {% else %}
               <option value="{{ option.value }}"{% if option.value == collection.sort_by %} selected{% endif %}>{{ option.name }}</option>
