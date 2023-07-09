@@ -39,16 +39,16 @@
             </summary>
 
             <div class="filter-group-display w-25 border rounded">
-              <div class="filter-group-display__header p-3 border-bottom">
+
+              {%- case filter.type -%}
+                {%- when 'boolean' or 'list' -%}
+                  <div class="filter-group-display__header p-3 border-bottom">
                 <span class="filter-group-display__header-selected">{{ filter.active_values.size }} selected</span>
 
                 {%- if filter.active_values.size > 0 -%}
                   <a href="{{ filter.url_to_remove }}" class="filter-group-display__header-reset float-right">Reset</a>
                 {%- endif -%}
               </div>
-
-              {%- case filter.type -%}
-                {%- when 'boolean' or 'list' -%}
                   <ul class="filter-group-display__list p-3">
                     {%- for filter_value in filter.values -%}
                       <li class="filter-group-display__list-item">
