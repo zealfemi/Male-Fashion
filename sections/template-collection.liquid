@@ -44,7 +44,7 @@
       
                     {%- case filter.type -%}
                       {%- when 'boolean' or 'list' -%}
-                        <div class="filter-group-display__header grid-2 p-3 border-bottom">
+                        <div class="filter-group-display__header flex-auto p-3 border-bottom">
                           <span class="filter-group-display__header-selected">{{ filter.active_values.size }} selected</span>
       
                           {%- if filter.active_values.size > 0 -%}
@@ -67,7 +67,7 @@
                           {%- endfor -%}
                         </ul>
                       {%- when 'price_range' -%}
-                        <div class="filter-group-display__header p-3 border-bottom">
+                        <div class="filter-group-display__header flex-auto p-3 border-bottom">
                           <span class="filter-group-display__header-selected">The highest price is {{ filter.range_max | money_without_currency | replace: ',', '' }}</span>
       
                           <a href="{{ filter.url_to_remove }}" class="filter-group-display__header-reset float-right">Reset</a>
