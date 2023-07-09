@@ -130,7 +130,7 @@
                 {%- endif- %}
               {%- endfor -%}
     
-              {% if collection.url.active %}
+              {% if url.active != collection.url %}
                 <a href="{{ collection.url }}" class="active-filters__clear ml-5">Remove all</a>
               {% endif %}
             </div>
