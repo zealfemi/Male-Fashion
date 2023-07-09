@@ -32,7 +32,7 @@
             <form class="filter-form">
               {%- for filter in collection.filters -%}
                 <details class="filter-group">
-                  <summary class="">
+                  <summary class="filter-group-summary">
                       <span class="">{{ filter.label }}</span>
       
                       {%- if filter.active_values.size > 0 -%}
@@ -140,7 +140,7 @@
         
         <div class="text-end">
           <label for="sort-by">Sort by:</label> 
-          <select id="sort-by" class="sort-by border rounded-pill">
+          <select id="sort-by" class="sort-by p-2 border rounded-pill">
             {% for option in collection.sort_options %}
               {% if option.value == "title-ascending" %}
                 <option value="{{ option.value }}"{% if option.value == collection.sort_by %} selected{% endif %}>A - Z</option>
