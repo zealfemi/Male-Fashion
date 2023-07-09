@@ -33,14 +33,14 @@
               {%- for filter in collection.filters -%}
                 <details class="filter-group">
                   <summary class="filter-group-summary">
-                      <span class="flex">{{ filter.label }}</span>
+                      <span class="">{{ filter.label }}</span>
       
                       {%- if filter.active_values.size > 0 -%}
                         <span>({{ filter.active_values.size }})</span>
                       {%- endif -%}
                   </summary>
       
-                  <div class="filter-group-display border rounded">
+                  <div class="filter-group-display border rounded w-35">
       
                     {%- case filter.type -%}
                       {%- when 'boolean' or 'list' -%}
