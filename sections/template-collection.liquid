@@ -33,7 +33,7 @@
             {%- for filter in collection.filters -%}
               <details class="filter-group">
                 <summary class="filter-group-summary">
-                    <span>{{ filter.label }}</span>
+                    <span class="inline">{{ filter.label }}</span>
     
                     {%- if filter.active_values.size > 0 -%}
                       <span>({{ filter.active_values.size }})</span>
