@@ -43,12 +43,12 @@
               {%- case filter.type -%}
                 {%- when 'boolean' or 'list' -%}
                   <div class="filter-group-display__header p-3 border-bottom">
-                <span class="filter-group-display__header-selected">{{ filter.active_values.size }} selected</span>
+                    <span class="filter-group-display__header-selected">{{ filter.active_values.size }} selected</span>
 
-                {%- if filter.active_values.size > 0 -%}
-                  <a href="{{ filter.url_to_remove }}" class="filter-group-display__header-reset float-right">Reset</a>
-                {%- endif -%}
-              </div>
+                    {%- if filter.active_values.size > 0 -%}
+                      <a href="{{ filter.url_to_remove }}" class="filter-group-display__header-reset float-right">Reset</a>
+                    {%- endif -%}
+                  </div>
                   <ul class="filter-group-display__list p-3">
                     {%- for filter_value in filter.values -%}
                       <li class="filter-group-display__list-item">
@@ -65,9 +65,15 @@
                     {%- endfor -%}
                   </ul>
                 {%- when 'price_range' -%}
+                  <div class="filter-group-display__header p-3 border-bottom">
+                    <span class="filter-group-display__header-selected">The highest price is {{ filter.range_max | money_without_currency | replace: ',', '' }}</span>
+
+                    {%- if filter.active_values.size > 0 -%}
+                      <a href="{{ filter.url_to_remove }}" class="filter-group-display__header-reset float-right">Reset</a>
+                    {%- endif -%}
+                  </div>
                   <div class="filter-group-display__price-range p-3">
                     <div class="filter-group-display__price-range-from">
-                      The highest price is {{ filter.range_max | money_without_currency | replace: ',', '' }}
                       <span>{{ cart.currency.symbol }}</span>
 
                       <input name="{{ filter.min_value.param_name }}"
