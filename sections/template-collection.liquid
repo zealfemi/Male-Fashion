@@ -44,7 +44,7 @@
       
                     {%- case filter.type -%}
                       {%- when 'boolean' or 'list' -%}
-                        <div class="filter-group-display__header flex justify-content-between p-3 border-bottom">
+                        <div class="filter-group-display__header flex justify-content-between w-auto p-3 border-bottom">
                           <span class="filter-group-display__header-selected">{{ filter.active_values.size }} selected</span>
       
                           {%- if filter.active_values.size > 0 -%}
