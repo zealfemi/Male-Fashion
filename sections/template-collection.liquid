@@ -28,7 +28,7 @@
       </div>
 
       <div class="row">
-        <div class="col">
+        <div class="text-start">
           <form class="filter-form">
             {%- for filter in collection.filters -%}
               <details class="filter-group">
@@ -136,7 +136,7 @@
           </form>
         </div>
         
-        <div class="col text-end">
+        <div class="text-end">
           <label for="sort-by">Sort by</label> 
           <select id="sort-by" class="sort-by">
             {% for option in collection.sort_options %}
