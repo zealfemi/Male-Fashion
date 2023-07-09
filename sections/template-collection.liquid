@@ -45,10 +45,10 @@
                     {%- case filter.type -%}
                       {%- when 'boolean' or 'list' -%}
                         <div class="filter-group-display__header row p-3 border-bottom">
-                          <span class="filter-group-display__header-selected">{{ filter.active_values.size }} selected</span>
+                          <span class="filter-group-display__header-selected col">{{ filter.active_values.size }} selected</span>
       
                           {%- if filter.active_values.size > 0 -%}
-                            <a href="{{ filter.url_to_remove }}" class="filter-group-display__header-reset text-end">Reset</a>
+                            <a href="{{ filter.url_to_remove }}" class="col filter-group-display__header-reset text-end">Reset</a>
                           {%- endif -%}
                         </div>
                         <ul class="filter-group-display__list p-3">
