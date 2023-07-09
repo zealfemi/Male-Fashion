@@ -117,13 +117,13 @@
                 <a class="active-filters__remove-filter rounded-pill border p-2 small m-1" href="{{ filter.url_to_remove }}">
                   {%- assign min_value = filter.min_value.value | default: 0 -%}
                   {%- assign max_value = filter.max_value.value | default: filter.range_max -%}
-                  {{ min_value | money }} - {{ max_value | money }} {% render 'icon-remove' %}
+                  {{ min_value | money }} - {{ max_value | money }} <span>{% render 'icon-remove' %}</span>
                 </a>
               {%- endif -%}
             {%- else -%}
               {%- for filter_value in filter.active_values -%}
                 <a class="active-filters__remove-filter rounded-pill border p-2 small m-1" href="{{ filter_value.url_to_remove }}">
-                  {{ filter_value.label }} {% render 'icon-remove' %}
+                  {{ filter_value.label }} <span>{% render 'icon-remove' %}</span>
                 </a>
               {%- endfor -%}
             {%- endif- %}
