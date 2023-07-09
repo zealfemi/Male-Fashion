@@ -39,7 +39,7 @@
             </summary>
 
             <div class="filter-group-display w-25 border rounded">
-              <div class="filter-group-display__header p-3 mb-10 border-bottom">
+              <div class="filter-group-display__header p-3 border-bottom">
                 <span class="filter-group-display__header-selected">{{ filter.active_values.size }} selected</span>
 
                 {%- if filter.active_values.size > 0 -%}
@@ -49,7 +49,7 @@
 
               {%- case filter.type -%}
                 {%- when 'boolean' or 'list' -%}
-                  <ul class="filter-group-display__list">
+                  <ul class="filter-group-display__list p-3">
                     {%- for filter_value in filter.values -%}
                       <li class="filter-group-display__list-item">
                         <label for="Filter-{{ filter.param_name }}-{{ forloop.index }}">
@@ -65,11 +65,11 @@
                     {%- endfor -%}
                   </ul>
 
-                  <div class="filter-group-display__submit">
+                  <div class="filter-group-display__submit p-3">
                     <input type="submit" value="Apply">
                   </div>
                 {%- when 'price_range' -%}
-                  <div class="filter-group-display__price-range">
+                  <div class="filter-group-display__price-range p-3">
                     <div class="filter-group-display__price-range-from">
                       The highest price is {{ filter.range_max | money_without_currency | replace: ',', '' }}
                       <span>{{ cart.currency.symbol }}</span>
@@ -101,7 +101,7 @@
                     </div>
                   </div>
 
-                  <div class="filter-group-display__submit">
+                  <div class="filter-group-display__submit p-3">
                     <input type="submit" value="Apply">
                   </div>
               {%- endcase -%}
