@@ -68,9 +68,8 @@
                   <div class="filter-group-display__header p-3 border-bottom">
                     <span class="filter-group-display__header-selected">The highest price is {{ filter.range_max | money_without_currency | replace: ',', '' }}</span>
 
-                    {%- if filter.active_values.size > 0 -%}
+                    
                       <a href="{{ filter.url_to_remove }}" class="filter-group-display__header-reset float-right">Reset</a>
-                    {%- endif -%}
                   </div>
                   <div class="filter-group-display__price-range p-3">
                     <div class="filter-group-display__price-range-from">
