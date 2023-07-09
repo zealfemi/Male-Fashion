@@ -140,7 +140,7 @@
         
         <div class="text-end">
           <label for="sort-by">Sort by:</label> 
-          <select id="sort-by" class="sort-by">
+          <select id="sort-by" class="sort-by rounded-pill">
             {% for option in collection.sort_options %}
               {% if option.value == "title-ascending" %}
                 <option value="{{ option.value }}"{% if option.value == collection.sort_by %} selected{% endif %}>A - Z</option>
