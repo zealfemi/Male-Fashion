@@ -32,7 +32,7 @@
             <form class="filter-form">
               {%- for filter in collection.filters -%}
                 <details class="filter-group">
-                  <summary class="filter-group-summary">
+                  <summary class="filter-group-summary flex">
                       <span class="d-inline-block">{{ filter.label }}</span>
       
                       {%- if filter.active_values.size > 0 -%}
