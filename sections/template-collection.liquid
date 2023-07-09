@@ -40,10 +40,10 @@
 
             <div class="filter-group-display w-25 border rounded">
               <div class="filter-group-display__header p-3 mb-10 border-bottom">
-                <span class="filter-group-display__header-selected align-text-left">{{ filter.active_values.size }} selected</span>
+                <span class="filter-group-display__header-selected">{{ filter.active_values.size }} selected</span>
 
                 {%- if filter.active_values.size > 0 -%}
-                  <a href="{{ filter.url_to_remove }}" class="filter-group-display__header-reset align-text-right">Reset</a>
+                  <a href="{{ filter.url_to_remove }}" class="filter-group-display__header-reset float-right">Reset</a>
                 {%- endif -%}
               </div>
 
