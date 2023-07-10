@@ -130,10 +130,8 @@
                     {%- endfor -%}
                   {%- endif- %}
                 {%- endfor -%}
-      
-                {% unless filter.type == blank  %}
+
                   <a href="{{ collection.url }}" class="active-filters__clear ml-5">Remove all</a>
-              {% endunless %}
               </div>
             </form>
         </div>
